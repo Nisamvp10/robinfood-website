@@ -177,6 +177,8 @@ $routes->group('', ['filter' => 'auth'], function($routes)
 });
 
 //frondent Card demos 
+$routes->get('index','HomeController::index');
+
 $routes->get('logout','admin\AuthController::logout');
 $routes->get('about-us','AboutController::index');
 $routes->get('industries','IndustryController::index');
