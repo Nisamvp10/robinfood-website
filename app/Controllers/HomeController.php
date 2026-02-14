@@ -9,7 +9,7 @@ use App\Models\IndustriesModel;
 use App\Models\FeedbackModel;
 use App\Models\NewsModel;
 use App\Models\ServiceModel;
-use App\Models\categoryModel;
+use App\Models\CategoryModel;
 use App\Models\ProductManageModel;
 
 class HomeController extends BaseController {
@@ -24,7 +24,7 @@ class HomeController extends BaseController {
 
     function __construct(){
         $this->sliderModel = new SliderModel();
-        $this->categoryModel = new categoryModel();
+        $this->categoryModel = new CategoryModel();
 
         $this->expertiseModel = new ExpertiseModel();
         $this->industyModel = new IndustriesModel();
