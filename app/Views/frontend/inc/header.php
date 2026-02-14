@@ -84,15 +84,17 @@
                      </ul>
                      <ul class="sub-cataegory">
                             
-                              <li>
-                                 <a href="productlist.html">Rice</a>
-                              </li>
-                              <li>
-                                 <a href="productlist.html">Millet</a>
-                              </li>
-                              <li>
-                                 <a href="productlist.html">Breakfast</a>
-                              </li>
+                             <?php
+                            if(!empty(services())) {
+                                foreach(services() as $itemCategory) {
+                                    ?>
+                                    <li>
+                                        <a href="<?= base_url('productlist?category='.$itemCategory['slug']) ?>"><?= $itemCategory['category'] ?></a>
+                                    </li>
+                                    <?php
+                                }
+                            }
+                             ?>
                            </ul>
                   </div>
                   <div class="offcanvas__contact">
@@ -273,7 +275,7 @@
                                        <a href="#">Gallery</a>
                                     </li>
                                     <li>
-                                       <a href="contact.html">Contact Us</a>
+                                       <a href="<?= base_url('contact') ?>">Contact Us</a>
                                     </li>
                                  </ul>
                               </nav>

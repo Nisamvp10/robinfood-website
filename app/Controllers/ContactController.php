@@ -5,7 +5,7 @@ class ContactController extends BaseController
 {
     public function index()
     {
-        $page = "Industries";
+        $page = "Contact Us";
         return view('frontend/contact-us',compact('page'));
     }
 }
