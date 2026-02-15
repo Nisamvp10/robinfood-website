@@ -252,7 +252,7 @@
                                     </li>
 
                                     <li class="active has-dropdown">
-                                       <a href="#"> Products <i class="fa-regular fa-plus"></i></a>
+                                       <a href="<?= base_url('productlist') ?>"> Products <i class="fa-regular fa-plus"></i></a>
                                        <ul class="submenu">
                                           <?php
                                            if(!empty(services())) {
@@ -272,7 +272,7 @@
                                        <a href="#">Offers</a>
                                     </li>
                                     <li class="active ">
-                                       <a href="#">Gallery</a>
+                                       <a href="<?= base_url('gallery') ?>">Gallery</a>
                                     </li>
                                     <li>
                                        <a href="<?= base_url('contact') ?>">Contact Us</a>
