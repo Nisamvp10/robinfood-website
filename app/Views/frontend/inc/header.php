@@ -250,7 +250,7 @@
                                     <li class="active ">
                                        <a href="<?= base_url('about-us') ?>"> About Us</a>
                                     </li>
-
+ 
                                     <li class="active has-dropdown">
                                        <a href="<?= base_url('productlist') ?>"> Products <i class="fa-regular fa-plus"></i></a>
                                        <ul class="submenu">
