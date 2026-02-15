@@ -218,6 +218,7 @@ $routes->post('cart/update', 'CartController::update');
 $routes->post('cart/getMyCartItems', 'CartController::getMyCartItems');
 //checkout 
 $routes->get('checkout','CheckoutController::index');
+$routes->get('terms-conditions','CommonController::terms');
 
 
 

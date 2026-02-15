@@ -184,6 +184,12 @@
                                  Return Policy
                               </a>
                            </li>
+                           <li>
+                              <a class="style1" href="<?=base_url('terms-conditions') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Terms and Conditions
+                              </a>
+                           </li>
                         </ul>
                      </div>
                   </div>
