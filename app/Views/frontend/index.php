@@ -282,7 +282,7 @@
                                        </div>
                                        <div class="best-seller-one__content">
                                           <h4 class="best-seller-one__content-title">
-                                             <a href="productdetials.html" ><?=$premiumproduct->product_title?></a>
+                                             <a href="<?=base_url('product-details/'.$premiumproduct->slug)?>"><?= $premiumproduct->product_title ?></a>
                                           </h4>
                                           <div class="best-seller-one__star-wrap">
                                              <div class="star">
@@ -442,7 +442,7 @@
                                  } ?>
                                     <div class="icon">
                                        <a
-                                          href="<?=base_url('productdetials/'.$featuredProduct->slug)?>"
+                                          href="<?=base_url('product-details/'.$featuredProduct->slug)?>"
                                        >
                                           <i class="fa-regular fa-eye"></i>
                                     </a>
