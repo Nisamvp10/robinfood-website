@@ -76,7 +76,7 @@
                 if(!empty($gallery)){
                     foreach($gallery as $img) {
                     ?>
-                     <div class="col-lg-4 col-6">
+                     <div class="col-lg-3 col-6">
                     <!-- Image Gallery start -->
                     <div class="photo-gallery wow fadeInUp">
                         <a href="<?=validImg($img['image']) ?>" data-fancybox="gallery">
