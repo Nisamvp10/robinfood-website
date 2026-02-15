@@ -161,33 +161,41 @@
                         </div>
                         <ul class="list-area">
                            <li>
-                              <a class="style1" href="#">
+                              <a class="style1" href="<?=base_url('productlist') ?>">
                                  <i class="fa-solid fa-chevrons-right"></i>
-                                 Store List
+                                 Products
                               </a>
                            </li>
+                        
                            <li>
-                              <a class="style1" href="#">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Opening Hours
-                              </a>
-                           </li>
-                           <li>
-                              <a class="style1" href="#">
+                              <a class="style1" href="<?=base_url('contact') ?>">
                                  <i class="fa-solid fa-chevrons-right"></i>
                                  Contact Us
                               </a>
                            </li>
-                           <li>
-                              <a class="style1" href="#">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Return Policy
-                              </a>
-                           </li>
+                           
                            <li>
                               <a class="style1" href="<?=base_url('terms-conditions') ?>">
                                  <i class="fa-solid fa-chevrons-right"></i>
                                  Terms and Conditions
+                              </a>
+                           </li>
+                           <li>
+                              <a class="style1" href="<?=base_url('refund-and-cancellation') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Refund & Cancellation
+                              </a>
+                           </li>
+                           <li>
+                              <a class="style1" href="<?=base_url('privacy-policy') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Privacy Policy
+                              </a>
+                           </li>
+                            <li>
+                              <a class="style1" href="<?=base_url('shipping-policy') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Shipping Policy
                               </a>
                            </li>
                         </ul>

@@ -199,7 +199,7 @@
                   <div class="header-main">
                      <div class="header-left">
                         <div class="logo">
-                           <a href="#" class="header-logo">
+                           <a href="<?= base_url() ?>" class="header-logo">
                               <img
                                  src="<?=base_url('public/assets/template/');?>assets/images/logo.png"
                                  alt="logo-img"

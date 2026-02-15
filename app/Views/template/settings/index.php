@@ -77,6 +77,24 @@
                     </span>
                     <span>Refound & Cancell</span>
                 </button>
+                 <button class="w-full flex items-center space-x-3 px-3 py-2 rounded-md transition-colors  text-primary-700 " id="shipping-tab" data-bs-toggle="pill" data-bs-target="#shipping" type="button" role="tab" aria-controls="terms" aria-selected="true">
+                    <span class="flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building ">
+                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                            <path d="M8 6h.01"></path>
+                            <path d="M16 6h.01"></path>
+                            <path d="M12 6h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M16 10h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M8 14h.01"></path>
+                        </svg>
+                    </span>
+                    <span>Shipping Policy</span>
+                </button>
 
                 <!-- privacy -->
                  <button class="w-full flex items-center space-x-3 px-3 py-2 rounded-md transition-colors  text-primary-700 " id="privacy-tab" data-bs-toggle="pill" data-bs-target="#privacy" type="button" role="tab" aria-controls="terms" aria-selected="true">
@@ -255,6 +273,25 @@
                                 </svg>Save Changes</button></div>
                     </form>
                 </div>
+                  <div class="tab-pane fade fade  mt-0" id="terms" role="tabpanel" aria-labelledby="terms-tab">
+                    <h2 class="text-lg font-medium text-gray-800 mb-4">Terms & Conditions</h2>
+                    <form class="space-y-4" id="refoundForm" enctype="multipart/form-data">
+                        <div>
+                            <div class="form-group ">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2"> Terms & Conditions</label>
+                                <textarea id="termsInput" rows="10" cols="15" name="termsInput" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Description...."><?= getappdata('termsInput') ?></textarea>
+                                <div class="invalid-feedback" id="terms_error"></div>
+                            </div>
+
+                        </div>
+                           <div class="flex justify-end">
+                            <button id="submitBtn" class="bg-primary-600 rounded hover:bg-primary-700 text-white px-4 py-2 rounded-md flex items-center transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save mr-1">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>Save Changes</button></div>
+                    </form>
+                </div>
                 <div class="tab-pane fade fade  mt-0" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
                     <h2 class="text-lg font-medium text-gray-800 mb-4">Privacy Policy</h2>
                     <form class="space-y-4" id="privacyForm" enctype="multipart/form-data">
@@ -276,7 +313,7 @@
                 </div>
                 <!-- Refound -->
                     <div class="tab-pane fade fade  mt-0" id="refound" role="tabpanel" aria-labelledby="refound-tab">
-                    <h2 class="text-lg font-medium text-gray-800 mb-4">Privacy Policy</h2>
+                    <h2 class="text-lg font-medium text-gray-800 mb-4">Refound & Cancellation</h2>
                     <form class="space-y-4" id="refoundForm" enctype="multipart/form-data">
                         <div>
                             <div class="form-group ">
@@ -294,6 +331,27 @@
                                 </svg>Save Changes</button></div>
                     </form>
                 </div>
+                 <!-- Refound -->
+                    <div class="tab-pane fade fade  mt-0" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
+                    <h2 class="text-lg font-medium text-gray-800 mb-4">Shipping Policy</h2>
+                    <form class="space-y-4" id="shippingForm" enctype="multipart/form-data">
+                        <div>
+                            <div class="form-group ">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2"> Shipping Policy </label>
+                                <textarea id="shippingInput" rows="10" cols="15" name="shippingInput" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Description...."><?= getappdata('shippingInput') ?></textarea>
+                                <div class="invalid-feedback" id="terms_error"></div>
+                            </div>
+
+                        </div>
+                           <div class="flex justify-end">
+                            <button id="submitBtn" class="bg-primary-600 rounded hover:bg-primary-700 text-white px-4 py-2 rounded-md flex items-center transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save mr-1">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>Save Changes</button></div>
+                    </form>
+                </div>
+
 
                 <?php if ($userRole == 1) { ?>
 
@@ -435,7 +493,7 @@
         // Configure toastr
 
 
-        $('#termsForm,#privacyForm,#refoundForm').on('submit', function(e) {
+        $('#termsForm,#privacyForm,#refoundForm,#shippingForm').on('submit', function(e) {
             e.preventDefault();
 
             // Reset previous error states
@@ -542,7 +600,7 @@
     }
 
     tinymce.init({
-        selector: '#termsInput, #privacyInput,#refoundInput',
+        selector: '#termsInput, #privacyInput,#refoundInput,#shippingInput',
         plugins: 'lists link image table code',
         toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image | code',
         height: 300,

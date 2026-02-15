@@ -219,6 +219,9 @@ $routes->post('cart/getMyCartItems', 'CartController::getMyCartItems');
 //checkout 
 $routes->get('checkout','CheckoutController::index');
 $routes->get('terms-conditions','CommonController::terms');
+$routes->get('refund-and-cancellation','CommonController::refundcancellation');
+$routes->get('privacy-policy','CommonController::privacyPolicy');
+$routes->get('shipping-policy','CommonController::shippingPolicy');
 
 
 
