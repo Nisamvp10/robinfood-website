@@ -157,22 +157,10 @@
                   >
                      <div class="single-footer-widget">
                         <div class="widget-head">
-                           <h3 class="style1">Costumers Support</h3>
+                           <h3 class="style1">Terms</h3>
                         </div>
                         <ul class="list-area">
-                           <li>
-                              <a class="style1" href="<?=base_url('productlist') ?>">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Products
-                              </a>
-                           </li>
-                        
-                           <li>
-                              <a class="style1" href="<?=base_url('contact') ?>">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Contact Us
-                              </a>
-                           </li>
+                          
                            
                            <li>
                               <a class="style1" href="<?=base_url('terms-conditions') ?>">
@@ -210,30 +198,35 @@
                            <h3 class="style1">Quick Links</h3>
                         </div>
                         <ul class="list-area">
+                             <li>
+                              <a class="style1" href="<?=base_url() ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Home
+                              </a>
+                           </li>
+
+                            <li>
+                              <a class="style1" href="<?=base_url('productlist') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Products
+                              </a>
+                           </li>
+                        
+                           <li>
+                              <a class="style1" href="<?=base_url('contact') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Contact Us
+                              </a>
+                           </li>
                            <li>
                               <a class="style1" href="about.html">
                                  <i class="fa-solid fa-chevrons-right"></i>
                                  About Us
                               </a>
                            </li>
-                           <li>
-                              <a class="style1" href="#">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Testimonial
-                              </a>
-                           </li>
-                           <li>
-                              <a class="style1" href="#">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Faq
-                              </a>
-                           </li>
-                           <li>
-                              <a class="style1" href="#">
-                                 <i class="fa-solid fa-chevrons-right"></i>
-                                 Blog
-                              </a>
-                           </li>
+                          
+                         
+                        
                         </ul>
                      </div>
                   </div>

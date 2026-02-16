@@ -222,6 +222,5 @@ $routes->get('terms-conditions','CommonController::terms');
 $routes->get('refund-and-cancellation','CommonController::refundcancellation');
 $routes->get('privacy-policy','CommonController::privacyPolicy');
 $routes->get('shipping-policy','CommonController::shippingPolicy');
-
-
-
+//offers
+$routes->get('offers','OfferController::index');
