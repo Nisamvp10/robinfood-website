@@ -269,7 +269,7 @@
                                     </li>
 
                                     <li class="active ">
-                                       <a href="#">Offers</a>
+                                       <a href="<?= base_url('offers') ?>">Offers</a>
                                     </li>
                                     <li class="active ">
                                        <a href="<?= base_url('gallery') ?>">Gallery</a>
