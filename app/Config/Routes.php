@@ -74,7 +74,6 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post('supplier/delete','SupplierController::delete');
         $routes->get('supplier-history/(:any)','SupplierController::history/$1');
         $routes->post('supplier/history-list','SupplierController::historyList');
-
         //products //Investments
         $routes->get('products','ProductsController::index');
         $routes->post('product/save','ProductsController::save');

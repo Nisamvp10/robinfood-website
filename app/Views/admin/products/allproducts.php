@@ -204,7 +204,7 @@ if (openBtn) {
                                     <div class="text-sm text-gray-900">${product.note}</div>
                                 </td>
                                 <td class="px-2 py-2 whitespace-nowrap text-center text-sm font-medium border border-gray-300">
-                                    <a href="<?=base_url('product/edit/');?>${product.encrypted_id}" class="!text-blue-600 !no-underline hover:text-blue-800 mr-3">Edit</a>
+                                    <a href="<?=base_url('admin/product/edit/');?>${product.encrypted_id}" class="!text-blue-600 !no-underline hover:text-blue-800 mr-3">Edit</a>
                                     <button type="button" onclick="deleteProduct(this)" data-id="${product.encrypted_id}" class="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors removeRow">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 w-4 h-4"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line>
                                         </svg>

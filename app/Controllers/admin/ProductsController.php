@@ -21,7 +21,7 @@ Class ProductsController extends Controller {
         return view('admin/products/index',compact('page'));
     }
 
-    function create($id) {
+    function create($id=false) {
         $page = (!haspermission('','create_investment') ? lang('Custom.permissionDenied' ): 'Edit Inventory Stock');
         $route = (!haspermission('','create_investment') ? 'pages-error-404': 'admin/products/create');
         $data = $this->productModel->find(decryptor($id));
