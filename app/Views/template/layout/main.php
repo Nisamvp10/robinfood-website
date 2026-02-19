@@ -184,18 +184,9 @@ if (!empty($userData)){
                 <?php 
                 }
 
-                if(haspermission('','product_management')) { 
-                ?>
-                 <li class="nav-item">
-                    <a class="nav-link <?= strpos(uri_string(), 'admin/'.slugify(getappdata('product_management'))) === 0  ? 'active' : '' ?>" href="<?= base_url('admin/'.slugify(getappdata('product_management'))) ?>">
-                    <span class="flex-shrink-0"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles "><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg></span>
-                        <span><?=ucwords(getappdata('product_management'))?></span>
-                    </a>
-                </li>
-                <?php
-                }
+               
                 if(haspermission('','investments')) { ?>
-                <li class="nav-item">
+                <li class="nav-item hidden">
                     <a class="nav-link <?= strpos(uri_string(), 'admin/products') === 0  ? 'active' : '' ?>" href="<?= base_url('admin/products') ?>">
                     <span class="flex-shrink-0"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles "><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg></span>
                         <span>Inventory Stock</span>
@@ -214,11 +205,21 @@ if (!empty($userData)){
                     <a class="nav-link cursor-pointer <?= strpos(uri_string(), 'admin/inventory') === 0 ? 'active' : '' ?>" href="<?=base_url('admin/inventory');?>" >
                     <span class="flex-shrink-0">
                         <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package h-4 w-4 mr-3" data-lov-id="src/components/DashboardLayout.tsx:99:16" data-lov-name="item.icon" data-component-path="src/components/DashboardLayout.tsx" data-component-line="99" data-component-file="DashboardLayout.tsx" data-component-name="item.icon" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-3%22%7D"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg></span>
-                        <span>Purchase</span>
+                        <span>Product Purchase</span>
                     </a>
                 </li>
                 <?php 
                  }
+                  if(haspermission('','product_management')) { 
+                ?>
+                 <li class="nav-item">
+                    <a class="nav-link <?= strpos(uri_string(), 'admin/'.slugify(getappdata('product_management'))) === 0  ? 'active' : '' ?>" href="<?= base_url('admin/'.slugify(getappdata('product_management'))) ?>">
+                    <span class="flex-shrink-0"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles "><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg></span>
+                        <span><?=ucwords(getappdata('product_management'))?></span>
+                    </a>
+                </li>
+                <?php
+                }
                 if(haspermission('','sales')) { ?>
                 <li class="nav-item">
                     <a class="nav-link cursor-pointer <?= strpos(uri_string(), 'admin/sales') === 0 ? 'active' : '' ?>" href="<?=base_url('admin/sales');?>" >

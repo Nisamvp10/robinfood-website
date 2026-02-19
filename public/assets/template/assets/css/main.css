@@ -20612,7 +20612,53 @@ button {
   height: 32px;
 }
 
+.coupon-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
 
+.discount-box {
+  background: #eaf4ff;
+  text-align: center;
+  padding: 25px 10px;
+  border-right: 1px dashed #ccc;
+}
+
+.discount-box h2 {
+  font-weight: 700;
+  color: #1e73be;
+  margin: 0;
+}
+
+.discount-box span {
+  font-size: 14px;
+  color: #666;
+}
+
+.coupon-content {
+  padding: 20px;
+}
+
+.coupon-btn {
+  background: #ff5b5b;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  position: relative;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+
+.coupon-btn:hover {
+  background: #e04848;
+}
+
+.expire-text {
+  font-size: 12px;
+  color: #777;
+}
 
 
 /*# sourceMappingURL=main.css.map */
