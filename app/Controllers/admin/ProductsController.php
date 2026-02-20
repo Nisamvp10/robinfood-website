@@ -17,12 +17,12 @@ Class ProductsController extends Controller {
     }
 
     public function index () {
-        $page = (!haspermission('','investments') ? lang('Custom.permissionDenied' ): 'Inventory Stock');
+        $page = (!haspermission('','investments') ? lang('Custom.permissionDenied' ): 'Products');
         return view('admin/products/index',compact('page'));
     }
 
     function create($id=false) {
-        $page = (!haspermission('','create_investment') ? lang('Custom.permissionDenied' ): 'Edit Inventory Stock');
+        $page = (!haspermission('','create_investment') ? lang('Custom.permissionDenied' ): 'Edit Product ');
         $route = (!haspermission('','create_investment') ? 'pages-error-404': 'admin/products/create');
         $data = $this->productModel->find(decryptor($id));
         $categories = $this->categoryModel->where(['is_active' =>1])->find();

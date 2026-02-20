@@ -11,7 +11,7 @@ $('#createProduct').on('submit', function (e) {
     );
 
     $.ajax({
-        url: App.getSiteurl() + 'product/save',
+        url: App.getSiteurl() + 'admin/product/save',
         method: 'POST',
         data: formData,
         contentType: false,
