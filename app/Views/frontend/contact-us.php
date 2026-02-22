@@ -92,9 +92,15 @@
                           </ul>
                         </div>
                         <div class="contact-info__contact--social-icon d-flex align-items-center">
-                          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                          <a href="https://www.facebook.com/Robinfoodindia"
+                                 ><i class="fab fa-facebook-f"></i
+                              ></a>
+                              <a href="https://instagram.com/robinfood_india"
+                                 ><i class="fab fa-instagram"></i
+                              ></a>
+                              <a href="https://www.youtube.com/@robinfood1849"
+                                 ><i class="fab fa-youtube"></i
+                              ></a>
                         </div>
                       </div>
                       <div class="contact-info__icon">

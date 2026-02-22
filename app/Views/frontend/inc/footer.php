@@ -45,7 +45,7 @@
                   <div class="content">
                      <p>Make a Quote</p>
                      <h3>
-                        <a href="#">info@robinfoodsindia.com</a>
+                        <a href="mailto:<?=getappdata('email') ?>"><?=getappdata('email') ?></a>
                      </h3>
                   </div>
                </div>
@@ -78,7 +78,7 @@
                   </div>
                   <div class="content">
                      <p>Opening Hour</p>
-                     <h3>Sunday - Fri: 9 aM - 6 pM</h3>
+                     <h3>Monday to saturday- 9AM - 5.30PM.</h3>
                   </div>
                </div>
                <div
@@ -135,18 +135,18 @@
                               Backed by Arrikar Foods and Pavizham Rice, Robin Hood stands for uncompromising quality and nutrition. Expert supervision and strict quality checks ensure the food you can trust every day.
                            </p>
                            <div class="social-icon d-flex align-items-center">
-                              <a href="https://www.facebook.com/"
+                              <a href="https://www.facebook.com/Robinfoodindia"
                                  ><i class="fab fa-facebook-f"></i
                               ></a>
-                              <a href="https://x.com/"
-                                 ><i class="fab fa-twitter"></i
+                              <a href="https://instagram.com/robinfood_india"
+                                 ><i class="fab fa-instagram"></i
                               ></a>
-                              <a href="https://www.youtube.com/"
+                              <a href="https://www.youtube.com/@robinfood1849"
                                  ><i class="fab fa-youtube"></i
                               ></a>
-                              <a href="https://www.linkedin.com/"
+                              <!-- <a href="https://www.linkedin.com/"
                                  ><i class="fab fa-linkedin-in"></i
-                              ></a>
+                              ></a> -->
                            </div>
                         </div>
                      </div>
@@ -232,8 +232,7 @@
                   </div>
                   <div
                      class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-                     data-wow-delay=".8s"
-                  >
+                     data-wow-delay=".8s">
                      <div class="single-footer-widget">
                         <div class="widget-head">
                            <h3 class="style1">Newsletter</h3>

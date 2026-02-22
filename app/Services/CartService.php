@@ -25,17 +25,13 @@ class CartService
         $session = session();
         $userId  = $session->get('user_id');
         $sessionId = $session->get('cart_session') ?? session_id();
-
         $session->set('cart_session', $sessionId);
 
         if ($userId) {
             $cart = $this->cartModel->where('user_id', $userId)->first();
             if ($cart) return $cart;
         }
-
-        return $this->cartModel
-            ->where('session_id', $sessionId)
-            ->first();
+        return $this->cartModel->where('session_id', $sessionId)->first();
     }
 
      private function createCart()
