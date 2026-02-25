@@ -9,7 +9,7 @@
                  <?php if(haspermission('','create_staff') ) { ?>
                 <div>
                     <a onclick="openModal()" class="btn btn-primary">
-                        <i class="bi bi-plus-circle me-1"></i> Add a Member
+                        <i class="bi bi-plus-circle me-1"></i> Add a Staff
                     </a>
                 </div>
                 <?php } ?>

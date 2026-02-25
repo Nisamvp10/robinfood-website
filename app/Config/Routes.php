@@ -139,6 +139,7 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post('sale-info','SalesController::list');
         $routes->post('order-update','SalesController::orderUpdate');
         $routes->post('payment-update','SalesController::paymentUpdate');
+        $routes->get('downloadInvoice/(:any)','SalesController::downloadInvoice/$1');
         $routes->post('sales/delete/(:any)','SalesController::delete/$1');
         $routes->post('sales/active/(:any)','SalesController::active/$1');
           

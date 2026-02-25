@@ -18,11 +18,20 @@ class CustomerOrderModel extends Model
                     ur.name as customerName,
                     ur.phone as customerPhone,
                     ur.email as customerEmail,
+                    sa.full_name as shipping_full_name,
+                    sa.phone as shipping_phone,
+                    sa.address_line1 as shipping_address_line1,
+                    sa.address_line2 as shipping_address_line2,
+                    sa.city as shipping_city,
+                    sa.state as shipping_state,
+                    sa.postal_code as shipping_postal_code,
+                    sa.country as shipping_country,
                     coi.id as saleId,coi.price as unit_price,coi.qty as quantity,coi.subtotal as total')
                     ->join('customer_orders_items as coi','coi.customer_order_id = co.id')
                     ->join('product_management as pm','coi.product_id = pm.id')
                     ->join('products as p','p.id = pm.product_id')
                     ->join('usersregistrations as ur','ur.id = co.user_id')
+                    ->join('shipping_addresses as sa','sa.id = co.address_id')
                     ->orderBy('coi.id','DESC');
                     if($searchInput) {
                         $builder->groupStart();

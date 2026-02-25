@@ -58,6 +58,11 @@ class SettingsController extends Controller{
         }else{
             $postData['order_status_mail_notification'] = 'off';
         }
+        if(isset($postData['invoice_type'])){
+            $postData['invoice_type'] = 'on';
+        }else{
+            $postData['invoice_type'] = 'off';
+        }
         foreach($postData as $key => $value){
 
             saveSettings($key,$value);

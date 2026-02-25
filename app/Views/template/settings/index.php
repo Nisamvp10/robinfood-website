@@ -275,6 +275,10 @@
                             <input class="form-check-input" <?= (getappdata('order_status_mail_notification') == 'on' ? 'checked' : ''); ?> name="order_status_mail_notification" type="checkbox" id="order_status_mail_notification">
                             <label class="form-check-label" for="order_status_mail_notification">Order Status Mail Notification</label>
                         </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" <?= (getappdata('invoice_type') == 'on' ? 'checked' : ''); ?> name="invoice_type" type="checkbox" id="invoice_type">
+                            <label class="form-check-label" for="invoice_type">Invoice Auto Download</label>
+                        </div>
                         </div>
 
                         <div class="flex justify-end"><button id="submitBtn" class="bg-primary-600 rounded hover:bg-primary-700 text-white px-4 py-2 rounded-md flex items-center transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save mr-1">

@@ -438,7 +438,7 @@ function renderInfo(products) {
                         </select>
                        </div>
                        <div class="p-2 w-100">
-                            <button id="downloadInvoice" class="flex items-center space-x-2 float-right px-4 py-2 bg-green-600 text-white !rounded-lg hover:bg-green-700">  Download Invoice</button>
+                            <button id="downloadInvoice" onclick="downloadInvoice()"  class="flex items-center space-x-2 float-right px-4 py-2 bg-green-600 text-white !rounded-lg hover:bg-green-700">  Download Invoice</button>
                        </div>
                     </div>
 
@@ -541,3 +541,9 @@ document.addEventListener('change', async function (e) {
         })
     }
 })
+
+function downloadInvoice() {
+    let orderId = $('#orderId').val();
+    window.location.href = App.getSiteurl() + 'admin/downloadInvoice/' + orderId;
+
+}  

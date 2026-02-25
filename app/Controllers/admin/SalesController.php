@@ -9,6 +9,8 @@ use App\Models\PurchaseOrderItemModel;
 use App\Models\CustomerOrderModel;
 use App\Models\CustomerOrderItemsModel;
 use App\Models\UsersregistrationsModel;
+use Mpdf\Mpdf;
+
 class SalesController extends Controller {
     protected $productModel;
     protected $salesModel;
@@ -548,5 +550,80 @@ public function save()
         $emailService->setSubject($subject);
         $emailService->setMessage(view('frontend/email/notificationMail', compact('order', 'user','messages','subject')));
         $emailService->send();
+    }
+
+    public function downloadInvoice($id) {
+        $orderId = decryptor($id);
+        $purchaseInvoice = $this->customerOrderModel->salesHistory(null,null,null,null,$orderId);
+
+        $purchaseHistory = [];
+        $invoiceNo = '';
+        foreach ($purchaseInvoice as &$purchase) {
+            $purchaseOrderId = $purchase['orderId'];
+            if(!isset($purchaseHistory[$purchaseOrderId])) {
+                $invoiceNo = $purchase['order_number'];
+                $purchaseHistory[$purchaseOrderId] = [
+                    'orderId'   => encryptor($purchaseOrderId),
+                    'inoicenumber'  => $purchase['order_number'],
+                    'orderDate'     => $purchase['orderDate'],
+                    'payment'       => $purchase['payment_status'],
+                    'orderStatus'   => $purchase['status'],
+                    'paymentMethod' => $purchase['payment_method'],
+                    'note'          => '',
+                    'tax'           => $purchase['tax'],
+                    'customer'      => $purchase['customerName'],
+                    'phone'         => $purchase['customerPhone'],
+                    'email'         => $purchase['customerEmail'],
+                    'totalAmount'  => $purchase['total_amount'],
+                    'shippingAddress' => json_encode([
+                    'name' => $purchase['shipping_full_name'],
+                    'phone' => $purchase['shipping_phone'],
+                    'address' => $purchase['shipping_address_line1'].','.$purchase['shipping_city'].', '.$purchase['shipping_state'].', '.$purchase['shipping_postal_code'].', '.$purchase['shipping_country'],
+                    ]),
+                    'items'         => []
+                ];
+                if(!empty($purchase['product_title'])) {
+                    $purchaseHistory[$purchaseOrderId]['items'][] = [
+                        'product'   => $purchase['product_title'],
+                        'sku'       => $purchase['sku'],
+                        'price'     => $purchase['unit_price'],
+                        'quantity'  => $purchase['quantity'],
+                        'total'     => $purchase['total'],
+                    ];
+                }
+            }else{
+                if(!empty($purchase['product_title'])) {
+                    $purchaseHistory[$purchaseOrderId]['items'][] = [
+                        'product'   => $purchase['product_title'],
+                        'sku'       => $purchase['sku'],
+                        'price'     => $purchase['unit_price'],
+                        'quantity'  => $purchase['quantity'],
+                        'total'     => $purchase['total'],
+                    ];
+                }
+            }
+        }
+
+        $result = array_values($purchaseHistory);
+
+         $mpdf = new Mpdf([
+            'mode' => 'utf-8',
+            'format' => 'A4',
+            'orientation' => 'P',
+            'default_font_size' => 10,
+            'default_font' => 'dejavusans',
+        ]);
+
+        $html = view('admin/sales/invoice', compact('result'));
+        
+         $mpdf->WriteHTML($html);
+
+        if (ob_get_length()) {
+            ob_end_clean();
+        }
+
+        $invType = ( getappdata('invoice_type') == 'on') ? 'D' : 'I';
+        $mpdf->Output("invoice_$invoiceNo.pdf", $invType);
+        exit;
     }
 }

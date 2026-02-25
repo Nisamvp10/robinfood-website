@@ -5,17 +5,25 @@ use App\Models\UserModel;
 use App\Models\RoleModel;
 use CodeIgniter\Controller;
 use App\Models\ProductModel;
-use App\Models\ServiceModel;;
+use App\Models\ServiceModel;
+use App\Models\CustomerOrderModel;
+use App\Models\ProductManageModel;
 
 class AuthController extends Controller {
     protected $userModel;
     protected $roleModel;
     protected $serviceModel;
+    protected $productModel;
+    protected $customerOrderModel;
+    protected $productManagementModel;
     function __construct()
     {
         $this->userModel = new UserModel();
         $this->roleModel = new RoleModel();
         $this->serviceModel = new ServiceModel();
+        $this->productModel = new ProductModel();
+        $this->customerOrderModel = new CustomerOrderModel();
+        $this->productManagementModel = new ProductManageModel();
     }
 
     function login() {
@@ -27,14 +35,17 @@ class AuthController extends Controller {
         $page = "Dashboard";
         $serviceCount = $this->serviceModel->where(['status' => 1])->countAllResults() ?? 0 ;
         $memberCount = $this->userModel->where(['role !=' => 1,'status' => 'approved'])->countAllResults() ?? 0 ;
+        $productCount = $this->productModel->where(['status' => 1])->countAllResults() ?? 0 ;
+        $salesItemCount = $this->productManagementModel->where(['product_status' => 1])->countAllResults() ?? 0 ;
+        $orderCount = $this->customerOrderModel->countAllResults() ?? 0 ;
        if(session()->get('user_data')['role'] == 6)
        {
             //echo $this->productInfoModel->getLastQuery();
 
-            return view('admin/dashboard',compact('page','serviceCount','memberCount'));
+            return view('admin/dashboard',compact('page','serviceCount','memberCount','productCount'));
 
        }else{
-            return view('admin/dashboard',compact('page','serviceCount','memberCount'));
+            return view('admin/dashboard',compact('page','serviceCount','memberCount','productCount','orderCount','salesItemCount'));
 
        }
     }

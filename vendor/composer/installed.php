@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/appstarter',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '31d57e721aa66b9dbb86e53802e9070f38c37f5b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'codeigniter4/appstarter' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '31d57e721aa66b9dbb86e53802e9070f38c37f5b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -65,9 +65,9 @@
             'dev_requirement' => true,
         ),
         'mpdf/mpdf' => array(
-            'pretty_version' => 'v8.2.6',
-            'version' => '8.2.6.0',
-            'reference' => 'dd30e3b01061cf8dfe65e7041ab4cc46d8ebdd44',
+            'pretty_version' => 'v8.2.7',
+            'version' => '8.2.7.0',
+            'reference' => 'b59670a09498689c33ce639bac8f5ba26721dab3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../mpdf/mpdf',
             'aliases' => array(),

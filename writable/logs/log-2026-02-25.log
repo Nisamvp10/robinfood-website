@@ -743,3 +743,829 @@ INFO - 2026-02-25 09:32:45 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2026-02-25 09:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2026-02-25 09:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2026-02-25 09:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:06:45 --> ErrorException: Undefined variable $searchInput
+in APPPATH\Controllers\admin\SalesController.php on line 556.
+ 1 APPPATH\Controllers\admin\SalesController.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $searchInput', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\admin\\SalesController.php', 556)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 11:28:57 --> mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id...', 0)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id...')
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id...')
+#3 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id...', Array, false)
+#4 D:\xamp\htdocs\robinfood\app\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\robinfood\app\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(NULL, NULL, NULL, NULL, false)
+#6 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDM...')
+#7 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-02-25 11:28:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 2 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:28:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 4 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:28:57 --> [Caused by] mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 5 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 11:29:39 --> mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id...', 0)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id...')
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id...')
+#3 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id...', Array, false)
+#4 D:\xamp\htdocs\robinfood\app\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\robinfood\app\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(NULL, NULL, NULL, NULL, false)
+#6 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDM...')
+#7 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-02-25 11:29:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 2 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:29:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 4 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:29:39 --> [Caused by] mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 5 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 11:29:41 --> mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id...', 0)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id...')
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id...')
+#3 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id...', Array, false)
+#4 D:\xamp\htdocs\robinfood\app\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\robinfood\app\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(NULL, NULL, NULL, NULL, false)
+#6 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDM...')
+#7 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-02-25 11:29:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 2 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:29:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 4 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 11:29:41 --> [Caused by] mysqli_sql_exception: Table 'robinfood.shipping_address' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `co`.`id` as `orderId`, `co`.`order_number`, `co`.`tax`, `co`.`address_id`, `co`.`sub_total`, `co`.`total_amount`, `co`.`payment_method`, `co`.`payment_status`, `co`.`status`, `co`.`created_at` as `orderDate`, `pm`.`id` as `productId`, `pm`.`product_title`, `p`.`sku`, `p`.`current_stock`, `ur`.`name` as `customerName`, `ur`.`phone` as `customerPhone`, `ur`.`email` as `customerEmail`, `sa`.`full_name` as `shipping_full_name`, `sa`.`phone` as `shipping_phone`, `sa`.`address_line1` as `shipping_address_line1`, `sa`.`address_line2` as `shipping_address_line2`, `sa`.`city` as `shipping_city`, `sa`.`state`, `sa`.`postal_code`, `sa`.`country`, `coi`.`id` as `saleId`, `coi`.`price` as `unit_price`, `coi`.`qty` as `quantity`, `coi`.`subtotal` as `total`
+FROM `customer_orders` as `co`
+JOIN `customer_orders_items` as `coi` ON `coi`.`customer_order_id` = `co`.`id`
+JOIN `product_management` as `pm` ON `coi`.`product_id` = `pm`.`id`
+JOIN `products` as `p` ON `p`.`id` = `pm`.`product_id`
+JOIN `usersregistrations` as `ur` ON `ur`.`id` = `co`.`user_id`
+JOIN `shipping_address` as `sa` ON `sa`.`id` = `co`.`address_id`
+ORDER BY `coi`.`id` DESC', [], false)
+ 5 APPPATH\Models\CustomerOrderModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\SalesController.php(557): App\Models\CustomerOrderModel->salesHistory(null, null, null, null, false)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:30:20 --> ErrorException: Undefined array key "shipping_state"
+in APPPATH\Controllers\admin\SalesController.php on line 567.
+ 1 APPPATH\Controllers\admin\SalesController.php(567): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shipping_state"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\admin\\SalesController.php', 567)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:30:47 --> ErrorException: Undefined array key "email"
+in APPPATH\Views\admin\sales\invoice.php on line 88.
+ 1 APPPATH\Views\admin\sales\invoice.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 88)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:31:01 --> ErrorException: Undefined array key "state"
+in APPPATH\Views\admin\sales\invoice.php on line 89.
+ 1 APPPATH\Views\admin\sales\invoice.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "state"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 89)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:45:11 --> ParseError: syntax error, unexpected string content "</tr>"
+in APPPATH\Views\admin\sales\invoice.php on line 164.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 3 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:46:34 --> ErrorException: Undefined variable $detail
+in APPPATH\Views\admin\sales\invoice.php on line 124.
+ 1 APPPATH\Views\admin\sales\invoice.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:46:55 --> ErrorException: Undefined array key "product_title"
+in APPPATH\Views\admin\sales\invoice.php on line 129.
+ 1 APPPATH\Views\admin\sales\invoice.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_title"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 129)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:47:14 --> ErrorException: Attempt to read property "product_title" on array
+in APPPATH\Views\admin\sales\invoice.php on line 129.
+ 1 APPPATH\Views\admin\sales\invoice.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product_title" on array', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 129)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:47:46 --> ErrorException: Attempt to read property "product_title" on array
+in APPPATH\Views\admin\sales\invoice.php on line 130.
+ 1 APPPATH\Views\admin\sales\invoice.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product_title" on array', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 130)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:47:58 --> ErrorException: Undefined array key "tax"
+in APPPATH\Views\admin\sales\invoice.php on line 134.
+ 1 APPPATH\Views\admin\sales\invoice.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tax"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 134)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:49:24 --> ErrorException: Attempt to read property "tax" on array
+in APPPATH\Views\admin\sales\invoice.php on line 134.
+ 1 APPPATH\Views\admin\sales\invoice.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tax" on array', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 134)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:49:45 --> ErrorException: Undefined variable $orderDetail
+in APPPATH\Views\admin\sales\invoice.php on line 155.
+ 1 APPPATH\Views\admin\sales\invoice.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orderDetail', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 155)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:58:36 --> ParseError: syntax error, unexpected token ";", expecting ")"
+in APPPATH\Views\admin\sales\invoice.php on line 161.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 3 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 11:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:02:54 --> ErrorException: Undefined array key "tasx"
+in APPPATH\Views\admin\sales\invoice.php on line 153.
+ 1 APPPATH\Views\admin\sales\invoice.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tasx"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:03:02 --> ErrorException: Undefined array key "tax"
+in APPPATH\Views\admin\sales\invoice.php on line 153.
+ 1 APPPATH\Views\admin\sales\invoice.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tax"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:03:03 --> ErrorException: Undefined array key "tax"
+in APPPATH\Views\admin\sales\invoice.php on line 153.
+ 1 APPPATH\Views\admin\sales\invoice.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tax"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(616): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:07:39 --> Error: Call to undefined function appdata()
+in APPPATH\Views\admin\sales\invoice.php on line 75.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 4 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:15:45 --> ErrorException: Undefined array key "order_id"
+in APPPATH\Views\admin\sales\invoice.php on line 76.
+ 1 APPPATH\Views\admin\sales\invoice.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "order_id"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:15:47 --> ErrorException: Undefined array key "order_id"
+in APPPATH\Views\admin\sales\invoice.php on line 76.
+ 1 APPPATH\Views\admin\sales\invoice.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "order_id"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:16:01 --> ErrorException: Undefined array key "payment_status"
+in APPPATH\Views\admin\sales\invoice.php on line 77.
+ 1 APPPATH\Views\admin\sales\invoice.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_status"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:16:16 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\admin\sales\invoice.php on line 78.
+ 1 APPPATH\Views\admin\sales\invoice.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 78)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:16:32 --> ErrorException: Undefined array key "payment_method"
+in APPPATH\Views\admin\sales\invoice.php on line 79.
+ 1 APPPATH\Views\admin\sales\invoice.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_method"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php', 79)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:16:57 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\admin\sales\invoice.php on line 83.
+ 1 APPPATH\Views\admin\sales\invoice.php(83): date('Y-m-d H:i:s', '2026-02-25 04:52:39')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:17:26 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\admin\sales\invoice.php on line 118.
+ 1 APPPATH\Views\admin\sales\invoice.php(118): date('Y-m-d H:i:s', '2026-02-25 04:52:39')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\admin\\sales\\invoice.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/sales/invoice', [], true)
+ 5 APPPATH\Controllers\admin\SalesController.php(617): view('admin/sales/invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\SalesController->downloadInvoice('dkNuYjhDQ2tnNDMyYjBNVGp6ak1Ldz09')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SalesController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:55:54 --> Error: Class "App\Models\ProductManagementModel" not found
+in APPPATH\Controllers\admin\AuthController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\admin\AuthController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 12:56:28 --> mysqli_sql_exception: Unknown column 'statuproduct_statuss' in 'where clause' in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\xamp\htdocs\robinfood\app\Controllers\admin\AuthController.php(39): CodeIgniter\Model->countAllResults()
+#6 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\AuthController->login()
+#7 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AuthController))
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-02-25 12:56:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'statuproduct_statuss' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = :statuproduct_statuss:', [...], false)
+ 2 SYSTEMPATH\Model.php(625): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\admin\AuthController.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 12:56:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'statuproduct_statuss' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = :statuproduct_statuss:', [...], false)
+ 4 SYSTEMPATH\Model.php(625): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\admin\AuthController.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-25 12:56:28 --> [Caused by] mysqli_sql_exception: Unknown column 'statuproduct_statuss' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `product_management`
+WHERE `statuproduct_statuss` = :statuproduct_statuss:', [...], false)
+ 5 SYSTEMPATH\Model.php(625): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\admin\AuthController.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-02-25 12:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 13:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

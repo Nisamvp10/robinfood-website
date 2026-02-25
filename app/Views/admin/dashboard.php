@@ -16,14 +16,14 @@
     <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all hover:shadow-md">
         <div class="flex items-start justify-between">
             <div>
-                <p class="text-gray-500 text-sm capitalize"><?=getappdata('services');?></p>
-                <h3 class="text-2xl font-semibold mt-1"><?= $serviceCount ?? 0 ?></h3>
+                <p class="text-gray-500 text-sm capitalize"><?='Products';?></p>
+                <h3 class="text-2xl font-semibold mt-1"><?= $productCount ?? 0 ?></h3>
                 <div class="flex items-center mt-2">
                     <span class="mr-1 text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up "><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
                     </span>
                     <!-- <span class="text-sm text-green-500">+ <?=0?> %</span> -->
-                    <span class="text-xs text-gray-400 ml-1 capitalize"><?=getappdata('services');?> Growth</span>
+                    <span class="text-xs text-gray-400 ml-1 capitalize"><?='Products';?> Growth</span>
                 </div>
             </div>
             <div class="p-3 rounded-full bg-blue-50">
@@ -34,8 +34,8 @@
     <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all hover:shadow-md">
         <div class="flex items-start justify-between">
             <div>
-                <p class="text-gray-500 text-sm">Feedback</p>
-                <h3 class="text-2xl font-semibold mt-1"><?= $feedback ?? 0 ?></h3>
+                <p class="text-gray-500 text-sm">Orders</p>
+                <h3 class="text-2xl font-semibold mt-1"><?= $orderCount ?? 0 ?></h3>
                 <div class="flex items-center mt-2">
                     <span class="mr-1 text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up "><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
@@ -53,14 +53,13 @@
     <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all hover:shadow-md">
         <div class="flex items-start justify-between">
             <div>
-                <p class="text-gray-500 text-sm apitalize"><?=getappdata('ct1');?></p>
-                <h3 class="text-2xl font-semibold mt-1"><?=getappdata('c1');?></h3>
+                <p class="text-gray-500 text-sm apitalize"><?='Sales Items';?></p>
+                <h3 class="text-2xl font-semibold mt-1"><?=$salesItemCount ?? 0?></h3>
                 <div class="flex items-center mt-2">
                     <span class="mr-1 text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up "><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
                     </span>
-                    <!-- <span class="text-sm text-green-500"><?= 0 ?></span> -->
-                    <span class="text-xs text-gray-400 ml-1"><?=getappdata('ct1');?> </span>
+                    <span class="text-xs text-gray-400 ml-1"><?='Sales Items';?> </span>
                 </div>
             </div>
             <div class="p-3 rounded-full bg-blue-50">
@@ -107,19 +106,23 @@
                     <div class="font-medium text-blue-800">Banner List</div>
                     <div class="text-sm text-blue-600">Create a new Banner </div>
                 </a>
-                <a href="<?=base_url('admin/news');?>" class=" w-full d-block text-left p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors border border-green-200">
-                    <div class="font-medium text-green-800">News / Blog</div>
-                    <div class="text-sm text-green-600 ">Add a new News or Blog</div>
+                <a href="<?=base_url('admin/all-products');?>" class=" w-full d-block text-left p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors border border-green-200">
+                    <div class="font-medium text-green-800">Products</div>
+                    <div class="text-sm text-green-600 ">Add a new Products</div>
                 </a>
+                <?php   
 
-                <a  href="<?=base_url('admin/feedback');?>" class=" w-full d-block text-left p-3 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors border border-purple-200">
-                    <div class="font-medium text-purple-800">Feedback</div>
-                    <div class="text-sm text-purple-600">Create  Feedback</div>
+                if(haspermission('','product_management')) { 
+                ?>
+                  <a  href="<?=base_url('admin/'.slugify(getappdata('product_management')));?>" class=" w-full d-block text-left p-3 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors border border-purple-200">
+                    <div class="font-medium text-purple-800"><?=ucwords(str_replace('_',' ',getappdata('product_management')))?></div>
+                    <div class="text-sm text-purple-600">Create New <?=ucwords(str_replace('_',' ',getappdata('product_management')))?></div>
                 </a>
+                <?php } ?>
 
-                <a href="<?=base_url('admin/').slugify(getappdata('industries'));?>" class=" w-full d-block text-left p-3 rounded-lg bg-urange-50 hover:bg-orange-100 transition-colors border border-urange-200">
-                    <div class="font-medium text-orange-800"><?= getappdata('industries') ?></div>
-                    <div class="text-sm text-orange-600">Create  new <?= getappdata('industries') ?></div>
+                <a href="<?=base_url('admin/sales');?>" class=" w-full d-block text-left p-3 rounded-lg bg-urange-50 hover:bg-orange-100 transition-colors border border-urange-200">
+                    <div class="font-medium text-orange-800">Sales</div>
+                    <div class="text-sm text-orange-600">Create  new Sales</div>
                 </a>
             </div>
         </div>
