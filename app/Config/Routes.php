@@ -61,7 +61,7 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post('purachse/save','InventoryController::save');
         $routes->post('purachse/update','InventoryController::updateSave');
         $routes->post('inventory-list','InventoryController::list');
-        $routes->post('purchase-info','admin\InventoryController::list');
+        $routes->post('purchase-info','InventoryController::list');
         $routes->get('inventory/edit/(:any)','InventoryController::edit/$1');
         $routes->post('get-product-price','InventoryController::getProductPrice');
         $routes->post('purchase/getLastPurchasePrice','InventoryController::getLastPurchasePrice');
@@ -128,6 +128,19 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post(slugify(getappdata('product_management')).'/delete-gallery/(:any)','productmanagementController::glleryDelete/$1');
         $routes->post(slugify(getappdata('product_management')).'/products/(:any)','productmanagementController::getProductBycategory/$1');
         $routes->post(slugify(getappdata('product_management')).'/get-products-info/(:any)','productmanagementController::productPurchaseDetail/$1');
+        //users or Clients
+        $routes->get(slugify(getappdata('clients')),'ClientsController::index');
+        $routes->post(slugify(getappdata('clients')).'/list','ClientsController::list');
+        $routes->post(slugify(getappdata('clients')).'/delete/(:any)','ClientsController::delete/$1');
+        $routes->post(slugify(getappdata('clients')).'/active/(:any)','ClientsController::active/$1');
+        //sales
+        $routes->get('sales','SalesController::index');
+        $routes->post('sales-list','SalesController::list');
+        $routes->post('sale-info','SalesController::list');
+        $routes->post('order-update','SalesController::orderUpdate');
+        $routes->post('payment-update','SalesController::paymentUpdate');
+        $routes->post('sales/delete/(:any)','SalesController::delete/$1');
+        $routes->post('sales/active/(:any)','SalesController::active/$1');
           
 });
 $routes->group('', ['filter' => 'auth'], function($routes)
@@ -217,9 +230,23 @@ $routes->post('cart/update', 'CartController::update');
 $routes->post('cart/getMyCartItems', 'CartController::getMyCartItems');
 //checkout 
 $routes->get('checkout','CheckoutController::index');
+$routes->post('cart/checkout-items', 'CartController::getMyCheckoutItems');
 $routes->get('terms-conditions','CommonController::terms');
 $routes->get('refund-and-cancellation','CommonController::refundcancellation');
 $routes->get('privacy-policy','CommonController::privacyPolicy');
 $routes->get('shipping-policy','CommonController::shippingPolicy');
 //offers
 $routes->get('offers','OfferController::index');
+//Register
+$routes->post('register','AuthController::register');
+$routes->post('user-login','AuthController::login');
+//isLogin
+$routes->get('isLogin','CheckoutController::isLogin');
+//shipping address
+$routes->post('user/add-shipping-address','ShippingAddressController::save');
+$routes->post('shipping-address','ShippingAddressController::getShippingAddress');
+$routes->post('set-default-address','ShippingAddressController::setDefaultAddress');
+//place order
+$routes->post('place-order','CheckoutController::placeOrder');
+
+

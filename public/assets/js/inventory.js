@@ -347,7 +347,7 @@ function purchaseDetails(e) {
     if (orderId) {
         $.ajax({
             method: 'POST',
-            url: App.getSiteurl() + 'purchase-info',
+            url: App.getSiteurl() + 'admin/purchase-info',
             data: { id: orderId },
             dataType: 'json',
             success: function (response) {

@@ -20,25 +20,65 @@ class CartService
         $this->categoryModel = new CategoryModel();
         $this->productManageModel = new ProductManageModel();
     }
-    private function getCart()
+    public function getMyCart()
     {
         $session = session();
-        $userId  = $session->get('user_id');
+
+        $user = $session->get('user');
+        $userId = 0;
+
+        if ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true) {
+            $userId = $user['userId']; // use 'id' not userId
+        }
+
         $sessionId = $session->get('cart_session') ?? session_id();
         $session->set('cart_session', $sessionId);
 
         if ($userId) {
             $cart = $this->cartModel->where('user_id', $userId)->first();
-            if ($cart) return $cart;
+            if ($cart) {
+                return $cart;
+            }
         }
+
+        return $this->cartModel->where('session_id', $sessionId)->first();
+    }
+
+    private function getCart()
+    {
+        $session = session();
+
+        $user = $session->get('user');
+        $userId = 0;
+
+        if ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true) {
+            $userId = $user['userId']; // use 'id' not userId
+        }
+
+        $sessionId = $session->get('cart_session') ?? session_id();
+        $session->set('cart_session', $sessionId);
+
+        if ($userId) {
+            $cart = $this->cartModel->where('user_id', $userId)->first();
+            if ($cart) {
+                return $cart;
+            }
+        }
+
         return $this->cartModel->where('session_id', $sessionId)->first();
     }
 
      private function createCart()
     {
         $session = session();
+        $user = $session->get('user');
+        $userId = 0;
+
+        if ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true) {
+            $userId = $user['userId']; // use 'id' not userId
+        }
         return $this->cartModel->insert([
-            'user_id'    => $session->get('user_id'),
+            'user_id'    => $userId,
             'session_id' => $session->get('cart_session'),
             'created_at' => date('Y-m-d H:i:s')
         ]);
@@ -250,6 +290,20 @@ class CartService
         }
 
         return $cartItems;
+    }
+    public function deleteCart($data)
+    {
+        $cart = $this->getCart();
+        if (!$cart) {
+            return ['status' => false, 'message' => 'Cart not found'];
+        }
+
+        $this->cartModel->where('id', $cart['id'])->delete();
+
+        return [
+            'status' => true,
+            'message' => 'Cart deleted successfully'
+        ];
     }
 
 }

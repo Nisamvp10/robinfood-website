@@ -135,6 +135,15 @@ if (!empty($userData)){
                         </a>
                     </li>
                 <?php }
+
+                if(haspermission('','view_clients')) { ?>
+                    <li class="nav-item disp">
+                        <a class="nav-link <?= strpos(uri_string(), 'admin/clients') === 0  ? 'active' : '' ?>" href="<?= base_url('admin/'.slugify(getappdata('clients'))) ?>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"   class="lucide lucide-newspaper" aria-hidden="true">  <path d="M4 19h16a2 2 0 0 0 2-2V5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"></path>  <path d="M22 5v14a2 2 0 0 1-2 2H4"></path>  <path d="M16 8h2"></path>  <path d="M16 12h2"></path>  <path d="M16 16h2"></path>  <path d="M8 8h6v8H8z"></path></svg>
+                            <span><?=ucwords(getappdata('clients'))?></span>
+                        </a>
+                    </li>
+                <?php }
                    if(haspermission('','news')) { ?>
                     <li class="nav-item disp">
                         <a class="nav-link <?= strpos(uri_string(), 'admin/news') === 0  ? 'active' : '' ?>" href="<?= base_url('admin/news') ?>">

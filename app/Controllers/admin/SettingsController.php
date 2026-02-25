@@ -53,6 +53,11 @@ class SettingsController extends Controller{
         } else {
             $postData['site_mode'] = 'off';
         }
+        if(isset($postData['order_status_mail_notification'])){
+            $postData['order_status_mail_notification'] = 'on';
+        }else{
+            $postData['order_status_mail_notification'] = 'off';
+        }
         foreach($postData as $key => $value){
 
             saveSettings($key,$value);

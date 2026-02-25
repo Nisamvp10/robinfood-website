@@ -40,4 +40,5 @@ class Salesmodel extends Model {
         $result = $builder->get()->getResultArray();
         return $result;
     }
+    
 }

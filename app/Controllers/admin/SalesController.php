@@ -6,16 +6,25 @@ use App\Models\ProductModel;
 use App\Models\Salesmodel;
 use App\Models\SaleItemModel;
 use App\Models\PurchaseOrderItemModel;
+use App\Models\CustomerOrderModel;
+use App\Models\CustomerOrderItemsModel;
+use App\Models\UsersregistrationsModel;
 class SalesController extends Controller {
     protected $productModel;
     protected $salesModel;
     protected $saleItemModel;
     protected $purchaseItemModel;
+    protected $customerOrderModel;
+    protected $customerOrderItemsModel;
+    protected $userModel;
     function __construct() {
         $this->productModel = new ProductModel();
         $this->salesModel = new Salesmodel();
         $this->saleItemModel = new SaleItemModel();
         $this->purchaseItemModel = new PurchaseOrderItemModel();
+        $this->customerOrderModel = new CustomerOrderModel();
+        $this->customerOrderItemsModel = new CustomerOrderItemsModel();
+        $this->userModel = new UsersregistrationsModel();
     }
 
     public function index() {
@@ -209,7 +218,7 @@ public function save()
 
     function list() {
 
-        if(!hasPermission('','inventory')) {
+        if(!hasPermission('','sales')) {
             return $this->response->setJSON(['success' => false ,'message' => lang('Custom.permissionDenied')]);
         }
         if(!$this->request->isAJAX()) {
@@ -220,25 +229,30 @@ public function save()
         $startDate = $this->request->getPost('startDate');
         $endDate = $this->request->getPost('endDate');
         $orderId = decryptor($this->request->getPost('id'));
-        $purchaseInvoice = $this->salesModel->salesHistory($searchInput,$filter,$startDate,$endDate,$orderId);
+        $purchaseInvoice = $this->customerOrderModel->salesHistory($searchInput,$filter,$startDate,$endDate,$orderId);
+
         $purchaseHistory = [];
-        //echo  $this->purchaseModel->getLastQuery();
+        
         foreach ($purchaseInvoice as &$purchase) {
-            $purchaseOrderId = $purchase['id'];
+            $purchaseOrderId = $purchase['orderId'];
             if(!isset($purchaseHistory[$purchaseOrderId])) {
                 $purchaseHistory[$purchaseOrderId] = [
                     'orderId'   => encryptor($purchaseOrderId),
-                    'inoicenumber'  => $purchase['invoice_number'],
-                    'sale_date'     => $purchase['sale_date'],
+                    'inoicenumber'  => $purchase['order_number'],
+                    'sale_date'     => $purchase['orderDate'],
                     'payment'       => $purchase['payment_status'],
-                    'note'          => $purchase['note'],
-                    'customer'      => $purchase['customer_name'],
+                    'orderStatus'   => $purchase['status'],
+                    'paymentMethod' => $purchase['payment_method'],
+                    'note'          => '',
+                    'customer'      => $purchase['customerName'],
+                    'phone'         => $purchase['customerPhone'],
+                    'email'         => $purchase['customerEmail'],
                     'totalAmount'  => $purchase['total_amount'],
                     'items'         => []
                 ];
-                if(!empty($purchase['product_name'])) {
+                if(!empty($purchase['product_title'])) {
                     $purchaseHistory[$purchaseOrderId]['items'][] = [
-                        'product'   => $purchase['product_name'],
+                        'product'   => $purchase['product_title'],
                         'sku'       => $purchase['sku'],
                         'price'     => $purchase['unit_price'],
                         'quantity'  => $purchase['quantity'],
@@ -246,9 +260,9 @@ public function save()
                     ];
                 }
             }else{
-                if(!empty($purchase['product_name'])) {
+                if(!empty($purchase['product_title'])) {
                     $purchaseHistory[$purchaseOrderId]['items'][] = [
-                        'product'   => $purchase['product_name'],
+                        'product'   => $purchase['product_title'],
                         'sku'       => $purchase['sku'],
                         'price'     => $purchase['unit_price'],
                         'quantity'  => $purchase['quantity'],
@@ -461,4 +475,78 @@ public function save()
         ]);
     }
 
+
+    //paymentUpdate 
+    public function paymentUpdate() {
+        if (!$this->request->isAJAX()) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => lang('Custom.invalidRequest')
+            ]);
+        }
+
+        $orderId = decryptor($this->request->getPost('orderId'));
+        $orderStatus = $this->request->getPost('orderStatus');
+        $paymentStatus = $this->request->getPost('paymentStatus');
+
+        $this->customerOrderModel->update($orderId, [
+            'payment_status' => ($orderStatus == 'pending') ? 1 : (($paymentStatus == 'paid') ? 2 : (($paymentStatus == 'failed') ? 3 : 4)),
+        ]);
+        $this->mailnotification($orderId,['type' => 'payment','status' => $paymentStatus]);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Order status updated to '.$paymentStatus.' successfully'
+        ]);
+    }
+    
+    //orderUpdate 
+    public function orderUpdate() {
+        if (!$this->request->isAJAX()) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => lang('Custom.invalidRequest')
+            ]);
+        }
+
+        $orderId = decryptor($this->request->getPost('orderId'));
+        $orderStatus = $this->request->getPost('orderStatus');
+        $paymentStatus = $this->request->getPost('paymentStatus');
+
+        $this->customerOrderModel->update($orderId, [
+            'status' => ($orderStatus == 'pending') ? 1 : (($orderStatus == 'confirmed') ? 2 : (($orderStatus == 'cancelled') ? 3 : 4)),
+            //'payment_status' => $paymentStatus
+        ]);
+        $this->mailnotification($orderId,['type' => 'order','status' => $orderStatus]);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Order status updated to '.$orderStatus.' successfully'
+        ]);
+    }
+
+    private function mailnotification($order_id,$mailType) {
+        if(getappdata('order_status_mail_notification') == 'off') {
+            return false;
+        }
+        $emailService = \Config\Services::email();
+        $order = $this->customerOrderModel->find($order_id);
+        $order_items = $this->customerOrderItemsModel->where('customer_orders_items.customer_order_id', $order_id)->
+        join('product_management', 'product_management.id = customer_orders_items.product_id')
+        ->get()
+        ->getResultArray();
+        $user = $this->userModel->where('id', $order['user_id'])->get()->getRow();
+        $subject = '';
+        if($mailType['type'] == 'payment') {
+           $subject = 'Your Payment Status Has Been Updated to '.ucfirst($mailType['status']);
+           $messages = 'Your Payment Status Has Been Updated to '.ucfirst($mailType['status']);
+        }else{
+            $subject = "Update: Your Order is Now " . ucfirst($mailType['status']);
+            $messages = 'Your Order is Now ' . ucfirst($mailType['status']);
+        }
+        $emailService->setTo($user->email);
+        $emailService->setSubject($subject);
+        $emailService->setMessage(view('frontend/email/notificationMail', compact('order', 'user','messages','subject')));
+        $emailService->send();
+    }
 }

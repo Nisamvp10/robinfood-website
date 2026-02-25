@@ -23,15 +23,24 @@ class CartController extends Controller
         return view('frontend/cart/subtotal',compact('subtotal'));
     }
 
+    private function checkoutItemsHtml() {
+        $subtotal = $this->cart->getCartItems();
+        return view('frontend/cart/checkoutItems',compact('subtotal'));
+    }
+
     public function index() {
         $page = "Cart";
-       
         return view('frontend/cart/index', compact('page'));
     }
 
     public function getMyCartItems() {
         $cartItemhtml = $this->cartItemHtml();
         $subtotalhtml = $this->subtotalHtml();
+        return $this->response->setJSON(['res' =>$cartItemhtml,'subtotal'=>$subtotalhtml]);
+    }
+    public function getMyCheckoutItems() {
+        $cartItemhtml = $this->cartItemHtml();
+        $subtotalhtml = $this->checkoutItemsHtml();
         return $this->response->setJSON(['res' =>$cartItemhtml,'subtotal'=>$subtotalhtml]);
     }
 

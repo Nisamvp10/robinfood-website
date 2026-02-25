@@ -11,7 +11,7 @@
                 if(haspermission('','sales')) { ?>
                 <div>
                    <button id="salesBtn" 
-  class="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white !rounded-lg hover:bg-green-700">
+  class="flex items-center space-x-2 px-4 hidden py-2 bg-green-600 text-white !rounded-lg hover:bg-green-700">
   + New Sale
 </button>
                 </div>
@@ -50,10 +50,11 @@
                     </svg>
                     </div>
                     <select id="filerStatus" class="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none">
-                    <option value="all">Account Status</option>
+                    <option value="all">Payment Status</option>
+                    <option value="pending">Pending</option>
                     <option value="paid">Paid</option>
-                    <!-- <option value="on leave">On Leave</option> -->
-                    <option value="credit">Credit</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="unpaid">Unpaid</option>
                     </select>
                 </div>
             </div>
@@ -89,7 +90,7 @@
             function loadSales(search = '',startDate ='', endDate='') {
                 let filter = $('#filerStatus').val();
                 $.ajax({
-                    url: "<?= site_url('sales-list') ?>",
+                    url: "<?= site_url('admin/sales-list') ?>",
                     type: "POST",
                     data: { search: search,filter:filter,startDate:startDate,endDate:endDate },
                     dataType: "json",
@@ -126,6 +127,7 @@
                                     <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sale Date</th>
                                     <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
                                     <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment Status</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order Status</th>
                                     <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Items</th>
                                     <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Amount</th>
                                     <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
@@ -137,7 +139,7 @@
                     paginationSales.forEach(product => {
                        
                 let joinedDate = new Date(product.sale_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-
+                        let orderStatus = product.orderStatus == 'pending' ? `bg-yellow-100 text-yellow-800` : product.orderStatus == 'confirmed' ? `bg-green-100 text-green-800` : product.orderStatus == 'delivered' ? `bg-blue-100 text-blue-800` : product.orderStatus == 'cancelled' ? `bg-red-100 text-red-800` : `bg-gray-100 text-gray-800`;
                         html += `
                             <tr class="hover:bg-gray-50">
                              <td class="px-2 py-2 whitespace-nowrap border border-gray-300">
@@ -156,7 +158,11 @@
                                     <div class="text-sm text-gray-900">${product.customer}</div>
                                 </td>
                                 <td class="px-2 py-2 whitespace-nowrap  border border-gray-300">
-                                    <div class="text-sm text-gray-900 capitalize">${product.payment == 'paid' ? `<span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Paid</span>` :`<span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">Credit</span>`}</div>
+                                    <div class="text-sm text-gray-900 capitalize">${product.payment == 'paid' ? `<span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Paid</span>` :`<span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">${product.payment}</span>`}</div>
+                                </td>
+                                <td class="px-2 py-2 whitespace-nowrap  border border-gray-300">
+                                        
+                                    <div class="text-sm text-gray-900 capitalize"><span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full ${orderStatus}">${product.orderStatus}</span></div>
                                 </td>
                                  <td class="px-2 py-2 relative border border-gray-300">
                                    <div class="text-xs text-gray-500"> `;

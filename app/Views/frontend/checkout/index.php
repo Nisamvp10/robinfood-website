@@ -59,13 +59,13 @@
 <div class="checkout-wrapper section-padding fix">
     <div class="container">
             <div class="row ">
-                <div class="col-lg-6">
+                <div class="col-lg-8  col-sm-12">
 
 
                     <!--  -->
                     <div id="accordion">
                         <div class="card mb-3">
-                            <button class="card-header border collapsed card-link bg-white" data-toggle="collapse" data-target="#collapseaddress">
+                            <button class="card-header border collapsed card-link bg-white d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#collapseaddress">
 
                                 <b class="header-title float-left">
                                     Shipping Info
@@ -76,13 +76,12 @@
                             <div id="collapseaddress" class="collapse show"
                                 data-parent="#accordion">
                                 <div class="card-body">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNewAddressModal"> Add to Address </button>
-                                    <div class="shippingAddress"></div>
+                                    <div id="shippingAddress"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-3">
-                            <button class="card-header  border collapsed card-link bg-white" data-toggle="collapse" data-target="#collapseTwo">
+                            <button class="card-header  border collapsed card-link bg-white d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#collapseTwo">
 
                                 <div class="header-title float-left">
                                     <b class="header-title float-left">
@@ -101,7 +100,7 @@
                         </div>
 
                         <div class="card">
-                            <button class="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseThree">
+                            <button class="card-header collapsed card-link d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#collapseThree">
 
                                 <b class="header-title float-left">
                                     Purchase History
@@ -143,8 +142,6 @@
                                                         <a class="badge label-success deleteOrder" href="<?= site_url('history-details/' . encryptor($myorder->id)); ?>"><i class="fa fa-eye"></i></a>
                                                     </td>
                                                 </tr>
-
-
                                         <?php
                                             }
                                         } ?>
@@ -155,7 +152,7 @@
                     </div>
                     <!--  -->
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4 col-sm-12">
                     <div class="" id="cartSubtotal"> </div>
                 </div>
             </div>
@@ -204,9 +201,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="form-row place-order">
-                    <button type="submit" class="theme-btn">Place order</button>
-                </div>
+        
             </div>
         </div>
     </div>
@@ -214,75 +209,16 @@
 
 
 
-<!--  -->
+    <!--  -->
 
-
-
-
-    <!-- Modal -->
-    <div class="modal fade"
-        id="addNewAddressModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="addNewAddressLabel"
-        aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-            <div class="modal-content">
-
-                <div class="modal-body">
-
-                    <form action="#" method="post">
-
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" name="address" rows="3" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="text" class="form-control" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>City</label>
-                            <input type="text" class="form-control" name="city">
-                        </div>
-
-                        <div class="form-group">
-                            <label>State</label>
-                            <input type="text" class="form-control" name="state">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Pincode</label>
-                            <input type="text" class="form-control" name="pincode">
-                        </div>
-
-                        <div class="text-right">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                Close
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                Save Address
-                            </button>
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
+    <?= view('modal/shippingAddressModal')?>
+    <?= view('modal/loginModal')?>
     <?= view('frontend/inc/footerLink') ?>
     <!-- REQUIRED JS ORDER -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="<?=base_url('public/assets/template/');?>assets/js/count.js"></script>
+    <script src="<?=base_url('public/assets/template/');?>assets/js/auth.js"></script>
+    <script src="<?=base_url('public/assets/template/');?>assets/js/checkout.js"></script>
 
 <script>
     mycart();
@@ -290,7 +226,7 @@
     function mycart(){
       
         $.ajax({
-            url: "<?=base_url('cart/getMyCartItems');?>",
+            url: "<?=base_url('cart/checkout-items');?>",
             method: "POST",
             success: function (response) {
                 $('#cartItems').html(response.res);
@@ -356,4 +292,54 @@ document.addEventListener('click', async (e) => {
 });
 
 
+
+</script>
+<!-- intlTelInput CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+<!-- intlTelInput JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<!-- Utils (required for validation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+<script>
+$(document).ready(function () {
+    const input = document.querySelector("#shipping_phone") ?? null;
+    if (!input) return;
+    // Initialize intlTelInput and store instance in `iti`
+    const iti = window.intlTelInput(input, {
+        separateDialCode: true,
+        initialCountry: "in",
+        preferredCountries: ["in"],
+        nationalMode: false,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    const errorMsg = $("#error-msg");
+    const validMsg = $("#valid-msg");
+
+    function reset() {
+        errorMsg.hide();
+        validMsg.hide();
+    }
+
+    input.addEventListener('blur', function () {
+        reset();
+        if (input.value.trim()) {
+            if (iti.isValidNumber()) {
+                const countryData = iti.getSelectedCountryData();
+                if (countryData.iso2 === "in") {
+                    validMsg.show();
+                    $("#phone_country_code").val(countryData.dialCode);
+                } else {
+                    errorMsg.text("Only Indian (+91) numbers allowed.").show();
+                }
+            } else {
+                errorMsg.text("Invalid number").show();
+            }
+        }
+    });
+
+    input.addEventListener('change', reset);
+    input.addEventListener('keyup', reset);
+});
 </script>
