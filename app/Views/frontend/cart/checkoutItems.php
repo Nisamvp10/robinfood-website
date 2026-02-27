@@ -1,7 +1,7 @@
 <?php
     $couponDiscount = 0;
 
-    if($cartdata) {
+    if(isset($cartdata) && $cartdata != null) {
         $couponDiscount = ($cartdata['coupon_discount'] ==0)?0:$cartdata['coupon_discount'] ?? 0;
     }
     $amountAmt = 0;
