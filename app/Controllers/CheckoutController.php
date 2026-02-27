@@ -78,7 +78,7 @@ class CheckoutController extends Controller
         $user = session()->get('user');
         $status = ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true);
         $minimumOrderAmount = getappdata('minimum_order_amount');
-        $totalAmount = 0;
+        $itemSum = 0;
         $tax = getappdata('tax');
 
         if ($status) {
@@ -101,11 +101,13 @@ class CheckoutController extends Controller
                 ]);
             }
             foreach($cartItems as $item){
-                $totalAmount += $item['subtotal'];
+                $itemSum += $item['subtotal'];
             }
             $coupenDiscount = ($cart['coupon_discount'] !=0)?$cart['coupon_discount']:0;
-            $taxAmount = round($totalAmount * ($tax / 100));
-            $totalAmount = $totalAmount + $taxAmount - $coupenDiscount; 
+            $subTotal  = $itemSum - $coupenDiscount; 
+            $taxAmount = round($subTotal * ($tax / 100));
+         
+            $totalAmount = $subTotal + $taxAmount; 
             if($totalAmount < $minimumOrderAmount){
                 return $this->response->setJSON([
                     'success' => false,
@@ -121,11 +123,11 @@ class CheckoutController extends Controller
             $orderData = [
                 'user_id' => $user['userId'],
                 'order_number' => $this->generateOrderNumber(),
-                'tax' => $tax,
+                'tax' => $taxAmount,
                 'coupen_code_id' => $cart['couponcode_id'],
                 'discount' => $cart['coupon_discount'],
                 'address_id' => $address_id,
-                'sub_total' => $totalAmount,
+                'sub_total' => $itemSum,
                 'total_amount' => $totalAmount,
                 'payment_method' => $payment_method,
                 'coupon_id' => $cart['couponcode_id'],
@@ -134,7 +136,7 @@ class CheckoutController extends Controller
                 'status' => 'pending',
                 'created_at' => date('Y-m-d H:i:s')
             ];
-            
+            //print_r($orderData); exit();
             $order = $this->customerOrderModel->insert($orderData);
             if($order){
                 $order_id = $this->customerOrderModel->insertID();

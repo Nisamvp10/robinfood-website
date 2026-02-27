@@ -73,12 +73,17 @@ class CartService
         if (!$sessionId) return;
 
         // Session cart
-        $sessionCart = $this->cartModel->where('session_id', $sessionId)->where('user_id', 0)->first();
+        $sessionCart = $this->cartModel
+            ->where('session_id', $sessionId)
+            ->where('user_id', 0)
+            ->first();
 
         if (!$sessionCart) return;
 
         // User cart
-        $userCart = $this->cartModel->where('user_id', $userId)->first();
+        $userCart = $this->cartModel
+            ->where('user_id', $userId)
+            ->first();
 
         // If user has no cart → assign session cart
         if (!$userCart) {
@@ -91,11 +96,16 @@ class CartService
         }
 
         // Merge Items
-        $sessionItems = $this->itemModel->where('cart_id', $sessionCart['id'])->findAll();
+        $sessionItems = $this->itemModel
+            ->where('cart_id', $sessionCart['id'])
+            ->findAll();
 
         foreach ($sessionItems as $sItem) {
 
-            $existing = $this->itemModel->where('cart_id', $userCart['id'])->where('product_id', $sItem['product_id'])->first();
+            $existing = $this->itemModel
+                ->where('cart_id', $userCart['id'])
+                ->where('product_id', $sItem['product_id'])
+                ->first();
 
             if ($existing) {
 
@@ -383,7 +393,6 @@ class CartService
         if($total < $coupon['minimumShopping']){
             return ['status' => false, 'message' => 'Minimum shopping amount is '.$coupon['minimumShopping']];
         }
-        
         $discount = ($coupon['discount_type'] == 2) ? $total * ($coupon['discount'] / 100) : $coupon['discount'];
         //the maximum_discount_amount discount is limited 500 the discount graterthan 500 then set 500
         if($coupon['maximum_discount_amount'] < $discount){

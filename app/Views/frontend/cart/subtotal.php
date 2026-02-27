@@ -18,7 +18,7 @@
                         <p>Subtotal</p>
                         <p class="cart_amount"><?= money_format_custom($amountAmt) ?></p>
                     </div>
-                    <div class="cart_subtotal d-flex align-items-center justify-content-between">
+                    <div class="cart_subtotal d-flex align-items-center justify-content-between d-none">
                         <p>Tax</p>
                         <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
                     </div>
@@ -30,7 +30,7 @@
                         </div>
                         
 
-                    <div class="cart-subtotal">
+                    <div class="cart-subtotal d-none">
                         <p>Total</p>
                         <p class="cart_amount"><?= money_format_custom($totalAmt) ?></p> 
                     </div>

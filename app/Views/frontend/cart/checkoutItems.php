@@ -11,7 +11,8 @@
             $amountAmt += $res['subtotal'];  
         }
     }    
-    $taxCalculate = round($amountAmt * ($taxAmt / 100));
+    $subtotalAmt = ($amountAmt - $couponDiscount);
+    $taxCalculate = round($subtotalAmt * ($taxAmt / 100));
     $totalAmt = $amountAmt + $taxCalculate - $couponDiscount;
     ?>
 

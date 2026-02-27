@@ -199,7 +199,7 @@ if(!empty($result)) {
                            
                             $i++;
                             $totalAmount += $detail['price'] * $detail['quantity'];
-                            $totalTax    = ($totalAmount * $orders['tax'] / 100);
+                            $totalTax    = ( $orders['tax']);
                            // $totalDiscountAmount = ($detail['discount'] / 100 *  $detail['price'] * $detail['quantity']);
                             //$totalDiscount += $totalDiscountAmount;
                                 } ?>
