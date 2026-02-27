@@ -99,8 +99,44 @@ document.addEventListener('click', async (e) => {
 
             btn.prop('disabled', false).html('Place Order');
         }
+    }
 
-
+    if (e.target.classList.contains('applyCoupon')) {
+        const couponCode = $('.couponcodeInput').val();
+        $('.is-invalid').removeClass('is-invalid');
+        $('.invalid-feedback').empty();
+        let btn = $('.applyCoupon');
+        btn.prop('disabled', true).html(
+            '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Applying...'
+        );
+        if (couponCode) {
+            $.ajax({
+                url: App.getSiteurl() + 'apply-coupon',
+                method: 'POST',
+                data: { coupon_code: couponCode },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        toastr.success(response.message);
+                        mycart();
+                    } else {
+                        if (response.errors) {
+                            $.each(response.errors, function (field, msg) {
+                                $('#' + field).addClass('is-invalid');
+                                $('#' + field + 'Error').text(msg.replaceAll('_', ' '));
+                            })
+                        }
+                        if (response.message) {
+                            toastr.error(response.message);
+                        }
+                    }
+                    btn.prop('disabled', false).html('Apply');
+                }
+            })
+        } else {
+            toastr.error('Please enter coupon code');
+            btn.prop('disabled', false).html('Apply');
+        }
     }
 })
 

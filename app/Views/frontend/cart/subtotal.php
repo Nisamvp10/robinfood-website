@@ -22,7 +22,7 @@
                         <p>Tax</p>
                         <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
                     </div>
-                       <div class="coupon-left mt-2">
+                       <div class="coupon-left mt-2 d-none">
                             <div class="coupon-input d-flex align-items-center">
                                 <input class="couponcodeInput" placeholder="Coupon code" class="h-auto " type="text">
                                 <button type="button" class="theme-btn style6 rounded-0 h-auto px-3 py-2">Apply</button>

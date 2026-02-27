@@ -1,4 +1,9 @@
 <?php
+    $couponDiscount = 0;
+
+    if($cartdata) {
+        $couponDiscount = ($cartdata['coupon_discount'] ==0)?0:$cartdata['coupon_discount'] ?? 0;
+    }
     $amountAmt = 0;
     $taxAmt = getappdata('tax');
     if($subtotal)   {
@@ -7,7 +12,7 @@
         }
     }    
     $taxCalculate = round($amountAmt * ($taxAmt / 100));
-    $totalAmt = $amountAmt + $taxCalculate;
+    $totalAmt = $amountAmt + $taxCalculate - $couponDiscount;
     ?>
 
 <div class="cart-checkout-wrapper w-100 mb-0 border w-100 mt-0" style="w-100">
@@ -18,15 +23,23 @@
                         <p>Subtotal</p>
                         <p class="cart_amount"><?= money_format_custom($amountAmt) ?></p>
                     </div>
-                    <div class="cart_subtotal d-flex align-items-center justify-content-between">
-                        <p>Tax</p>
-                        <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
-                    </div>
+                  
                        <div class="coupon-left mt-2">
-                            <div class="coupon-input d-flex align-items-center">
+                            <div class="coupon-input d-flex align-items-center mt-3 mb-3">
                                 <input class="couponcodeInput" placeholder="Coupon code" class="h-auto " type="text">
-                                <button type="button" class="theme-btn style6 rounded-0 h-auto px-3 py-2">Apply</button>
+                                <button type="button" class="theme-btn style6 applyCoupon rounded-0 h-auto px-3 py-2">Apply</button>
                             </div>
+                        </div>
+                        
+                        <?php if($couponDiscount > 0) { ?>
+                        <div class="cart_subtotal d-flex align-items-center justify-content-between">
+                            <p>Coupon Discount</p>
+                            <p class="cart_amount"><?= money_format_custom($couponDiscount) ?></p>
+                        </div>
+                        <?php } ?>
+                        <div class="cart_subtotal d-flex align-items-center justify-content-between mt-3 mb-3">
+                            <p>Tax</p>
+                            <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
                         </div>
                         
 

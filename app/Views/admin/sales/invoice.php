@@ -81,6 +81,7 @@ if(!empty($result)) {
         $grandTotal = $res['totalAmount'];
         $shippingAddress = json_decode($res['shippingAddress'], true);
         $orderDate = date('Y-m-d H:i:s',strtotime($orderDate));
+        $discount = $res['discount'];
     }
 }else{
     $orderId = '';
@@ -91,6 +92,7 @@ if(!empty($result)) {
     $grandTotal = '';
     $shippingAddress = '';
     $orderDate = '';
+    $discount = '';
 }?>
     <div class="head row d-flex" style=" display:block; border:1px red solid; text-align: center; font-weight: bold;font-size:18px;width:100%;">
         <div class="logo col-sm-8" style="width:340px;text-align:left;padding:0px;margin:0px;" >
@@ -212,10 +214,13 @@ if(!empty($result)) {
                                 <th id="total" style="text-align:right;" colspan="2">Tax :</th>
                                 <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($totalTax)?></td>
                                 </tr>
-                                <!-- <tr>
-                                <th id="total" style="text-align:right;" colspan="3">Discount :</th>
-                                <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($totalDiscount)?></td>
-                                </tr> -->
+                                <?php
+                                if($discount > 0){ ?>
+                                <tr>
+                                <th id="total" style="text-align:right;" colspan="2">Discount :</th>
+                                <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($discount)?></td>
+                                </tr>
+                                <?php } ?>
                                 <tr>
                                 <th id="total" style="text-align:right;" colspan="2">Total :</th>
                                 <td colspan="2" style="text-align:right;"><b>RS:  <?=money_format_custom($orders['totalAmount'])?></b></td>

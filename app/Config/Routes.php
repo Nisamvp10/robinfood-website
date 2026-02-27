@@ -142,6 +142,12 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->get('downloadInvoice/(:any)','SalesController::downloadInvoice/$1');
         $routes->post('sales/delete/(:any)','SalesController::delete/$1');
         $routes->post('sales/active/(:any)','SalesController::active/$1');
+        //coupen code
+        $routes->get('coupen-code','CoupenCodeController::index');
+        $routes->post('coupen-code/list','CoupenCodeController::list');
+        $routes->post('coupen-code/save','CoupenCodeController::save');
+        $routes->get('coupen-code/edit/(:any)','CoupenCodeController::getinfo/$1');
+        $routes->get('coupen-code/delete/(:any)','CoupenCodeController::delete/$1');
           
 });
 $routes->group('', ['filter' => 'auth'], function($routes)
@@ -249,5 +255,6 @@ $routes->post('shipping-address','ShippingAddressController::getShippingAddress'
 $routes->post('set-default-address','ShippingAddressController::setDefaultAddress');
 //place order
 $routes->post('place-order','CheckoutController::placeOrder');
+$routes->post('apply-coupon','CheckoutController::applyCoupon');
 
 

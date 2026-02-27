@@ -478,8 +478,14 @@ function renderInfo(products) {
             html += `</div>
 
                         <!-- Total Amount -->
+                          <div class="border-t border-gray-200 pt-1 mt-2 bg-gray-50 rounded-lg px-4 py-1 flex justify-end">
+                         <div class="text-xl font-[12px] text-gray-200"> Tax: ${product.tax}</div>
+                         </div>
+                           <div class="border-t border-gray-200 pt-1 mt-2 bg-gray-50 rounded-lg px-4 py-1 flex justify-end">
+                             <div class="text-xl font-[12px] text-gray-200"> Discount: ${product.discount}</div>
+                         </div>   
                         <div class="border-t border-gray-200 pt-4 mt-6 bg-gray-50 rounded-lg px-4 py-3 flex justify-end">
-                        <div class="text-xl font-bold text-gray-900">Total Amount RS: ${product.totalAmount}</div>
+                         <div class="text-xl font-bold text-gray-900">Total Amount RS: ${product.totalAmount}</div>
                         </div>
                     </div>
 

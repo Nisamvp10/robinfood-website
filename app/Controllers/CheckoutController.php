@@ -9,6 +9,7 @@ use App\Models\CustomerOrderItemsModel;
 use App\Models\UsersregistrationsModel;
 use App\Models\ProductModel;
 use App\Models\ProductManageModel;
+use App\Models\CouponcodeModel;
 
 class CheckoutController extends Controller
 {
@@ -19,6 +20,7 @@ class CheckoutController extends Controller
     protected $userModel;
     protected $productModel;
     protected $productManageModel;
+    protected $couponcodeModel;
     public function __construct()
     {
         $this->cart = new CartService();
@@ -28,6 +30,7 @@ class CheckoutController extends Controller
         $this->userModel = new UsersregistrationsModel();
         $this->productModel = new ProductModel();
         $this->productManageModel = new ProductManageModel();
+        $this->couponcodeModel = new CouponcodeModel();
     }
     public function index()
     {
@@ -100,8 +103,9 @@ class CheckoutController extends Controller
             foreach($cartItems as $item){
                 $totalAmount += $item['subtotal'];
             }
+            $coupenDiscount = ($cart['coupon_discount'] !=0)?$cart['coupon_discount']:0;
             $taxAmount = round($totalAmount * ($tax / 100));
-            $totalAmount = $totalAmount + $taxAmount;
+            $totalAmount = $totalAmount + $taxAmount - $coupenDiscount; 
             if($totalAmount < $minimumOrderAmount){
                 return $this->response->setJSON([
                     'success' => false,
@@ -118,11 +122,14 @@ class CheckoutController extends Controller
                 'user_id' => $user['userId'],
                 'order_number' => $this->generateOrderNumber(),
                 'tax' => $tax,
-                'coupen_code_id' => null,
+                'coupen_code_id' => $cart['couponcode_id'],
+                'discount' => $cart['coupon_discount'],
                 'address_id' => $address_id,
                 'sub_total' => $totalAmount,
                 'total_amount' => $totalAmount,
                 'payment_method' => $payment_method,
+                'coupon_id' => $cart['couponcode_id'],
+                'coupon_discount' => $coupenDiscount,
                 'payment_status' => 'pending',
                 'status' => 'pending',
                 'created_at' => date('Y-m-d H:i:s')
@@ -196,5 +203,39 @@ class CheckoutController extends Controller
         $emailService->setSubject('Order Placed');
         $emailService->setMessage(view('frontend/email/order_placed', compact('order', 'order_items','user','shippingAddress')));
         $emailService->send();
+    }
+    public function applyCoupon(){
+        if(!$this->request->isAJAX()){
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Invalid request',
+                'url' => base_url('checkout')
+            ]);
+        }
+        $rules = [
+            'coupon_code' => 'required'
+        ];
+        if(!$this->validate($rules)){
+            return $this->response->setJSON([
+                'success' => false,
+                'errors' => $this->validator->getErrors(),
+            ]);
+        }
+        $coupon_code = $this->request->getPost('coupon_code');
+        $coupon = $this->cart->couponCodeApply($coupon_code);
+        if($coupon['status'] == 'success'){
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => $coupon['message'],
+                'url' => base_url('checkout')
+            ]);
+        }else{
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => $coupon['message'],
+                'url' => base_url('checkout')
+            ]);
+        }
+        
     }
 }

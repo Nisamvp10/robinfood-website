@@ -51,7 +51,6 @@ $('#loginForm').on('submit', function (e) {
         contentType: false,
         dataType: 'json',
         success: function (response) {
-            console.log(response)
             if (response.success) {
                 window.location.href = response.url;
             } else {

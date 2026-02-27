@@ -24,8 +24,9 @@ class CartController extends Controller
     }
 
     private function checkoutItemsHtml() {
+        $cartdata = $this->cart->getMyCart();
         $subtotal = $this->cart->getCartItems();
-        return view('frontend/cart/checkoutItems',compact('subtotal'));
+        return view('frontend/cart/checkoutItems',compact('subtotal','cartdata'));
     }
 
     public function index() {
@@ -39,6 +40,7 @@ class CartController extends Controller
         return $this->response->setJSON(['res' =>$cartItemhtml,'subtotal'=>$subtotalhtml]);
     }
     public function getMyCheckoutItems() {
+        
         $cartItemhtml = $this->cartItemHtml();
         $subtotalhtml = $this->checkoutItemsHtml();
         return $this->response->setJSON(['res' =>$cartItemhtml,'subtotal'=>$subtotalhtml]);
