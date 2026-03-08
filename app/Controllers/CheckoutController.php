@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Services\CartService;
+use App\Services\PaymentGateway;
 use App\Models\CustomerOrderModel;
 use App\Models\ShippingAddressModel;
 use App\Models\CustomerOrderItemsModel;
@@ -10,10 +11,14 @@ use App\Models\UsersregistrationsModel;
 use App\Models\ProductModel;
 use App\Models\ProductManageModel;
 use App\Models\CouponcodeModel;
+//thi controller in controllers frond folder 
+use Razorpay\Api\Api;
+use App\Controllers\front\RazorpayController; 
 
 class CheckoutController extends Controller
 {
     protected CartService $cart;
+    protected PaymentGateway $paymentGateway;
     protected $customerOrderModel;
     protected $shippingAddressModel;
     protected $customerOrderItemsModel;
@@ -31,6 +36,7 @@ class CheckoutController extends Controller
         $this->productModel = new ProductModel();
         $this->productManageModel = new ProductManageModel();
         $this->couponcodeModel = new CouponcodeModel();
+        $this->paymentGateway = new PaymentGateway();
     }
     public function index()
     {
@@ -74,7 +80,7 @@ class CheckoutController extends Controller
 
     public function placeOrder() {
         $address_id = $this->request->getPost('address_id');
-        $payment_method = $this->request->getPost('payment_method') ?? 'cod';
+        $payment_method = $this->request->getPost('payment_method') ?? 'upi'; //cod
         $user = session()->get('user');
         $status = ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true);
         $minimumOrderAmount = getappdata('minimum_order_amount');
@@ -136,6 +142,27 @@ class CheckoutController extends Controller
                 'status' => 'pending',
                 'created_at' => date('Y-m-d H:i:s')
             ];
+            if($payment_method == 'upi'){
+               //$order = $this->paymentGateway->createOrder($totalAmount, 'INR', $orderData['order_number']);
+               $order = $this->paymentGateway->createOrder($totalAmount,$orderData['order_number']);
+
+                if(isset($order['id'])){
+
+                $orderData['razorpay_order_id'] = $order['id'];
+
+                $order_id = $this->customerOrderModel->insert($orderData);
+
+                return $this->response->setJSON([
+                    'success'=>true,
+                    'razorpay_order_id'=>$order['id'],
+                    'amount'=>$totalAmount * 100,
+                    'key'=>env('payment.keyId'),
+                    'order_id'=>$order_id
+                ]);
+
+                }
+            }
+            exit();       
             //print_r($orderData); exit();
             $order = $this->customerOrderModel->insert($orderData);
             if($order){
@@ -192,6 +219,41 @@ class CheckoutController extends Controller
             ]);
         }
     }
+
+    //verify 
+    public function verifyPayment()
+    {
+
+    $keySecret = env('payment.keySecret');
+
+    $payment_id = $this->request->getPost('razorpay_payment_id');
+    $order_id = $this->request->getPost('razorpay_order_id');
+    $signature = $this->request->getPost('razorpay_signature');
+
+    $generated_signature = hash_hmac(
+        'sha256',
+        $order_id . "|" . $payment_id,
+        $keySecret
+    );
+
+    if($generated_signature == $signature){
+
+    $this->customerOrderModel
+    ->where('razorpay_order_id',$order_id)
+    ->set([
+        'payment_status'=>'paid'
+    ])->update();
+
+    return $this->response->setJSON(['status'=>true]);
+
+    }else{
+
+    return $this->response->setJSON(['status'=>false]);
+
+    }
+
+    }
+    // close verify 
     private function sendOrderMail($order_id){
         $emailService = \Config\Services::email();
         $order = $this->customerOrderModel->find($order_id);

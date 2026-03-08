@@ -79,6 +79,50 @@ document.addEventListener('click', async (e) => {
                     dataType: 'json',
                     success: function (response) {
                         if (response.success) {
+
+                            if (response.razorpay_order_id) {
+                                alert(App.getSiteurl() + "/public/assets/template/assets/images/logo.png");
+                                var options = {
+
+                                    "key": response.key,
+                                    "amount": response.amount,
+                                    "currency": "INR",
+                                    "name": "Robin Food",
+                                    "description": "Order Payment",
+                                    "image": App.getSiteurl() + "/public/assets/template/assets/images/logo.png",
+                                    "order_id": response.razorpay_order_id,
+
+                                    "handler": function (payment) {
+                                        console.log(payment);
+
+                                        $.ajax({
+                                            url: App.getSiteurl() + 'verify-payment',
+                                            type: 'POST',
+                                            data: {
+                                                razorpay_payment_id: payment.razorpay_payment_id,
+                                                razorpay_order_id: payment.razorpay_order_id,
+                                                razorpay_signature: payment.razorpay_signature
+                                            },
+                                            success: function (res) {
+
+                                                window.location.href = App.getSiteurl() + 'order-success';
+
+                                            }
+                                        });
+
+                                    },
+
+                                    "theme": {
+                                        "color": "#3399cc"
+                                    }
+
+                                };
+
+                                var rzp1 = new Razorpay(options);
+                                rzp1.open();
+
+
+                            }
                             toastr.success(response.message);
                             btn.prop('disabled', false).html('Place Order');
                             mycart();

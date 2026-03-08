@@ -218,6 +218,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="<?=base_url('public/assets/template/');?>assets/js/count.js"></script>
     <script src="<?=base_url('public/assets/template/');?>assets/js/auth.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="<?=base_url('public/assets/template/');?>assets/js/checkout.js"></script>
 
 <script>

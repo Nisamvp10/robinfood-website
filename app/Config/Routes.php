@@ -256,5 +256,8 @@ $routes->post('set-default-address','ShippingAddressController::setDefaultAddres
 //place order
 $routes->post('place-order','CheckoutController::placeOrder');
 $routes->post('apply-coupon','CheckoutController::applyCoupon');
+$routes->post('verify-payment','CheckoutController::verifyPayment');
+// razarpay
+$routes->get('razorpay/create-order/(:any)','frond\RazorpayController::createOrder/$1');
 
 
