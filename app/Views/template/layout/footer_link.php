@@ -14,6 +14,7 @@
     App.init({
         'siteUrl' : '<?=base_url()?>'
     })
+    
         // Toggle sidebar on mobile
         document.querySelector('.toggle-sidebar').addEventListener('click', function() {
             document.querySelector('.sidebar').classList.toggle('show');

@@ -59,90 +59,153 @@ $('#addShippingAddressForm').on('submit', function (e) {
 
 document.addEventListener('click', async (e) => {
     if (e.target.classList.contains('checkoutBtn')) {
-        //FIRST CHECK IS LOGIN OR NOT
-        const isLogin = await fetch(App.getSiteurl() + '/isLogin');
-        const res = await isLogin.json();
+
         let btn = $('.checkoutBtn');
+
         btn.prop('disabled', true).html(
-            '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Placing Order...'
+            '<span class="spinner-border spinner-border-sm"></span> Placing Order...'
         );
-        if (res.status) {
-            //window.location.href = App.getSiteurl() + '/checkout';
-            //check any address select or not
-            const address = $('input[name="address_id"]:checked').val();
-            if (address) {
-                //place order
-                $.ajax({
-                    url: App.getSiteurl() + 'place-order',
-                    method: 'POST',
-                    data: { address_id: address },
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.success) {
 
-                            if (response.razorpay_order_id) {
-                                alert(App.getSiteurl() + "/public/assets/template/assets/images/logo.png");
-                                var options = {
+        try {
 
-                                    "key": response.key,
-                                    "amount": response.amount,
-                                    "currency": "INR",
-                                    "name": "Robin Food",
-                                    "description": "Order Payment",
-                                    "image": App.getSiteurl() + "/public/assets/template/assets/images/logo.png",
-                                    "order_id": response.razorpay_order_id,
+            /* LOGIN CHECK */
+            const isLogin = await fetch(App.getSiteurl() + '/isLogin');
+            const res = await isLogin.json();
 
-                                    "handler": function (payment) {
-                                        console.log(payment);
+            if (!res.status) {
 
-                                        $.ajax({
-                                            url: App.getSiteurl() + 'verify-payment',
-                                            type: 'POST',
-                                            data: {
-                                                razorpay_payment_id: payment.razorpay_payment_id,
-                                                razorpay_order_id: payment.razorpay_order_id,
-                                                razorpay_signature: payment.razorpay_signature
-                                            },
-                                            success: function (res) {
-
-                                                window.location.href = App.getSiteurl() + 'order-success';
-
-                                            }
-                                        });
-
-                                    },
-
-                                    "theme": {
-                                        "color": "#3399cc"
-                                    }
-
-                                };
-
-                                var rzp1 = new Razorpay(options);
-                                rzp1.open();
-
-
-                            }
-                            toastr.success(response.message);
-                            btn.prop('disabled', false).html('Place Order');
-                            mycart();
-                            // window.location.href = response.url;
-                        } else {
-                            toastr.error(response.message);
-                            btn.prop('disabled', false).html('Place Order');
-                        }
-                    }
-                })
-            } else {
-                toastr.error('Please select address');
+                $('#loginModal').modal('show');
                 btn.prop('disabled', false).html('Place Order');
+                return;
             }
 
-        } else {
-            $('#loginModal').modal('show');
+            /* ADDRESS CHECK */
+            const address = $('input[name="address_id"]:checked').val();
+
+            if (!address) {
+
+                toastr.error('Please select address');
+                btn.prop('disabled', false).html('Place Order');
+                return;
+            }
+
+            /* PLACE ORDER */
+            $.ajax({
+
+                url: App.getSiteurl() + 'place-order',
+                method: 'POST',
+                data: { address_id: address },
+                dataType: 'json',
+
+                success: function (response) {
+
+                    if (!response.success) {
+
+                        toastr.error(response.message);
+                        btn.prop('disabled', false).html('Place Order');
+                        return;
+                    }
+
+                    /* OPEN RAZORPAY */
+                    if (response.razorpay_order_id) {
+
+                        var options = {
+
+                            key: response.key,
+                            amount: response.amount,
+                            currency: "INR",
+                            name: "Robin Food",
+                            description: "Order Payment",
+                            image: App.getSiteurl() + "/public/assets/template/assets/images/logo.png",
+                            order_id: response.razorpay_order_id,
+
+                            handler: function (payment) {
+                                /* VERIFY PAYMENT */
+
+                                $.ajax({
+
+                                    url: App.getSiteurl() + 'verify-payment',
+                                    type: 'POST',
+                                    data: {
+                                        razorpay_payment_id: payment.razorpay_payment_id,
+                                        razorpay_order_id: payment.razorpay_order_id,
+                                        razorpay_signature: payment.razorpay_signature
+                                    },
+                                    dataType: 'json',
+
+                                    success: function (res) {
+                                        window.location.href = App.getSiteurl() + 'order-success/' + res.order_id;
+                                    },
+
+                                    error: function () {
+                                        toastr.error("Payment verification failed");
+
+                                        btn.prop('disabled', false).html('Place Order');
+
+                                    }
+
+                                });
+
+                            },
+
+                            modal: {
+
+                                ondismiss: function (res) {
+                                    //here set order cancel updation
+                                    toastr.error("Payment cancelled");
+                                    $.post(App.getSiteurl() + "cancel-order", { order_id: response.razorpay_order_id });
+                                    btn.prop('disabled', false).html('Place Order');
+
+                                }
+
+                            },
+
+                            theme: {
+                                color: "#3399cc"
+                            }
+
+                        };
+
+                        var rzp1 = new Razorpay(options);
+
+                        /* PAYMENT FAILED EVENT */
+
+                        rzp1.on('payment.failed', function (response) {
+
+                            console.log(response.error);
+
+                            toastr.error(response.error.description);
+
+                            btn.prop('disabled', false).html('Place Order');
+
+                        });
+
+                        rzp1.open();
+
+                    }
+
+                },
+
+                error: function () {
+
+                    toastr.error("Server error");
+
+                    btn.prop('disabled', false).html('Place Order');
+
+                }
+
+            });
+
+        } catch (error) {
+
+            console.log(error);
+
+            toastr.error("Something went wrong");
 
             btn.prop('disabled', false).html('Place Order');
+
         }
+
     }
 
     if (e.target.classList.contains('applyCoupon')) {

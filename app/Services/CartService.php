@@ -218,7 +218,9 @@ class CartService
         if (!$item) {
             return ['status' => false, 'message' => 'Item not found in cart'];
         }
-
+         if($cart['couponcode_id'] != null && $cart['coupon_discount'] != null){
+           $this->removeCoupon($cart);
+        }
         $this->itemModel->delete($item['id']);
 
         return [
@@ -279,6 +281,12 @@ class CartService
                 'subtotal' => $subtotal
             ]);
             $total += $subtotal;
+        }
+
+        //update coupon discount and coupon id in cart
+        //check cart couponcode_id and coupon_discount is not null
+        if(!empty($cart['couponcode_id']) && !empty($cart['coupon_discount'])){
+           $this->couponCodeApply($cart['couponcode_id'],$cart['id']);
         }
 
         return [
@@ -361,13 +369,18 @@ class CartService
             'message' => 'Cart deleted successfully'
         ];
     }
-    public function couponCodeApply($couponCode)
+    public function couponCodeApply($couponCode,$type = false)
     {
         $cart = $this->getCart();
         if (!$cart) {
             return ['status' => false, 'message' => 'Cart not found'];
         }
-        $coupon = $this->couponcodeModel->where(['coupencode'=> $couponCode, 'is_active' => 1])->first();
+        if($type == false){
+            $coupon = $this->couponcodeModel->where(['coupencode'=> $couponCode, 'is_active' => 1])->first();
+        }else{
+            $this->cartModel->update($cart['id'], ['couponcode_id' => null,'coupon_discount' => null]);
+            $coupon = $this->couponcodeModel->where(['id'=> $couponCode, 'is_active' => 1])->first();
+        }
         if (!$coupon) {
             return ['status' => false, 'message' => 'Coupon code not valid'];
         }
@@ -383,17 +396,18 @@ class CartService
         if($total < $coupon['minimumShopping']){
             return ['status' => false, 'message' => 'Minimum shopping amount is '.$coupon['minimumShopping']];
         }
-        
         $discount = ($coupon['discount_type'] == 2) ? $total * ($coupon['discount'] / 100) : $coupon['discount'];
         //the maximum_discount_amount discount is limited 500 the discount graterthan 500 then set 500
         if($coupon['maximum_discount_amount'] < $discount){
             $discount = $coupon['maximum_discount_amount'];
         }
+        
         //orderpurchsed history check the coupon is used by same user then return false
         $orderHistory = $this->cartModel->where(['couponcode_id' => $coupon['id'], 'user_id' => $cart['user_id']])->first();
         if($orderHistory){
             return ['status' => false, 'message' => 'Coupon code is already used'];
         }
+        
         //coupon valid from date to valid to date from date is coupon start date and to date is coupon end date
         if($coupon['validity_from'] <= date('Y-m-d') && $coupon['validity_to'] >= date('Y-m-d')){
             $discount = $discount;

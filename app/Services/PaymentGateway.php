@@ -18,9 +18,10 @@ class PaymentGateway {
     {
         $user = session()->get('user');
         $url = "https://api.razorpay.com/v1/orders";
+        // $url = "https://api.razorpay.com/v1/payouts";
 
         $data = [
-            "amount" => $amount * 100,
+            "amount" => round($amount * 100),
             "currency" => "INR",
             "receipt" => $receipt,
             "payment_capture" => 1

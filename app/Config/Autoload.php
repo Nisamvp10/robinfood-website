@@ -95,5 +95,5 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = ['url','form','auth','settings','common','language','moneyformat'];
+    public $helpers = ['url','form','auth','userauth','settings','common','language','moneyformat'];
 }

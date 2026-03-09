@@ -15565,10 +15565,10 @@ table {
 
 .table_page table tbody tr td.product_thumb .product-name {
   color: var(--title);
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 50px;
+  line-height: normal;
   text-transform: capitalize;
   margin-left: 20px;
 }
@@ -16453,6 +16453,18 @@ span.select2-selection.select2-selection--single:focus {
 
 .dashboard-navigation-sidebar .nav-pills .nav-link.active:before {
   display: none;
+}
+
+.dashboard-profile .thumb {
+  padding: 15px;
+  border: 1px #ddd solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  background: #eafff4;
 }
 
 .dashboard-wrapper .dashboard-top .dashboard-profile {

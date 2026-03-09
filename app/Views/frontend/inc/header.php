@@ -186,7 +186,7 @@
                
 
                   <div class="user">
-                     <a href="#">
+                     <a href="<?=base_url('my-account')?>">
                         <i class="fa-solid fa-user"></i>
                         My account
                      </a>

@@ -10,6 +10,7 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\Auth;
 use App\Filters\NoAuth;
+use App\Filters\Userauth;
 
 class Filters extends BaseConfig
 {
@@ -28,6 +29,7 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'noauth'        => NoAuth::class,
         'auth'          => Auth::class,
+        'userauth'      => Userauth::class,
     ];
 
     /**

@@ -80,7 +80,7 @@ class CheckoutController extends Controller
 
     public function placeOrder() {
         $address_id = $this->request->getPost('address_id');
-        $payment_method = $this->request->getPost('payment_method') ?? 'upi'; //cod
+        $payment_method = $this->request->getPost('payment_method') ?? 'gateway'; //cod
         $user = session()->get('user');
         $status = ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true);
         $minimumOrderAmount = getappdata('minimum_order_amount');
@@ -125,14 +125,25 @@ class CheckoutController extends Controller
             //$db = \Config\Database::connect();
             //$db->transStart();
             //4 create order
-            $address_id = $this->shippingAddressModel->where('user_id', $user['userId'])->where('is_default', 1)->get()->getRow()->id;
+            $address = $this->shippingAddressModel->where('user_id', $user['userId'])->where('is_default', 1)->get()->getRow();
+            $shippingAddress = [
+                'name'  => $address->full_name,
+                'phone' => $address->phone,
+                'address'   => $address->address_line1,
+                'city'  =>$address->city,
+                'state' => $address->state,
+                'post'  => $address->postal_code,
+                'country'   => $address->country,
+
+            ];
             $orderData = [
                 'user_id' => $user['userId'],
                 'order_number' => $this->generateOrderNumber(),
                 'tax' => $taxAmount,
                 'coupen_code_id' => $cart['couponcode_id'],
                 'discount' => $cart['coupon_discount'],
-                'address_id' => $address_id,
+                'address_id' => $address->id,
+                'shipping_address' => json_encode($shippingAddress,true),
                 'sub_total' => $itemSum,
                 'total_amount' => $totalAmount,
                 'payment_method' => $payment_method,
@@ -142,27 +153,38 @@ class CheckoutController extends Controller
                 'status' => 'pending',
                 'created_at' => date('Y-m-d H:i:s')
             ];
-            if($payment_method == 'upi'){
+            if($payment_method == 'gateway'){   
+                
                //$order = $this->paymentGateway->createOrder($totalAmount, 'INR', $orderData['order_number']);
                $order = $this->paymentGateway->createOrder($totalAmount,$orderData['order_number']);
 
                 if(isset($order['id'])){
 
-                $orderData['razorpay_order_id'] = $order['id'];
+                    $orderData['gateway_order_id'] = $order['id'];
 
-                $order_id = $this->customerOrderModel->insert($orderData);
-
-                return $this->response->setJSON([
-                    'success'=>true,
-                    'razorpay_order_id'=>$order['id'],
-                    'amount'=>$totalAmount * 100,
-                    'key'=>env('payment.keyId'),
-                    'order_id'=>$order_id
-                ]);
+                    $order_id = $this->customerOrderModel->insert($orderData,true);
+                    foreach($cartItems as $item){
+                        $orderItemData = [
+                            'customer_order_id' => $order_id,
+                            'product_id' => $item['product_id'],
+                            'qty' => $item['quantity'],
+                            'price' => $item['price'],
+                            'subtotal' => $item['subtotal'],
+                            'created_at' => date('Y-m-d H:i:s')
+                        ];
+                        $this->customerOrderItemsModel->insert($orderItemData);
+                    }
+                    
+                    return $this->response->setJSON([
+                        'success'=>true,
+                        'razorpay_order_id'=>$order['id'],
+                        'amount'=>$totalAmount * 100,
+                        'key'=>env('payment.keyId'),
+                        'order_id'=>$order_id
+                    ]);
 
                 }
             }
-            exit();       
             //print_r($orderData); exit();
             $order = $this->customerOrderModel->insert($orderData);
             if($order){
@@ -224,33 +246,86 @@ class CheckoutController extends Controller
     public function verifyPayment()
     {
 
-    $keySecret = env('payment.keySecret');
+        $keyId = env('payment.keyId');
+        $keySecret = env('payment.keySecret');
 
-    $payment_id = $this->request->getPost('razorpay_payment_id');
-    $order_id = $this->request->getPost('razorpay_order_id');
-    $signature = $this->request->getPost('razorpay_signature');
+        $cart = $this->cart->getMyCart();
 
-    $generated_signature = hash_hmac(
-        'sha256',
-        $order_id . "|" . $payment_id,
-        $keySecret
-    );
+        $payment_id = $this->request->getPost('razorpay_payment_id');
+        $order_id = $this->request->getPost('razorpay_order_id');
+        $signature = $this->request->getPost('razorpay_signature');
 
-    if($generated_signature == $signature){
+        /* GET ORDER */
+        $order = $this->customerOrderModel->where('gateway_order_id',$order_id)->first();
 
-    $this->customerOrderModel
-    ->where('razorpay_order_id',$order_id)
-    ->set([
-        'payment_status'=>'paid'
-    ])->update();
+        /* VERIFY SIGNATURE */
 
-    return $this->response->setJSON(['status'=>true]);
+        $generated_signature = hash_hmac('sha256',$order_id . "|" . $payment_id,$keySecret);
 
-    }else{
+        if ($generated_signature != $signature) {
 
-    return $this->response->setJSON(['status'=>false]);
+            return $this->response->setJSON(['status'=>false,'message'=>'Invalid signature']);
+        }
 
-    }
+        /* CHECK PAYMENT STATUS FROM RAZORPAY */
+
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => "https://api.razorpay.com/v1/payments/".$payment_id,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_USERPWD => $keyId . ":" . $keySecret
+        ]);
+
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+
+        $payment = json_decode($response,true);
+
+        if($payment['status'] != 'captured'){   
+
+            return $this->response->setJSON([
+                'status'=>false,
+                'order_id'=>$order['order_number'],
+                'message'=>'Payment not completed'
+            ]);
+        }
+
+        /* PAYMENT SUCCESS */
+
+        $this->customerOrderModel->where('gateway_order_id',$order_id)->set(['payment_status'=>'paid','status'=>'confirmed'])->update();
+
+
+        $orderItems = $this->customerOrderItemsModel->where('customer_order_id',$order['id'])->findAll();
+
+        /* UPDATE STOCK */
+
+        foreach($orderItems as $item){
+
+            $productManage = $this->productManageModel->where('id',$item['product_id'])->first();
+
+            $currentStock = $this->productModel->where('id',$productManage['product_id'])->first();
+
+            $balanceQty = $currentStock['current_stock'] - $item['qty'];
+
+            $this->productModel->update($productManage['product_id'], ['current_stock'=>$balanceQty]);
+
+        }
+
+        /* DELETE CART */
+
+        $this->cart->deleteCart($cart['id']);
+
+        /* SEND EMAIL */
+
+        $this->sendOrderMail($order['id']);
+
+        return $this->response->setJSON([
+            'status'=>true,
+            'order_id'=>$order['order_number'],
+            'message'=>'Payment successful'
+        ]);
 
     }
     // close verify 
@@ -301,5 +376,13 @@ class CheckoutController extends Controller
             ]);
         }
         
+    }
+
+    public function cancelOrder() {
+        $orderId = $this->request->getPost('order_id');
+        if($orderId) {
+            $this->customerOrderModel->where('gateway_order_id',$orderId)->set(['payment_status'=>3,'status'=>3])->update();
+        }
+      return true;  
     }
 }

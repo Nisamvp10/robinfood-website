@@ -259,5 +259,14 @@ $routes->post('apply-coupon','CheckoutController::applyCoupon');
 $routes->post('verify-payment','CheckoutController::verifyPayment');
 // razarpay
 $routes->get('razorpay/create-order/(:any)','frond\RazorpayController::createOrder/$1');
+//order success
+$routes->get('order-success/(:any)','frond\PaymentSuccessController::index/$1');
+$routes->post('cancel-order','CheckoutController::cancelOrder');
+//my account
+//set only login user to access my account
+$routes->group('', ['filter' => 'userauth'], function($routes)
+{
+    $routes->get('my-account','frond\MyAccountController::index');
+});
 
 

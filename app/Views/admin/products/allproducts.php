@@ -64,6 +64,7 @@
 <script>
     App.init({
         cust: '<?=base_url('admin/'.slugify(getappdata('category')));?>',
+        siteUrl: '<?=base_url();?>',
     });
 </script>
 <script src="<?=base_url('public/assets/js/sweetalert.js');?>"></script>
