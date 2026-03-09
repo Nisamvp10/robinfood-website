@@ -108,7 +108,7 @@
                                  <div class="col-xl-5 col-md-6 mt-4 mt-md-0">
                                     <div class="dashboard-profile-info">
                                        <h6>Billing Address [is default]</h6>
-                                       <h5>Dainne Russell</h5>
+                                       <h5><?= $defaultSHippingAddress->full_name ?></h5>
                                        <a href="#" class="address"
                                           ><?= $defaultSHippingAddress->address_line1 ?></a
                                        >
