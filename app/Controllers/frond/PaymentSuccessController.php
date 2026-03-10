@@ -16,7 +16,7 @@ class PaymentSuccessController extends BaseController {
     function index($orderID) {
         $page = "success";
         $orders  = $this->customerOrders->where('order_number',$orderID)->get()->getRow();
-       // $orderItems = $this->customerOrderItems->where('customer_order_id',$orders->id)->findAll();
+        $orderItems = $this->customerOrderItems->where('customer_order_id',$orders->id)->findAll();
         $data = [];
         if($orders) {
             if($orders->status == 'confirmed') {
