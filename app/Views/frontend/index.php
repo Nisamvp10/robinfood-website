@@ -36,8 +36,7 @@
                               </svg>
                              
                                     
-                              59% <span class="color-text"> discount </span> for
-                              all items
+                              Enjoy<span class="color-text"> Healthier </span>  Diet
                            </div>
                            <h1>  health-oriented brand from Arrikar Foods</h1>
                            <p>
@@ -180,8 +179,8 @@
                              <img src="<?=base_url('public/assets/template/');?>assets/images/featureIcon2_1.png" alt="icon">
                          </div>
                          <div class="feature-box-item-two__content">
-                             <h6>Shop Online</h6>
-                             <p class="feature-box-item-two__content--text">Order your groceries online</p>
+                             <h6>Pan-India Reach</h6>
+                             <p class="feature-box-item-two__content--text">A robust Distribution Network ensuring seamless presence across major Indin markets</p>
                          </div>
                      </div>
                  </div>
@@ -191,8 +190,8 @@
                              <img src="<?=base_url('public/assets/template/');?>assets/images/featureIcon2_2.png" alt="icon">
                          </div>
                          <div class="feature-box-item-two__content">
-                             <h6>Choose Shipment</h6>
-                             <p class="feature-box-item-two__content--text">Home Delivery/Neighbourhood Pickup
+                             <h6>Global Presence</h6>
+                             <p class="feature-box-item-two__content--text">Expanding footprint with exports taking Kerala'sauthentic goodness to international shelves
 
                              </p>
                          </div>
@@ -204,8 +203,8 @@
                              <img src="<?=base_url('public/assets/template/');?>assets/images/featureIcon2_3.png" alt="icon">
                          </div>
                          <div class="feature-box-item-two__content">
-                             <h6>Choose Payment</h6>
-                             <p class="feature-box-item-two__content--text">COD or Online
+                             <h6>Reliable Supply Chain</h6>
+                             <p class="feature-box-item-two__content--text">Advances warehousing, efficient logistics, and consistent production supported by our co-grn power plan
 
                              </p>
                          </div>
@@ -217,9 +216,9 @@
                              <img src="<?=base_url('public/assets/template/');?>assets/images/featureIcon2_4.png" alt="icon">
                          </div>
                          <div class="feature-box-item-two__content">
-                             <h6>Get your Supplies
+                             <h6>Trusted Pertnerships
                            </h6>
-                             <p class="feature-box-item-two__content--text">Home Delivered/Pick-it-Up Yourself
+                             <p class="feature-box-item-two__content--text">Long-standing distributor relationships that ensures steady availability and market confidence
 
                              </p>
                          </div>
@@ -329,13 +328,13 @@
                   <div class="col-lg-6">
                      <div class="video-content">
                         <div class="video-box">
-                           <a href="https://www.youtube.com/embed/v6QtjD2udYM?si=rJShDFZs3D16WOtj" class="play-btn popup-video" >
+                           <a href="https://www.youtube.com/embed/AI2NXjbYpD4?si=kMNgq0ILzw3JhY8y" class="play-btn popup-video" >
                               <i class="fa-sharp fa-solid fa-play"></i>
                            </a>
                         </div>
                         
                         <div class="section-title">
-                           <h3 class="title">See The Worlds Like Birds</h3>
+                           <h3 class="title">Healthier Diet</h3>
                         </div>
                         <a class="theme-btn style3" href="<?=base_url('productlist');?>">
                            View All Products</a>
@@ -515,8 +514,8 @@
                         </div>
                         <div class="promo-content">
                            <div class="promo-info">
-                              <p class="offer-text">GET 30% OFF</p>
-                              <h3 class="promo-title"> Red Bran Rice</h3>
+                              <p class="offer-text">Red Bran Rice:</p>
+                              <h3 class="promo-title">  The Power of Every Grain.</h3>
                            </div>
                            <div class="promo-btn-wrapper">
                               <a
@@ -539,9 +538,9 @@
                         </div>
                         <div class="promo-content">
                            <div class="promo-info">
-                              <p class="offer-text">LIMITED OFFER</p>
+                              <p class="offer-text">The Best for Your Table</p>
                               <h3 class="promo-title">
-                                 Don't Miss 25% Off On All Item
+                                 Unpolished, Unprocessed, Unbeatable.
                               </h3>
                            </div>
                            <div class="promo-btn-wrapper">

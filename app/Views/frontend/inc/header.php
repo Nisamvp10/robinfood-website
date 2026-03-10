@@ -198,8 +198,12 @@
                <div class="mega-menu-wrapper">
                   <div class="header-main">
                      <div class="header-left">
-                        <div class="logo">
+                            <div class="logo">
+                             <img class="pa" src="https://www.pavizhamrice.com/images/logo.png" alt="logo-img"/>
+
                            <a href="<?= base_url() ?>" class="header-logo">
+
+
                               <img
                                  src="<?=base_url('public/assets/template/');?>assets/images/logo.png"
                                  alt="logo-img"
