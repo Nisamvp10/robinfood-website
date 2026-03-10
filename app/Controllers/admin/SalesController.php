@@ -580,11 +580,12 @@ public function save()
                     'phone'         => $purchase['customerPhone'],
                     'email'         => $purchase['customerEmail'],
                     'totalAmount'  => $purchase['total_amount'],
-                    'shippingAddress' => json_encode([
-                    'name' => $purchase['shipping_full_name'],
-                    'phone' => $purchase['shipping_phone'],
-                    'address' => $purchase['shipping_address_line1'].','.$purchase['shipping_city'].', '.$purchase['shipping_state'].', '.$purchase['shipping_postal_code'].', '.$purchase['shipping_country'],
-                    ]),
+                    'shippingAddress' => $purchase['shipping_address'],
+                    // 'shippingAddress' => json_encode([
+                    // 'name' => $purchase['shipping_full_name'], 
+                    // 'phone' => $purchase['shipping_phone'],
+                    // 'address' => $purchase['shipping_address_line1'].','.$purchase['shipping_city'].', '.$purchase['shipping_state'].', '.$purchase['shipping_postal_code'].', '.$purchase['shipping_country'],
+                    // ]),
                     'items'         => []
                 ];
                 if(!empty($purchase['product_title'])) {

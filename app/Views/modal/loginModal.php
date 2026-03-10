@@ -79,6 +79,18 @@
                             <input type="password" class="form-control" name="password" id="password" required>
                             <div id="passwordError" class="text-danger invalid-feedback"></div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                            <div class="">
+                                              <input id="reviewcheck" name="reviewcheck" type="checkbox">
+                                                <label class="form-check-label" for="reviewcheck">
+                                                    I agree to the <span>terms & policy</span>
+                                                </label>
+                                                <div class="invalid-feedback" id="reviewcheckError"></div>
+                                            </div>
+                                        </div>
+                        </div>
                     
 
                         <div class="text-right">

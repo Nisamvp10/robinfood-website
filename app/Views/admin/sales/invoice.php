@@ -148,9 +148,13 @@ if(!empty($result)) {
                         {
                             $shippingAddress = json_decode($row['shippingAddress'], true);
                         ?>
-                        <li><b><?=$shippingAddress['name']?></b></li>
-                        <li><?=$shippingAddress['address']?></li>
-                        <li><?=$shippingAddress['phone']?></li>
+                        <li><b><?=$shippingAddress['name'] ?? 'N/A'?></b></li>
+                        <li><?=$shippingAddress['address'] ?? 'N/A'?>
+                        <?=$shippingAddress['city'] .',' ?? 'N/A'?>
+                        <?=$shippingAddress['state'] .',' ?? 'N/A'?>
+                        <?=$shippingAddress['post'] .',' ?? 'N/A'?>
+                        <?=$shippingAddress['country'] ?? 'N/A'?> </li>
+                        <li><?=$shippingAddress['phone'] ?? 'N/A'?></li>
                         <?php
                         }
                     }

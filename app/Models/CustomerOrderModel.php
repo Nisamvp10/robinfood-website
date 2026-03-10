@@ -10,7 +10,7 @@ class CustomerOrderModel extends Model
 
     public function salesHistory($searchInput=false,$filter=false,$startDate=false,$endDate=false,$orderId=false) {
         $builder = $this->db->table('customer_orders as co')
-                    ->select('co.id as orderId,co.order_number,co.tax,co.discount,co.address_id,co.sub_total,co.total_amount,co.payment_method,co.payment_status,co.status,co.created_at as orderDate,
+                    ->select('co.id as orderId,co.order_number,co.tax,co.discount,co.address_id,co.shipping_address,co.sub_total,co.total_amount,co.payment_method,co.payment_status,co.status,co.created_at as orderDate,
                     pm.id as productId,
                     pm.product_title,
                     p.sku,

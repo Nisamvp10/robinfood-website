@@ -40,7 +40,7 @@ $('#loginForm').on('submit', function (e) {
     $('.is-invalid').removeClass('is-invalid');
     $('.invalid-feedback').empty();
     $('#loginBtn').prop('disabled', true).html(
-        '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...'
+        '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Login...'
     );
 
     $.ajax({
@@ -62,6 +62,7 @@ $('#loginForm').on('submit', function (e) {
                         $('#' + field + 'Error').text(msg.replaceAll('_', ' '));
                     })
                 }
+                $('#loginBtn').prop('disabled', false).html('Login');
             }
         }
     });

@@ -37,5 +37,4 @@
       <link rel="stylesheet" href="<?=base_url('public/assets/template/');?>assets/css/nice-select.css" />
       <!--<< Main.css >>-->
       <link rel="stylesheet" href="<?=base_url('public/assets/template/');?>assets/css/main.css" />
-      
    </head>

@@ -3,6 +3,14 @@ namespace App\Controllers;
 use App\Models\UsersregistrationsModel;
 class AuthController extends BaseController
 {
+    public function userLogin() {
+        $page ='Login';
+        return view('frontend/login',compact('page'));
+    }
+     public function createAccount() {
+        $page ='Create New Account';
+        return view('frontend/register',compact('page'));
+    }
     public function register()
     {
         if(!$this->request->isAJAX()){
@@ -16,6 +24,7 @@ class AuthController extends BaseController
             'email' => 'required|valid_email|is_unique[usersregistrations.email]',
             'phone' => 'required|numeric|exact_length[10]|is_unique[usersregistrations.phone]',
             'password' => 'required|min_length[6]|max_length[50]',
+            'reviewcheck'   => 'required'
         ];
         if(!$this->validate($rules)){
             return $this->response->setJSON([
@@ -108,5 +117,11 @@ class AuthController extends BaseController
             'success' => false,
             'message' => 'Invalid username or password',
         ]);
+    }
+
+    public function logout() {
+        $session = session();
+        $session->remove('user');
+        return  redirect()->to(base_url(''));
     }
 }

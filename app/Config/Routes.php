@@ -244,9 +244,7 @@ $routes->get('privacy-policy','CommonController::privacyPolicy');
 $routes->get('shipping-policy','CommonController::shippingPolicy');
 //offers
 $routes->get('offers','OfferController::index');
-//Register
-$routes->post('register','AuthController::register');
-$routes->post('user-login','AuthController::login');
+
 //isLogin
 $routes->get('isLogin','CheckoutController::isLogin');
 //shipping address
@@ -267,6 +265,14 @@ $routes->post('cancel-order','CheckoutController::cancelOrder');
 $routes->group('', ['filter' => 'userauth'], function($routes)
 {
     $routes->get('my-account','frond\MyAccountController::index');
+    $routes->post('account-update','frond\MyAccountController::myDataupdate');
+    $routes->post('change-password','frond\MyAccountController::changePassword');
 });
+//Register
+$routes->get('login','AuthController::userLogin');
+$routes->post('register','AuthController::register');
+$routes->post('user-login','AuthController::login');
+$routes->get('user-logout','AuthController::logout');
+$routes->get('register','AuthController::createAccount');
 
 
