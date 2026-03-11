@@ -93,6 +93,7 @@ class CoupenCodeController extends Controller
             'maximum_discount_amount' => $this->request->getPost('maximum_discount_amount'),
             'validity_from' => $fromDate,
             'validity_to' => $toDate,
+            'description'   => $this->request->getpost('description')
         ];
 
         if($id) {

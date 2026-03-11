@@ -75,12 +75,16 @@
 
             <!-- for products list all products here  -->
 
-            <div id="productList"></div>
 
-                <div class="mb-4">
+            <div class="mb-4">
                 <label for="validity" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
-                <input type="text" id="filterDate" name="filterDate" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter category name" >
+                <input type="text" id="filterDate" name="filterDate" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Select Start date to End date" >
                  <div class="invalid-feedback" id="filterDate_error"></div>
+            </div>
+             <div class="mb-4">
+                <label for="validity" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                <textarea type="text" id="description" name="description" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Select Start date to End date" ></textarea>
+                 <div class="invalid-feedback" id="description_error"></div>
             </div>
 
             <div class="flex justify-end gap-3">

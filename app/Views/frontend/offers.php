@@ -66,37 +66,50 @@
 <div class="container">
     <div class="row justify-content-center mt-4 pb-5">
         <div class="col-lg-8">
+         <?php 
+         if(!empty($offers)) {
+            foreach($offers as $offer) {
+               ?>
+                  <div class="coupon-card d-flex align-items-center mb-4">
+                  <!-- Left Discount Box -->
+                  <div class="discount-box col-md-2">
+                     <h2><?=$offer['discount'] ;?><?=($offer['discount_type'] == 1 ? 'RS':'%')?><br>OFF</h2>
+                  </div>
 
-            <div class="coupon-card d-flex align-items-center">
+                  <!-- Middle Content -->
+                  <div class="coupon-content col-md-7">
+                     <p class="mb-1 text-muted">
+                           <?=$offer['description'] ;?>
+                     </p>
+                  </div>
 
-                <!-- Left Discount Box -->
-                <div class="discount-box col-md-2">
-                    <h2>75%<br>OFF</h2>
-                </div>
-
-                <!-- Middle Content -->
-                <div class="coupon-content col-md-7">
-                    <h6 class="fw-bold">Up To 40% - 70% Off January Savings Event</h6>
-                    <p class="mb-1 text-muted">
-                        Save with free shipping and free returns on all orders of $99...
-                    </p>
-                    <small class="text-primary">Kmart Coupons</small>
-                </div>
-
-                <!-- Right Button -->
-                <div class="text-center col-md-3">
-                    <button class="coupon-btn">
-                        GET CODE
-                    </button>
-                    <div class="expire-text mt-2">
-                        Expires 6/25/2026
-                    </div>
-                </div>
+                  <!-- Right Button -->
+                  <div class="text-center col-md-3">
+                     <button class="coupon-btn" onclick="copyCode('<?=$offer['coupencode'] ;?>')">
+                           GET CODE
+                     </button>
+                     <div class="expire-text mt-2">
+                           Expires <?= date('m-d-Y',strtotime($offer['validity_to'])) ;?>
+                     </div>
+                  </div>
 
             </div>
+
+               <?php
+            }
+            
+         } ?>
+
+       
 
         </div>
     </div>
 </div>
 
 <?= view('frontend/inc/footerLink') ?>
+<script>
+function copyCode(code) {
+   navigator.clipboard.writeText(code);
+   toastr.success('Code copied to clipboard');
+}
+</script>

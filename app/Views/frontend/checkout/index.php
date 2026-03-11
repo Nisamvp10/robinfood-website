@@ -99,56 +99,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
-                            <button class="card-header collapsed card-link d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#collapseThree">
-
-                                <b class="header-title float-left">
-                                    Purchase History
-                                </b>
-                                <i class="fa fa-plus float-right "></i>
-
-                            </button>
-                            <div id="collapseThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <table class="table">
-                                        <?php
-                                        if (!empty($getorderHistory)) { ?>
-                                            <thead>
-                                                <tr>
-                                                    <td>Code</td>
-                                                    <td>date</td>
-                                                    <td>Amount</td>
-                                                    <td>Delivery Status</td>
-                                                    <td>Payment Status</td>
-                                                    <td>Optopn</td>
-                                                </tr>
-                                            </thead>
-                                            <?php
-                                            foreach ($getorderHistory as $myorder) { ?>
-
-                                                <tr>
-                                                    <td><?= $myorder->code; ?></td>
-                                                    <td><?= date('Y-m-d', $myorder->date); ?></td>
-                                                    <td><?= number_format($myorder->grand_total); ?></td>
-                                                    <td><?= $myorder->delivery_status; ?></td>
-                                                    <td>
-                                                        <?php
-                                                        if ($myorder->payment_status == "paid") {
-                                                            echo '<label class="label label-success label-sm">paid</label>';
-                                                        } ?>
-                                                    </td>
-                                                    <td class="d-flex">
-                                                        <a class="badge label-danger deleteOrder" onclick="deleteorder()" href=":void(0)"><i class="fa fa-trash"></i></a>
-                                                        <a class="badge label-success deleteOrder" href="<?= site_url('history-details/' . encryptor($myorder->id)); ?>"><i class="fa fa-eye"></i></a>
-                                                    </td>
-                                                </tr>
-                                        <?php
-                                            }
-                                        } ?>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                    
                     </div>
                     <!--  -->
                 </div>
@@ -157,53 +108,9 @@
                 </div>
             </div>
         
-        <h4 class="mb-4">Your Order</h4>
+        <!-- <h4 class="mb-4">Your Order</h4> -->
         
-        <div class="mt-lg-3 mb-30">
-            <div class="woocommerce-checkout-payment">
-                <ul class="wc_payment_methods payment_methods methods">
-                    <li class="wc_payment_method payment_method_bacs">
-                        <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method"
-                            value="bacs" checked="checked">
-                        <label for="payment_method_bacs">Direct bank transfer</label>
-                        <div class="payment_box payment_method_bacs">
-                            <p>Make your payment directly into our bank account. Please use your Order ID as the
-                                payment reference. Your order will not be shipped until the funds have cleared in
-                                our account.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="wc_payment_method payment_method_cheque">
-                        <input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method"
-                            value="cheque">
-                        <label for="payment_method_cheque">Cheque Payment</label>
-                        <div class="payment_box payment_method_cheque">
-                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,
-                                Store Postcode.</p>
-                        </div>
-                    </li>
-                    <li class="wc_payment_method payment_method_cod">
-                        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method">
-                        <label for="payment_method_cod">Credit Cart <img src="<?= base_url('public/assets/template/'); ?>assets/images/credit_card.jpg"
-                                alt="image"></label>
-                        <div class="payment_box payment_method_cod">
-                            <p>Pay with cash upon delivery.</p>
-                        </div>
-                    </li>
-                    <li class="wc_payment_method payment_method_paypal">
-                        <input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method"
-                            value="paypal">
-                        <label for="payment_method_paypal">Paypal<img src="<?= base_url('public/assets/template/'); ?>assets/images/paypal.jpg"
-                                alt="PayPal acceptance mark"></label>
-                        <div class="payment_box payment_method_paypal">
-                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-        
-            </div>
-        </div>
+     
     </div>
 </div>
 

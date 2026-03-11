@@ -11,6 +11,7 @@ function openModal(id = false) {
     webForm.querySelector('#filterDate').value = '';
     webForm.querySelector('#edit_id').value = '';
     webForm.querySelector('#discount_type').value = '';
+    webForm.querySelector('#description').value = '';
 
     if (id) {
         modal.find('.head').text('Edit Coupon Code');
@@ -26,6 +27,7 @@ function openModal(id = false) {
                     webForm.querySelector('#edit_id').value = result.data.id;
                     webForm.querySelector('#filterDate').value = result.data.validity_from + ' to ' + result.data.validity_to;
                     webForm.querySelector('#discount_type').value = result.data.discount_type;
+                    webForm.querySelector('#description').value = result.data.description;
                 }
             })
     }
