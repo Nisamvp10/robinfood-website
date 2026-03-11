@@ -53,12 +53,12 @@
         <div class="container">
             <div class="login-wrapper">
                 <div class="row gx-5">
-                    <div class="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
+                    <div class="col-xl-6 offset-xl-0 col-md-5 m-auto offset-md-2">
                         <div class="contact-info-area">
                             <div class="contact-content">
-                                <h2 class="contact-content__title">Get Started Now</h2>
-                                <p class="contact-content__subtitle">Enter your Credentials to access your account</p>
-                                <form id="loginForm" method="POST" class="contact-form-items">
+                                <h2 class="contact-content__title">Forgot Password</h2>
+                                <p class="contact-content__subtitle">Enter your email address to reset your password</p>
+                                <form id="forgotPasswordForm" method="POST" class="contact-form-items">
                                     <div class="row g-4"> 
                                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
                                             <div class="form-clt">
@@ -66,37 +66,22 @@
                                                 <input type="text" name="username" id="username" placeholder="Enter your email">
                                                 <div class="invalid-feedback" id="usernameError"></div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
-                                            <div class="form-clt">
-                                                <span>Password*</span>
-                                                <input type="password" name="pwd" id="pwd" placeholder="********">
-                                                <div class="invalid-feedback" id="pwdError"></div>
-                                            </div>
-                                        </div>
-                                       
+                                        </div>                                       
                                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
-                                            <button type="submit" id="loginBtn" class="theme-btn style6">
-                                                Sign In
+                                            <button type="submit" id="forgotPasswordBtn" class="theme-btn style6">
+                                                Send Reset Code
                                             </button>
                                         </div>
                                     </div>
                                 </form>
 
-                                 <!-- set forgot password -->
-                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
-                                    <a href="<?=base_url('forgot-password') ;?>">Forgot Password?</a>
-                                </div>
+                              
                                 <h5 class="contact-content__logtitle center">Don't Have an account? <a href="<?=base_url('register') ;?>">Sign Up</a> |</h5>
                              </div>
                        </div>
                     </div>
                     
-                   <div class="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
-                    <div class="login-thumb">
-                        <img src="<?=base_url('public/assets/template/');?>assets/img/register/loginThumb.jpg" alt="register-thumb">
-                    </div>
-                 </div>
+                 
                </div>
             </div>
         </div>

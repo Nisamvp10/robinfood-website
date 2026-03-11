@@ -274,5 +274,10 @@ $routes->post('register','AuthController::register');
 $routes->post('user-login','AuthController::login');
 $routes->get('user-logout','AuthController::logout');
 $routes->get('register','AuthController::createAccount');
-
-
+$routes->get('forgot-password','AuthController::forgotPassword');
+$routes->post('emailverify','AuthController::emielVerify');
+$routes->get('otp-verification','AuthController::otppage');
+$routes->post('verifyotp','AuthController::verifyOtp');
+$routes->post('resendotp','AuthController::resendOtp');
+$routes->get('reset-password/(:any)','AuthController::resetPasswordRequest/$1');
+$routes->post('reset-password','AuthController::resetpassword');
