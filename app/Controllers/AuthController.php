@@ -181,12 +181,14 @@ class AuthController extends BaseController
             }else{
                 return $this->response->setJSON([
                     'success' => false,
+                    'errors' => ['username'=> 'OTP not sent'],
                     'message' => 'OTP not sent',
                 ]);
             }
         }else{
             return $this->response->setJSON([
                 'success' => false,
+                'errors' => ['username'=> 'User not found'],
                 'message' => 'User not found',
             ]);
         }
