@@ -16832,6 +16832,19 @@ span.select2-selection.select2-selection--single:focus {
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img.pa {
+  width: 85px;
+  margin-bottom: -15px;
+  z-index: 1;
+}
+
 @media (max-width: 767px) {
   .order-details .details-wrapper .address-section {
     flex-direction: column;
