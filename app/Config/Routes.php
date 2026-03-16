@@ -281,3 +281,7 @@ $routes->post('verifyotp','AuthController::verifyOtp');
 $routes->post('resendotp','AuthController::resendOtp');
 $routes->get('reset-password/(:any)','AuthController::resetPasswordRequest/$1');
 $routes->post('reset-password','AuthController::resetpassword');
+//product Tracking
+$routes->get('product-tracking','frond\ProductTrackingController::index');
+$routes->post('track-order','frond\ProductTrackingController::trackOrder');
+
