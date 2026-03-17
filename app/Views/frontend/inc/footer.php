@@ -12,7 +12,7 @@
                   <div class="content">
                      <p>Call Us 7/24</p>
                      <h3>
-                        <a href="tel:+9118008909945">TOLL-FREE NO 1800 890 9945</a>
+                        <a href="tel:+9118008909945"> 1800 890 9945</a>
                      </h3>
                   </div>
                </div>
@@ -184,6 +184,12 @@
                               <a class="style1" href="<?=base_url('shipping-policy') ?>">
                                  <i class="fa-solid fa-chevrons-right"></i>
                                  Shipping Policy
+                              </a>
+                           </li>
+                           <li>
+                              <a class="style1" href="<?=base_url('product-tracking') ?>">
+                                 <i class="fa-solid fa-chevrons-right"></i>
+                                 Product Tracking
                               </a>
                            </li>
                         </ul>

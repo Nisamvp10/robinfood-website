@@ -274,9 +274,7 @@
                                     <li class="active ">
                                        <a href="<?= base_url('gallery') ?>">Gallery</a>
                                     </li>
-                                    <li class="active ">
-                                       <a href="<?= base_url('product-tracking') ?>">Product Tracking</a>
-                                    </li>
+                                  
                                     <li>
                                        <a href="<?= base_url('contact') ?>">Contact Us</a>
                                     </li>
