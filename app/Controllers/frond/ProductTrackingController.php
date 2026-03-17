@@ -18,18 +18,19 @@ class ProductTrackingController extends BaseController
         return view('frontend/product-tracking', compact('page'));
     }
 
-    public function trackOrder()
+   public function trackOrder()
     {
-        $page = "Track Your Order";
-      //  $trackingNumber = $this->request->getPost('trackingNumber');
-       $trackingId = $this->request->getPost('trackingNumber');
+        $trackingId = $this->request->getPost('trackingNumber');
+
+        if(!$trackingId){
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Tracking number required'
+            ]);
+        }
+
         $tracking = $this->shipbuddyService->trackShipment($trackingId);
-        print_r($tracking);
 
         return $this->response->setJSON($tracking);
-
-
-
-      //  return view('frontend/product-tracking', compact('page'));
     }
 }

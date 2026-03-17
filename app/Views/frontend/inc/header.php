@@ -51,7 +51,7 @@
                      class="offcanvas__top mb-5 d-flex justify-content-between align-items-center"
                   >
                      <div class="offcanvas__logo">
-                        <a href="index.html">
+                        <a href="<?=base_url() ;?>">
                            <img
                               src="<?=base_url('public/assets/template/');?>assets/images/logo.png"
                               alt="logo-img"
@@ -146,7 +146,7 @@
                         </li>
                      </ul>
                      <div class="header-button mt-4">
-                        <a href="contact.html" class="theme-btn text-center">
+                        <a href="<?=base_url('contact');?>" class="theme-btn text-center">
                            <span
                               >Get A Quote<i
                                  class="fa-solid fa-arrow-right-long"
@@ -172,14 +172,13 @@
          <div id="header-sticky" class="header-1">
             <div class="header-top-one">
                <div class="phone-icon">
-                  <i class="icon-telephone"></i>
-                  <a href="#">+91 7034741741</a>
+                  <i class="icon-whatsapp"></i>
+                  <a href="tel:+916238724919" class="text-white"> +91 6238724919</a>
                </div>
                <div class="offer">
-                  <div class="subtitle style1">
+                  <div class="subtitle style1 text-capitalize">
                      <i class="icon-tag"></i>
-                     15% <span class="color-text"> discount </span> for all
-                     items
+                    TOLL-FREE NO <a class="text-white" href="tel:18008909945">1800 890 9945</a>
                   </div>
                </div>
                <div class="lang">
@@ -200,10 +199,7 @@
                      <div class="header-left">
                             <div class="logo">
                              <img class="pa" src="https://www.pavizhamrice.com/images/logo.png" alt="logo-img"/>
-
                            <a href="<?= base_url() ?>" class="header-logo">
-
-
                               <img
                                  src="<?=base_url('public/assets/template/');?>assets/images/logo.png"
                                  alt="logo-img"
