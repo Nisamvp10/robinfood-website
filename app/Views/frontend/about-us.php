@@ -86,13 +86,20 @@
             <div class="row gy-4 gx-64 d-flex align-items-center">
               
                 <div class="col-xl-12">
-                    <div class="about-page-content testimonial-card-items-two">
-                        <h1>Founder’s Message
-                        </h1>
-                        <h6>Mr. Robin George
-                        </h6>
-                        <p class="mb-15">Our journey began as a small rice mill in Koovapady, built on hard work, honesty, and a deep respect for food and people. Over the years, with the trust of our farmers, partners, and customers, we have grown into one of South India’s leading rice mills, supporting thousands of families along the way. Robin Food was born from my belief that food should nourish, not just fill. Inspired by the spirit of sharing and care, we are committed to offering honest, healthy food that people can trust every day.
-                        </p>
+                    <div class="about-page-content testimonial-card-items-two row align-items-center">
+                        <div class="col-sm-4">
+                            <div class="about-page-thumb2 rounded-5 overflow-hidden">
+                                <img src="<?=base_url('public/assets/template/');?>assets/img/director.webp" alt="thumb">
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h1>Founder’s Message
+                            </h1>
+                            <h6>Mr. Robin George
+                            </h6>
+                            <p class="mb-15">Our journey began as a small rice mill in Koovapady, built on hard work, honesty, and a deep respect for food and people. Over the years, with the trust of our farmers, partners, and customers, we have grown into one of South India’s leading rice mills, supporting thousands of families along the way. Robin Food was born from my belief that food should nourish, not just fill. Inspired by the spirit of sharing and care, we are committed to offering honest, healthy food that people can trust every day.
+                            </p>
+                        </div>
         
                     </div>
                 </div>
