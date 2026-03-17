@@ -88,6 +88,18 @@
                               <i class="fas fa-map-marker-alt"></i>
                               <a href=""><?=getappdata('address') ?> <?=getappdata('city') ?> <?=getappdata('state') ?> <?=getappdata('zip_code') ?> <?=getappdata('country') ?> </a>
                             </li>
+
+                            <li>
+                              <i class="fas fa-map-marker-alt"></i>
+                             
+                              <a href=""><b>Manufactured by</b><br> Nambiyattukudy Food Spices Near Aimuri Ganapathi Temple Koovappady P.O., Perumbavoor Ernakulam, Kerala-683544 <br>Essai Lic. No. 11316007000247 </a>
+                            </li>
+
+                            <li>
+                              <i class="fas fa-map-marker-alt"></i>
+                             
+                              <a href=""><b>Marketed & Exported by</b><br>ARRIK AR FOODS PVT.LTD 19/636, Perumbavoor, Koovapady. Emakulam, Kerala - 683544 <br>Essai Lic. No. 11323999000136 </a>
+                            </li>
     
                           </ul>
                         </div>
@@ -115,7 +127,7 @@
                   </div>
                   <div class="col-xl-7"> 
                         <div class="contact-form-items-1">
-                        <form action="#" id="contact-form-1" method="POST">
+                        <form action="#" id="contact-form-1" method="POST" id="contactForm">
                             <div class="row g-4">
                             <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="form-clt-1 mb-3">
@@ -184,7 +196,7 @@
                                 </div>
                             </div>
                             <div class="btn-wrapper d-flex justify-content-end">
-                                <a class="theme-btn style6" href="cart.html">Send Message</a>
+                                <a class="theme-btn style6" >Send Message</a>
     
                             </div>
                             </div>
