@@ -30,19 +30,22 @@ class ProductTrackingController extends BaseController
                 "length" => 10,
                 "breadth" => 10,
                 "height" => 10,
-                "warehouseName" => "spotlight 27",
+                "warehouseName" => "robin food",
                 "packageCount" => 1,
                 "shippingMode" => "surface",
                 "deadWeight" => 0.5
             ],
             "customerAddressList" => [
-                "fullName" => "Test User",
-                "contactNumber" => "9999999999",
-                "email" => "test@gmail.com",
-                "address" => "Kerala Address",
-                "pincode" => 676505,
-                "city" => "Malappuram",
-                "state" => "Kerala"
+                 "fullName" => "Test User",
+                    "contactNumber" => "9999999999",
+                    "email" => "test@gmail.com",
+                    "alternateNumber" => "9999999999",   // ✅ ADD
+                    "address" => "Kerala Address",
+                    "landmark" => "Near Area",           // ✅ ADD
+                    "pincode" => 676505,
+                    "city" => "Malappuram",
+                    "state" => "Kerala",
+                    "country" => "India"                 // ✅ ADD
             ],
             "packageList" => [
                 [

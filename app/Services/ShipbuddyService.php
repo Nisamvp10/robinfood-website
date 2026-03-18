@@ -17,30 +17,58 @@ class ShipbuddyService
 
   public function request($endpoint, $method = 'POST', $data = [])
     {
-        $client = \Config\Services::curlrequest();
-        try {
-            $options = [
-                'headers' => [
-                    'Content-Type'  => 'application/json',
-                    'Authorization' => 'Bearer ' . $this->token,
-                ]
-            ];
+         $url = $this->baseUrl . $endpoint;
 
-            if ($method !== 'GET') {
-                $options['json'] = $data;
-            }
-// echo "<pre>";
-// print_r($options);
-// exit;
-            $response = $client->request($method, $this->baseUrl . $endpoint, $options);
+        $ch = curl_init();
 
-            return json_decode($response->getBody(), true);
+        $headers = [
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $this->token
+        ];
 
-        } catch (\Exception $e) {
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        // Method handling
+        if ($method == 'POST') {
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        } elseif ($method == 'PUT' || $method == 'PATCH' || $method == 'DELETE') {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        } elseif ($method == 'GET') {
+            curl_setopt($ch, CURLOPT_HTTPGET, true);
+        }
+
+        // Debug (optional)
+        curl_setopt($ch, CURLOPT_VERBOSE, true);
+
+        $response = curl_exec($ch);
+
+        // echo "<pre>";
+        // echo "URL: " . $url . "\n\n";
+        // print_r($headers);
+        // echo "\n\nPAYLOAD:\n";
+        // print_r($data);
+        // exit;
+
+
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        if (curl_errno($ch)) {
             return [
                 'status' => false,
-                'error'  => $e->getMessage()
+                'error' => curl_error($ch)
             ];
         }
+
+        curl_close($ch);
+
+        return [
+            'status_code' => $httpCode,
+            'response' => json_decode($response, true),
+            'raw' => $response
+        ];
     }
 }
