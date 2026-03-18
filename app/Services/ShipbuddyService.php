@@ -29,7 +29,7 @@ class ShipbuddyService
             $token = trim($this->apiKey); // set your token here
 
             // ✅ 2. API URL
-            $url = "https://seller.shypbuddy.net/api/orderApi/customOrderApi";
+            $url = "https://seller.shypbuddy.net/api/orderApi/createOrder";
 
             // ✅ 3. Request Data (FIXED: India pickup address + removed risky fields)
             $data = [
