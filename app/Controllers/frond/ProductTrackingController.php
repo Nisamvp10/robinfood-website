@@ -20,16 +20,51 @@ class ProductTrackingController extends BaseController
 
    public function trackOrder()
     {
-        $trackingId = $this->request->getPost('trackingNumber');
-        if(!$trackingId){
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => 'Tracking number required'
-            ]);
-        }
+        $orderId = 'ORD' . time();
 
-        $tracking = $this->shipbuddyService->createShypBuddyOrder($trackingId);
+        $payload = [
+            "orderData" => [
+                "deliveryType" => "FORWARD",
+                "isDangerousGoods" => "n",
+                "paymentMode" => "cod",
+                "length" => 10,
+                "breadth" => 10,
+                "height" => 10,
+                "warehouseName" => "spotlight 27",
+                "packageCount" => 1,
+                "shippingMode" => "surface",
+                "deadWeight" => 0.5
+            ],
+            "customerAddressList" => [
+                "fullName" => "Test User",
+                "contactNumber" => "9999999999",
+                "email" => "test@gmail.com",
+                "address" => "Kerala Address",
+                "pincode" => 676505,
+                "city" => "Malappuram",
+                "state" => "Kerala"
+            ],
+            "packageList" => [
+                [
+                    "name" => "Test Product",
+                    "qty" => 1,
+                    "price" => 500,
+                    "category" => "General",
+                    "sku" => "SKU001",
+                    "hsnCode" => "1234"
+                ]
+            ]
+        ];
 
-        return $this->response->setJSON($tracking);
+        $res = $this->shipbuddyService->request('orderApi/createOrder', 'POST', $payload);
+
+        // Save response
+        // $this->model->insert([
+        //     'order_id' => $orderId,
+        //     'response' => json_encode($res),
+        //     'status'   => $res['status'] ?? 'created'
+        // ]);
+
+        return $this->response->setJSON($res);
     }
 }
