@@ -29,9 +29,9 @@ class ShipbuddyService
             if ($method !== 'GET') {
                 $options['json'] = $data;
             }
-echo "<pre>";
-print_r($options);
-exit;
+// echo "<pre>";
+// print_r($options);
+// exit;
             $response = $client->request($method, $this->baseUrl . $endpoint, $options);
 
             return json_decode($response->getBody(), true);
