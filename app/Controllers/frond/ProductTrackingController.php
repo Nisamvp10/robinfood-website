@@ -21,7 +21,6 @@ class ProductTrackingController extends BaseController
    public function trackOrder()
     {
         $trackingId = $this->request->getPost('trackingNumber');
-
         if(!$trackingId){
             return $this->response->setJSON([
                 'success' => false,
@@ -29,7 +28,7 @@ class ProductTrackingController extends BaseController
             ]);
         }
 
-        $tracking = $this->shipbuddyService->trackShipment($trackingId);
+        $tracking = $this->shipbuddyService->createShypBuddyOrder($trackingId);
 
         return $this->response->setJSON($tracking);
     }

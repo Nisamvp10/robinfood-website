@@ -8,6 +8,7 @@ class ProductManageModel extends Model{
     
     function getData($search='',$filter=false){
         $builder = $this->table('product_management');
+        $builder->where('product_status', 1);
         if($search) {
             $builder->like('product_title', $search);
         }

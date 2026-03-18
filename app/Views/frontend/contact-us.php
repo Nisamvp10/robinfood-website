@@ -71,7 +71,7 @@
                   <div class="col-xl-5">
                     <div class="contact-info">
                       <div class="contact-info__contact">
-                        <h5 class="contact-info__contact--title">Contact Information</h5>
+                        <h5 class="contact-info__contact--title">Contact Information</h5> 
                         <p class="contact-info__contact--subtitle">Say something to start a live chat!</p>
                         <div class="contact-info__contact--contact-items">
                           <ul class="contact-info-items">
