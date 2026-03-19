@@ -52,7 +52,7 @@
            <div class="container">
               <ul class="breadcumb-wrapper">
                  <li>
-                    <a href="index.html"
+                    <a href="<?=base_url()?>"
                        ><i class="fa-sharp fa-light fa-house"></i
                     ></a>
                  </li>

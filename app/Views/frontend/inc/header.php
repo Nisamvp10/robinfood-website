@@ -287,7 +287,7 @@
                         ></a>
                         <div class="menu-cart" id="menuCart"></div>
                         
-                        <a class="wishlist" href="cart.html"
+                        <a class="wishlist" href="<?=base_url('cart')?>"
                            ><i class="fa-regular fa-heart"></i
                         ></a>
                         <div

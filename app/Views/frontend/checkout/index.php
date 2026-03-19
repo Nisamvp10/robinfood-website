@@ -44,7 +44,7 @@
         <div class="container">
             <ul class="breadcumb-wrapper">
                 <li>
-                    <a href="index.html"><i class="fa-sharp fa-light fa-house"></i></a>
+                    <a href="<?=base_url()?>"><i class="fa-sharp fa-light fa-house"></i></a>
                 </li>
                 <li><i class="fa-solid fa-chevron-right"></i></li>
                 <li>Products</li>
