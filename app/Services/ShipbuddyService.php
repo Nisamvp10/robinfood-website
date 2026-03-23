@@ -9,7 +9,7 @@ class ShipbuddyService
     public function __construct()
     {
         $this->token  = getenv('shipbudddy.api_key');
-        $this->baseUrl = 'https://seller.shypbuddy.net/api/orderApi/createOrder';
+        $this->baseUrl = 'https://seller.shypbuddy.net/api/';
         $this->client = \Config\Services::curlrequest([
             'timeout' => 30
         ]);
@@ -23,7 +23,7 @@ class ShipbuddyService
 
         $headers = [
             'Content-Type: application/json',
-            'Authorization: Bearer ' .'2b140db79042fa92040b31e6bc2686149c57a7d33229e3bc8f2bda1331f48a11' //$this->token
+            'Authorization: Bearer ' .$this->token
         ];
 
         curl_setopt($ch, CURLOPT_URL, $url);
