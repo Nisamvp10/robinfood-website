@@ -72,10 +72,10 @@
                  <form action="<?= base_url('track-order') ?>" id="trackOrderForm" method="post">
                     <div class="col-md-12 d-flex align-items-center justify-content-center m-auto w-100">
                         <div class="form-group w-50 mb-0">
-                            <input type="text" style="border-radius: 10px 0 0 10px" class="form-control" id="trackingNumber" name="trackingNumber" placeholder="Enter Tracking Number">
+                            <input type="text" style="border-radius: 10px 0 0 10px" class="form-control" id="trackingNumber" value="New Order 002" name="trackingNumber" placeholder="Enter Tracking Number">
                         </div>
                          <div class="">
-                            <button type="submit" class="btn btn-primary p-2 rounded-0">Track Order</button>
+                            <button type="submit" class="btn btn-primary p-2 rounded-0">Create New Order</button>
                         </div>
                     </div>
                  </form>

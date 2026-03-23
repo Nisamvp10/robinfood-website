@@ -37,19 +37,19 @@ class ProductTrackingController extends BaseController
             ],
             "customerAddressList" => [
                  "fullName" => "Test User",
-                    "contactNumber" => "9999999999",
-                    "email" => "test@gmail.com",
-                    "alternateNumber" => "9999999999",  
-                    "address" => "Kerala Address",
-                    "landmark" => "Near Area",          
-                    "pincode" => 676505,
-                    "city" => "Malappuram",
-                    "state" => "Kerala",
-                    "country" => "India"                
+                "contactNumber" => "9999999999",
+                "email" => "[EMAIL_ADDRESS]",
+                "alternateNumber" => "9999999999",
+                "address" => "Kerala Address",
+                "landmark" => "Near Area",
+                "pincode" => 676505,
+                "city" => "Malappuram",
+                "state" => "Kerala",
+                "country" => "India"              
             ],
             "packageList" => [
                 [
-                    "name" => "Test Product",
+                            "name" => "Test Product",
                     "qty" => 1,
                     "price" => 500,
                     "category" => "General",
