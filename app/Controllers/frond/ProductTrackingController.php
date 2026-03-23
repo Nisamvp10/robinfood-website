@@ -38,7 +38,7 @@ class ProductTrackingController extends BaseController
             "customerAddressList" => [
                  "fullName" => "Test User",
                 "contactNumber" => "9999999999",
-                "email" => "[EMAIL_ADDRESS]",
+                "email" => "nisamvp10@gmail.com",
                 "alternateNumber" => "9999999999",
                 "address" => "Kerala Address",
                 "landmark" => "Near Area",

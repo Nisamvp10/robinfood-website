@@ -6,16 +6,14 @@ class ShipbuddyService
 {
     protected $baseUrl;
     protected $token;
+
     public function __construct()
     {
         $this->token  = getenv('shipbudddy.api_key');
         $this->baseUrl = 'https://seller.shypbuddy.net/api/';
-        $this->client = \Config\Services::curlrequest([
-            'timeout' => 30
-        ]);
     }
 
-  public function request($endpoint, $method = 'POST', $data = [])
+    public function request($endpoint, $method = 'POST', $data = [])
     {
         $url = $this->baseUrl . $endpoint;
 
@@ -23,7 +21,8 @@ class ShipbuddyService
 
         $headers = [
             'Content-Type: application/json',
-            'Authorization: Bearer ' .$this->token
+            'Authorization: Bearer ' . $this->token,
+            'origin: https://robinfoodsindia.com'
         ];
 
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -31,17 +30,25 @@ class ShipbuddyService
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         // Method handling
-        if ($method == 'POST') {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-        } elseif ($method == 'PUT' || $method == 'PATCH' || $method == 'DELETE') {
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-        } elseif ($method == 'GET') {
-            curl_setopt($ch, CURLOPT_HTTPGET, true);
+        switch ($method) {
+            case 'POST':
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+                break;
+
+            case 'PUT':
+            case 'PATCH':
+            case 'DELETE':
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+                break;
+
+            case 'GET':
+                curl_setopt($ch, CURLOPT_HTTPGET, true);
+                break;
         }
 
-        // Debug (optional)
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_VERBOSE, true);
 
         $response = curl_exec($ch);
@@ -53,9 +60,11 @@ class ShipbuddyService
                 'error' => curl_error($ch)
             ];
         }
+
         curl_close($ch);
 
         return [
+            'status' => true,
             'status_code' => $httpCode,
             'response' => json_decode($response, true),
             'raw' => $response
