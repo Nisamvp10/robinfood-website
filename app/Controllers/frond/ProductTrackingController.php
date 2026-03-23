@@ -39,13 +39,13 @@ class ProductTrackingController extends BaseController
                  "fullName" => "Test User",
                     "contactNumber" => "9999999999",
                     "email" => "test@gmail.com",
-                    "alternateNumber" => "9999999999",   // ✅ ADD
+                    "alternateNumber" => "9999999999",  
                     "address" => "Kerala Address",
-                    "landmark" => "Near Area",           // ✅ ADD
+                    "landmark" => "Near Area",          
                     "pincode" => 676505,
                     "city" => "Malappuram",
                     "state" => "Kerala",
-                    "country" => "India"                 // ✅ ADD
+                    "country" => "India"                
             ],
             "packageList" => [
                 [

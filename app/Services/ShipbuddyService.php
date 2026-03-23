@@ -45,15 +45,6 @@ class ShipbuddyService
         curl_setopt($ch, CURLOPT_VERBOSE, true);
 
         $response = curl_exec($ch);
-
-        // echo "<pre>";
-        // echo "URL: " . $url . "\n\n";
-        // print_r($headers);
-        // echo "\n\nPAYLOAD:\n";
-        // print_r($data);
-        // exit;
-
-
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         if (curl_errno($ch)) {
@@ -62,7 +53,6 @@ class ShipbuddyService
                 'error' => curl_error($ch)
             ];
         }
-
         curl_close($ch);
 
         return [
