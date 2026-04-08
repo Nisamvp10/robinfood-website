@@ -264,34 +264,77 @@ class CheckoutController extends Controller
                     $pincode = substr(preg_replace('/\D/', '', $address->postal_code), 0, 6);
                     //shiping address to shipbuddy 
                 
+                    // $payload = [
+                    //     "orderData" => [
+                    //         "deliveryType" => "FORWARD",
+                    //         "isDangerousGoods" => "n",
+                    //         "paymentMode" => "cod",
+                    //         "length" => 10,
+                    //         "breadth" => 10,
+                    //         "height" => 10,
+                    //         "warehouseName" => "robin food",
+                    //         "packageCount" => 1,
+                    //         "shippingMode" => "surface",
+                    //         "deadWeight" => 0.5
+                    //     ],
+                    //     "customerAddressList" => [
+                    //         "fullName" => $address->full_name ?? '',
+                    //         "contactNumber" => $address->phone ?? '',
+                    //         "email" => ($address->email ?? $userData->email) ?? '',
+                    //         "alternateNumber" => $address->phone ?? '',
+                    //         "address" => $address->address_line1 ?? '',
+                    //         //"landmark" => $shippingAddress['landmark'] ?? '',
+                    //         //"pincode" => $address->postal_code ?? '',
+                    //         "pincode" => (int)$pincode, // ✅ important
+                    //         "city" => $address->city ?? '',
+                    //         "state" => $address->state ?? '',
+                    //         "country" => $address->country ?? ''
+                    //     ],
+                    //     "packageList" => $packageList
+                    // ];
+
                     $payload = [
-                        "orderData" => [
-                            "deliveryType" => "FORWARD",
-                            "isDangerousGoods" => "n",
-                            "paymentMode" => "cod",
-                            "length" => 10,
-                            "breadth" => 10,
-                            "height" => 10,
-                            "warehouseName" => "robin food",
-                            "packageCount" => 1,
-                            "shippingMode" => "surface",
-                            "deadWeight" => 0.5
-                        ],
-                        "customerAddressList" => [
-                            "fullName" => $address->full_name ?? '',
-                            "contactNumber" => $address->phone ?? '',
-                            "email" => ($address->email ?? $userData->email) ?? '',
-                            "alternateNumber" => $address->phone ?? '',
-                            "address" => $address->address_line1 ?? '',
-                            //"landmark" => $shippingAddress['landmark'] ?? '',
-                            //"pincode" => $address->postal_code ?? '',
-                            "pincode" => (int)$pincode, // ✅ important
-                            "city" => $address->city ?? '',
-                            "state" => $address->state ?? '',
-                            "country" => $address->country ?? ''
-                        ],
-                        "packageList" => $packageList
+
+                         "orderData"=> [
+                        "deliveryType"=> "FORWARD",
+                        "isDangerousGoods"=> "n",
+                        "paymentMode"=> "cod",
+                        "length"=> 10,
+                        "breadth"=> 10,
+                        "height"=> 10,
+                        "warehouseName"=> "robin food",
+                        "packageCount"=> 1,
+                        "shippingMode"=> "surface",
+                        "deadWeight"=> 0.5
+                    ],
+                    "customerAddressList"=> [
+                        "fullName"=> "Test User",
+                        "contactNumber"=> "9999999999",
+                        "email"=> "test@gmail.com",
+                        "alternateNumber"=> "9999999999",
+                        "address"=> "Kerala Address",
+                        "landmark"=> "Near Area",
+                        "pincode"=> 676505,
+                        "city"=> "Malappuram",
+                        "state"=> "Kerala",
+                        "country"=> "India"
+                    ],
+                    "packageList"=> [
+                        [
+                            "name"=> "Test Product",
+                            "qty"=> 1,
+                            "price"=> 500,
+                            "category"=> "General",
+                            "sku"=> "SKU001",
+                            "hsnCode"=> "1234"
+                        ]
+                    ]
                     ];
+
+                     
+
+                    // echo '<pre>';
+                    // print_r($payload);exit();
                     //$response = $this->shipbuddyService->request('orders/create', 'POST', $payload);
                     $res = $this->shipbuddyService->request('orderApi/createOrder', 'POST', $payload);
 

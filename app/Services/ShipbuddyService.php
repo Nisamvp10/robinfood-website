@@ -22,7 +22,8 @@ class ShipbuddyService
         $headers = [
             'Content-Type: application/json',
             'Authorization: Bearer ' . $this->token,
-            'origin: https://robinfoodsindia.com'
+            'origin: https://robinfoodsindia.com',
+            'Cookie: AWSALB=79pTDZd4KH+ACBKTJAh05K2Kupm8o0XlHJaPUq9jGFXafNDC0ftkBe4c7pEtggvdrNhGTVA2rJWl+tSEdVQ4ugtthcVOMyJrUHcKL6fSOkXG/k2eroa964rpOebY; AWSALBCORS=79pTDZd4KH+ACBKTJAh05K2Kupm8o0XlHJaPUq9jGFXafNDC0ftkBe4c7pEtggvdrNhGTVA2rJWl+tSEdVQ4ugtthcVOMyJrUHcKL6fSOkXG/k2eroa964rpOebY'
         ];
 
         curl_setopt($ch, CURLOPT_URL, $url);
