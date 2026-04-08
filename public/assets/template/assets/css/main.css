@@ -20715,4 +20715,14 @@ button {
 
 }
 
+.iti--allow-dropdown {
+  width: 100%;
+}
+
+a.logbtn {
+  width: fit-content;
+  float: right;
+  align-items: center;
+}
+
 /*# sourceMappingURL=main.css.map */

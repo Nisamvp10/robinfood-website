@@ -20,7 +20,7 @@
             <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="p-10 bg-off-white py-3 px-2">Order Summary  (<?= count($subtotal) ?>)</h3>
                 <div class="coupon_inner p-2">
-                    <div class="cart-subtotal p-0">
+                    <div class="cart-subtotal">
                         <p>Subtotal</p>
                         <p class="cart_amount"><?= money_format_custom($amountAmt) ?></p>
                     </div>
@@ -31,23 +31,6 @@
                                 <button type="button" class="theme-btn style6 applyCoupon rounded-0 h-auto px-3 py-2">Apply</button>
                             </div>
                         </div>
-
-                          <div class="w-100">
-                    <?php
-                    if(!empty($subtotal)) {
-                        foreach($subtotal as $res) {
-                            ?>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <p><?= $res['product_title'] ?> x <?= $res['quantity'] ?></p>
-                                <p><?= money_format_custom(($res['price'] * $res['quantity'])) ?></p>
-                            </div>
-                            <?php
-                        }
-                    }
-                    ?>
-
-                </div>
-
                         
                         <?php if($couponDiscount > 0) { ?>
                         <div class="cart_subtotal d-flex align-items-center justify-content-between">
@@ -61,7 +44,7 @@
                         </div>
                         
 
-                    <div class="cart-subtotal p-0">
+                    <div class="cart-subtotal">
                         <p>Total</p>
                         <p class="cart_amount"><?= money_format_custom($totalAmt) ?></p> 
                     </div>

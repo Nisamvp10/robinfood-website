@@ -16,8 +16,6 @@ class CartService
     protected $productManageModel;
     protected $couponcodeModel;
     protected $customerOrderModel;
-    protected $cartSessionId = null;
-
     public function __construct()
     {
         $this->cartModel = new CartModel();
@@ -28,28 +26,6 @@ class CartService
         $this->couponcodeModel = new CouponcodeModel();
         $this->customerOrderModel = new CustomerOrderModel();
     }
-    private function getCartSessionId()
-    {
-        if ($this->cartSessionId !== null) {
-            return $this->cartSessionId;
-        }
-
-        helper('cookie');
-        $sessionId = get_cookie('cart_session');
-        
-        if (!$sessionId) {
-            $sessionId = session_id();
-            if (empty($sessionId)) {
-                $sessionId = bin2hex(random_bytes(16));
-            }
-            set_cookie('cart_session', $sessionId, 30 * 24 * 60 * 60);
-        }
-        
-        $this->cartSessionId = $sessionId;
-        return $sessionId;
-    }
-
-    // gust puracjse now i am create session change to cookie
     public function getMyCart()
     {
        $cart = $this->getCart();
@@ -67,36 +43,18 @@ class CartService
             $userId = $user['userId']; // use 'id' not userId
         }
 
-        $sessionId = $this->getCartSessionId();
+        $sessionId = $session->get('cart_session') ?? session_id();
+        $session->set('cart_session', $sessionId);
 
         if ($userId) {
             $this->mergeCartAfterLogin();
-            //check cart coupen code is valid like session_id /coupon_code is_active =1 and start_date <= current_date <= end_date valid not valid remove coupon code from cart
-
             $cart = $this->cartModel->where('user_id', $userId)->first();
-            $this->checkCouponCode($cart);
-        
             if ($cart) {
                 return $cart;
             }
         }
 
-        $cart = $this->cartModel->where('session_id', $sessionId)->first();
-        $this->checkCouponCode($cart);
-        return $cart;
-    }
-
-    private function checkCouponCode($cart) {
-        if($cart['couponcode_id'] != null) {
-                $coupon = $this->couponcodeModel->where('id', $cart['couponcode_id'])->first();
-                if($coupon['is_active'] == 0 || $coupon['validity_from'] > date('Y-m-d') || $coupon['validity_to'] < date('Y-m-d')) {
-                    $this->cartModel->update($cart['id'], [
-                        //'coupon_code' => null,
-                        'coupon_discount' => 0,
-                        'couponcode_id' => null
-                    ]);
-                }
-            }
+        return $this->cartModel->where('session_id', $sessionId)->first();
     }
 
     /* ==========================================
@@ -110,7 +68,7 @@ class CartService
         if (!$user || !$user['isLoggedIn']) return;
 
         $userId = $user['userId'];
-        $sessionId = $this->getCartSessionId();
+        $sessionId = $session->get('cart_session');
 
         if (!$sessionId) return;
 
@@ -177,7 +135,7 @@ class CartService
         }
         return $this->cartModel->insert([
             'user_id'    => $userId,
-            'session_id' => $this->getCartSessionId(),
+            'session_id' => $session->get('cart_session'),
             'created_at' => date('Y-m-d H:i:s')
         ]);
     }
