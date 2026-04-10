@@ -87,7 +87,7 @@ class CartService
     }
 
     private function checkCouponCode($cart) {
-        if($cart['couponcode_id'] != null) {
+        if(!empty($cart['couponcode_id'])) {
                 $coupon = $this->couponcodeModel->where('id', $cart['couponcode_id'])->first();
                 if($coupon['is_active'] == 0 || $coupon['validity_from'] > date('Y-m-d') || $coupon['validity_to'] < date('Y-m-d')) {
                     $this->cartModel->update($cart['id'], [

@@ -81,7 +81,7 @@ class CheckoutController extends Controller
 
     public function placeOrder() {
         $address_id = $this->request->getPost('address_id');
-        $payment_method = $this->request->getPost('payment_method') ?? 'cod'; //gateway
+        $payment_method = $this->request->getPost('payment_method') ?? 'gateway'; //cod
         helper('cookie');
         $sessionId = get_cookie('cart_session');
 
@@ -264,82 +264,75 @@ class CheckoutController extends Controller
                     $pincode = substr(preg_replace('/\D/', '', $address->postal_code), 0, 6);
                     //shiping address to shipbuddy 
                 
-                    // $payload = [
-                    //     "orderData" => [
-                    //         "deliveryType" => "FORWARD",
-                    //         "isDangerousGoods" => "n",
-                    //         "paymentMode" => "cod",
-                    //         "length" => 10,
-                    //         "breadth" => 10,
-                    //         "height" => 10,
-                    //         "warehouseName" => "robin food",
-                    //         "packageCount" => 1,
-                    //         "shippingMode" => "surface",
-                    //         "deadWeight" => 0.5
-                    //     ],
-                    //     "customerAddressList" => [
-                    //         "fullName" => $address->full_name ?? '',
-                    //         "contactNumber" => $address->phone ?? '',
-                    //         "email" => ($address->email ?? $userData->email) ?? '',
-                    //         "alternateNumber" => $address->phone ?? '',
-                    //         "address" => $address->address_line1 ?? '',
-                    //         //"landmark" => $shippingAddress['landmark'] ?? '',
-                    //         //"pincode" => $address->postal_code ?? '',
-                    //         "pincode" => (int)$pincode, // ✅ important
-                    //         "city" => $address->city ?? '',
-                    //         "state" => $address->state ?? '',
-                    //         "country" => $address->country ?? ''
-                    //     ],
-                    //     "packageList" => $packageList
-                    // ];
-
                     $payload = [
-
-                         "orderData"=> [
-                        "deliveryType"=> "FORWARD",
-                        "isDangerousGoods"=> "n",
-                        "paymentMode"=> "cod",
-                        "length"=> 10,
-                        "breadth"=> 10,
-                        "height"=> 10,
-                        "warehouseName"=> "robin food",
-                        "packageCount"=> 1,
-                        "shippingMode"=> "surface",
-                        "deadWeight"=> 0.5
-                    ],
-                    "customerAddressList"=> [
-                        "fullName"=> "Test User",
-                        "contactNumber"=> "9999999999",
-                        "email"=> "test@gmail.com",
-                        "alternateNumber"=> "9999999999",
-                        "address"=> "Kerala Address",
-                        "landmark"=> "Near Area",
-                        "pincode"=> 676505,
-                        "city"=> "Malappuram",
-                        "state"=> "Kerala",
-                        "country"=> "India"
-                    ],
-                    "packageList"=> [
-                        [
-                            "name"=> "Test Product",
-                            "qty"=> 1,
-                            "price"=> 500,
-                            "category"=> "General",
-                            "sku"=> "SKU001",
-                            "hsnCode"=> "1234"
-                        ]
-                    ]
+                        "orderData" => [
+                            "deliveryType" => "FORWARD",
+                            "isDangerousGoods" => "n",
+                            "paymentMode" => "cod",
+                            "length" => 10,
+                            "breadth" => 10,
+                            "height" => 10,
+                            "warehouseName" => "robin food",
+                            "packageCount" => 1,
+                            "shippingMode" => "surface",
+                            "deadWeight" => 0.5
+                        ],
+                        "customerAddressList" => [
+                            "fullName" => $address->full_name ?? '',
+                            "contactNumber" => $address->phone ?? '',
+                            "email" => ($address->email ?? $userData->email) ?? '',
+                            "alternateNumber" => $address->phone ?? '',
+                            "address" => $address->address_line1 ?? '',
+                            //"landmark" => $shippingAddress['landmark'] ?? '',
+                            //"pincode" => $address->postal_code ?? '',
+                            "pincode" => (int)$pincode, // ✅ important
+                            "city" => $address->city ?? '',
+                            "state" => $address->state ?? '',
+                            "country" => $address->country ?? ''
+                        ],
+                        "packageList" => $packageList
                     ];
 
-                     
+                    // $payload = [
 
-                    // echo '<pre>';
-                    // print_r($payload);exit();
+                    //      "orderData"=> [
+                    //     "deliveryType"=> "FORWARD",
+                    //     "isDangerousGoods"=> "n",
+                    //     "paymentMode"=> "cod",
+                    //     "length"=> 10,
+                    //     "breadth"=> 10,
+                    //     "height"=> 10,
+                    //     "warehouseName"=> "robin food",
+                    //     "packageCount"=> 1,
+                    //     "shippingMode"=> "surface",
+                    //     "deadWeight"=> 0.5
+                    // ],
+                    // "customerAddressList"=> [
+                    //     "fullName"=> "Test User",
+                    //     "contactNumber"=> "9999999999",
+                    //     "email"=> "test@gmail.com",
+                    //     "alternateNumber"=> "9999999999",
+                    //     "address"=> "Kerala Address",
+                    //     "landmark"=> "Near Area",
+                    //     "pincode"=> 676505,
+                    //     "city"=> "Malappuram",
+                    //     "state"=> "Kerala",
+                    //     "country"=> "India"
+                    // ],
+                    // "packageList"=> [
+                    //     [
+                    //         "name"=> "Test Product",
+                    //         "qty"=> 1,
+                    //         "price"=> 500,
+                    //         "category"=> "General",
+                    //         "sku"=> "SKU001",
+                    //         "hsnCode"=> "1234"
+                    //     ]
+                    // ]
+                    // ];
+
                     //$response = $this->shipbuddyService->request('orders/create', 'POST', $payload);
-                    $res = $this->shipbuddyService->request('orderApi/createOrder', 'POST', $payload);
-
-                    print_r($res);exit();
-                   
+                    $res = $this->shipbuddyService->request('orderApi/createOrder', 'POST', $payload);                   
                     $shipping_order_id = $res['response']['data'][0]['orderId'];
                     $this->customerOrderModel->update($order_id, ['payment_status' => 'unpaid','status' => 'confirmed','shipping_order_id'=>$shipping_order_id]); 
 
@@ -490,7 +483,7 @@ class CheckoutController extends Controller
                 "length" => 10,
                 "breadth" => 10,
                 "height" => 10,
-                "warehouseName" => "royal alliance ayurveda",
+                "warehouseName" => "robin food",
                 "packageCount" => 1,
                 "shippingMode" => "surface",
                 "deadWeight" => 0.5
@@ -508,6 +501,7 @@ class CheckoutController extends Controller
             ],
             "packageList" => $packageList
         ];
+         
         $res = $this->shipbuddyService->request('orderApi/createOrder', 'POST', $payload);
         $shipping_order_id = $res['response']['data'][0]['orderId'];
         $this->customerOrderModel->where('gateway_order_id',$order_id)->set(['payment_status'=>'paid','status'=>'confirmed','shipping_order_id'=>$shipping_order_id])->update();
@@ -551,10 +545,11 @@ class CheckoutController extends Controller
                 $user = $this->userModel->where('id', $order['user_id'])->first();
                 $mailTo = (!empty($shippingAddress['email'])) ? $shippingAddress['email'] : $user['email'];
             }
-          
+
+         
         $emailService->setTo($mailTo);
         $emailService->setSubject('Order Placed');
-        $emailService->setMessage(view('frontend/email/order_placed', compact('order', 'order_items','user')));
+        $emailService->setMessage(view('frontend/email/order_placed', compact('order', 'order_items','user','shippingAddress'))); 
         $emailService->send();
     }
     public function applyCoupon(){
