@@ -302,8 +302,8 @@
                                              
                                           </h4>
                                           <div class="best-seller-one__icons">
-                                             <a href="#"><i class="fa-light fa-heart"></i></a>
-                                             <a href="#"><i class="fa-light fa-bag-shopping"></i></a>
+                                             <a href="#" class="d-none"><i class="fa-light fa-heart"></i></a>
+                                             <a href="javascript:void(0);" class="add-to-cart" data-id="<?= $premiumproduct->id ?>"><i class="fa-light fa-bag-shopping"></i></a>
                                           </div>
                                        </div>
                                     </div>
@@ -446,10 +446,10 @@
                                        >
                                           <i class="fa-regular fa-eye"></i>
                                     </a>
-                                       <a href="#"
+                                       <a href="#" class="d-none"
                                           ><i class="fa-regular fa-heart"></i
                                        ></a>
-                                       <a href="#">
+                                       <a href="javascript:void(0)" class="add-to-cart" data-id="<?= $featuredProduct->id ?>">
                                           <i
                                              class="fa-light fa-bag-shopping"
                                           ></i>
