@@ -173,7 +173,7 @@
             <div class="header-top-one">
                <div class="phone-icon">
                   <i class="icon-whatsapp"></i>
-                  <a href="tel:+916238724919" class="text-white"> +91 6238724919</a>
+                  <a href="tel:+916238724919" class="text-white">  <i class="fab fa-whatsapp"></i> +91 6238724919</a>
                </div>
                <div class="offer">
                   <div class="subtitle style1 text-capitalize">

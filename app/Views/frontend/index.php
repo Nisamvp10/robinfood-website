@@ -328,7 +328,7 @@
                   <div class="col-lg-6">
                      <div class="video-content">
                         <div class="video-box">
-                           <a href="https://www.youtube.com/embed/AI2NXjbYpD4?si=kMNgq0ILzw3JhY8y" class="play-btn popup-video" >
+                           <a href="https://www.youtube.com/watch?v=AI2NXjbYpD4" class="play-btn popup-video" >
                               <i class="fa-sharp fa-solid fa-play"></i>
                            </a>
                         </div>
