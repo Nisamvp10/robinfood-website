@@ -49,14 +49,14 @@ function openModal(id = false) {
 
     if (id) {
         $('#edit_id').val(id);
-        
+
         modal.find('.head').text('Edit');
         fetch(App.cust() + '/edit/' + `${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data) {
                     result = data.result[0];
-                    console.log(result.product_status )
+                    console.log(result.product_status)
                     webForm.querySelector('#title').value = result.product_title;
                     //webForm.querySelector('#status').value = result[0].status;
                     webForm.querySelector('#note').value = result.short_description;
@@ -98,7 +98,7 @@ function openModal(id = false) {
                                     <button type="button" onclick="addPoint()" class="text-blue-600 text-sm">+ Add Point</button>
                                 </div>
                             </div>`);
-                     highlights = data.result[0];
+                    highlights = data.result[0];
                     if (highlights.highlights && highlights.highlights.length > 0) {
                         highlights.highlights.forEach(carpoin => {
 
@@ -620,12 +620,13 @@ function renderfun(response) {
                         <th class="px-4 py-3 text-left font-medium">Image</th>
                         <th class="px-4 py-3 text-left font-medium">Title</th>
                         <th class="px-4 py-3 text-left font-medium">Short Description</th>
-                         <th class="px-4 py-3 text-left font-medium">Price</th>
+                        <th class="px-4 py-3 text-left font-medium">Price</th>
                         <th class="px-4 py-3 text-center font-medium">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">`
         paginatedData.forEach(function (item, idx) {
+            console.log(item);
             html += `<tr>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">${start + idx + 1}</td>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">
@@ -639,7 +640,9 @@ function renderfun(response) {
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight">${item.product_title}</td>
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs">${item.short_description}</td>
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs flex gap-2 text-bold"><p class="flex">${item.price}</p><p>${item.compare_price}</p></td>
+                <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs flex gap-2 text-bold"><p class="flex">${item.product_status == 1 ? 'Live' : 'Draft'}</p></td>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">
+                    ${item.product_status == 1 ? '<button class="btn btn-sm bg-success edit-expertise text-white" onclick="changeStatus(this)" data-id="' + item.id + '" >Live</button>' : '<button class="btn btn-sm btn-danger delete-expertise text-white" type="button" onclick="changeStatus(this)" data-id="' + item.id + '" >Draft</button>'}
                     <button class="btn btn-sm btn-primary edit-expertise" onclick="openModal('${item.id}')">Edit</button>
                     <button class="btn btn-sm btn-danger delete-expertise" type="button" onclick="deleteItem(this)" data-id="${item.id}" >Delete</button>
                 </td>
@@ -884,3 +887,21 @@ $(document).on('change', '#products', function (e, selectedSubcategoryId = null)
         })
     }
 })
+function changeStatus(e) {
+    let id = $(e).data('id');
+    if (confirm('Are you sure to change status?')) {
+        $.ajax({
+            url: App.cust() + 'change-status/' + id,
+            type: "POST",
+            dataType: 'json',
+            success: function (res) {
+                if (res.success) {
+                    toastr.success(res.message);
+                    loadServices();
+                } else {
+                    toastr.error(res.message);
+                }
+            }
+        })
+    }
+}

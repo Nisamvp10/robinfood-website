@@ -78,7 +78,7 @@ class ProductmanagementController extends Controller
                 $key['image'] = validImg($key['product_image']);
                 $price =  dicountPrice($key['price'],$key['price_offer_type'],$key['compare_price']); // money_format_custom($key['price']);
                 $totalDiscount = totalDiscount($key['compare_price'],$key['price_offer_type'],$key['price']);
-                $key['compare_price'] = ($key['price_offer_type'] == 2) ? '<del>'.money_format_custom($totalDiscount).'%</del>' : '<del>'.money_format_custom($totalDiscount).'<del>';
+                $key['compare_price'] = ($key['price_offer_type'] == 2) ? '<del>'.money_format_custom($totalDiscount).'%</del>' : '<del>'.money_format_custom($totalDiscount).'</del>';
                 $key['price'] = money_format_custom($price);
             }
             $status = true;
@@ -337,6 +337,33 @@ class ProductmanagementController extends Controller
             if($this->productManageModel->update(decryptor($id),['product_status'=>2])) {
                 $status  = true;
                 $msg = 'Successfully Deleted';
+            }else{
+                $msg = '!Opps try agian';
+            }
+        }else{
+            $msg = '!Opps try agian';
+        }
+        return $this->response->setJSON(['success' => $status , 'message' => $msg]);
+    }
+
+    public function changeStatus($id) {
+        if(!hasPermission('','update_product_management')) {
+            return $this->response->setJSON(['success' => false , 'message' => lang('Custom.permissionDenied')]);
+        }
+        if(!$this->request->isAJAX()) {
+            return $this->response->setJSON(['success' => false , 'message' => lang('Custom.invalidRequest')]);
+        }
+       
+        if(empty($id)) {
+            return $this->response->setJSON(['success' => false , 'message' => 'ddss d']);
+        }
+        $status = false;
+        $msg = '';
+         $item = $this->productManageModel->find(decryptor($id)); 
+        if($item) {
+            if($this->productManageModel->update(decryptor($id),['product_status'=>($item['product_status'] == 1 ? 2 : 1)])) {
+                $status  = true;
+                $msg = 'Successfully Updated';
             }else{
                 $msg = '!Opps try agian';
             }

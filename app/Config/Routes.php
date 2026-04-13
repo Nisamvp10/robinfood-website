@@ -128,6 +128,7 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post(slugify(getappdata('product_management')).'/delete-gallery/(:any)','productmanagementController::glleryDelete/$1');
         $routes->post(slugify(getappdata('product_management')).'/products/(:any)','productmanagementController::getProductBycategory/$1');
         $routes->post(slugify(getappdata('product_management')).'/get-products-info/(:any)','productmanagementController::productPurchaseDetail/$1');
+        $routes->post(slugify(getappdata('product_management')).'/change-status/(:any)','productmanagementController::changeStatus/$1');
         //users or Clients
         $routes->get(slugify(getappdata('clients')),'ClientsController::index');
         $routes->post(slugify(getappdata('clients')).'/list','ClientsController::list');
