@@ -640,7 +640,6 @@ function renderfun(response) {
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight">${item.product_title}</td>
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs">${item.short_description}</td>
                 <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs flex gap-2 text-bold"><p class="flex">${item.price}</p><p>${item.compare_price}</p></td>
-                <td class="px-2 py-2 text-gray-700 break-words max-w-x border border-gray-300 font-extralight text-xs flex gap-2 text-bold"><p class="flex">${item.product_status == 1 ? 'Live' : 'Draft'}</p></td>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">
                     ${item.product_status == 1 ? '<button class="btn btn-sm bg-success edit-expertise text-white" onclick="changeStatus(this)" data-id="' + item.id + '" >Live</button>' : '<button class="btn btn-sm btn-danger delete-expertise text-white" type="button" onclick="changeStatus(this)" data-id="' + item.id + '" >Draft</button>'}
                     <button class="btn btn-sm btn-primary edit-expertise" onclick="openModal('${item.id}')">Edit</button>
