@@ -10,6 +10,7 @@ function shippingAddress() {
         dataType: 'json',
         success: function (response) {
             address.html(response.result);
+            mycart();
         }
 
     })
@@ -38,6 +39,7 @@ $('#addShippingAddressForm').on('submit', function (e) {
                 webForm[0].reset();
                 $('#loginBtn').prop('disabled', false).html('Save Address');
                 shippingAddress();
+
             } else {
                 $('#loginBtn').prop('disabled', false).html('Save Address');
                 if (response.login === false) {
