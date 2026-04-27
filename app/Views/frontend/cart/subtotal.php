@@ -7,7 +7,7 @@
         }
     }    
     $taxCalculate = round($amountAmt * ($taxAmt / 100));
-    $shippingCharge = $shippingCharge['shipping_charge'];
+    $shippingCharge = $shippingCharge['charge'];
     $totalAmt = $amountAmt + $taxCalculate + $shippingCharge;
     ?>
 
