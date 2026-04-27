@@ -501,7 +501,8 @@ class CartService
         foreach ($cartItems as $item) {
             $total += $item['subtotal'];
         }
-        $shippingCharge = ($this->shippingCharge->calculate($total, $shippingAddress['state']))?$this->shippingCharge->calculate($total, $shippingAddress['state']):0;
+        //Trying to access array offset on null
+        $shippingCharge = $this->shippingCharge->calculate($total, $shippingAddress['state'] ?? '');
         if($shippingCharge){
             $shippingCharge = $shippingCharge;
         }else{
