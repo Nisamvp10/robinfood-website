@@ -501,7 +501,7 @@ class CartService
         foreach ($cartItems as $item) {
             $total += $item['subtotal'];
         }
-        $shippingCharge = $this->shippingCharge->calculate($total, $shippingAddress['state']);
+        $shippingCharge = ($this->shippingCharge->calculate($total, $shippingAddress['state']))?$this->shippingCharge->calculate($total, $shippingAddress['state']):0;
         if($shippingCharge){
             $shippingCharge = $shippingCharge;
         }else{
