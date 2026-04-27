@@ -222,7 +222,6 @@ document.addEventListener('click', async (e) => {
                         rzp1.open();
 
                     } else {
-                        console.log(response);
                         if (response.type == 'cod') {
                             window.location.href = response.url;
                         }
@@ -303,6 +302,7 @@ function isDefault(e) {
             success: function (response) {
                 if (response.success) {
                     toastr.success(response.message);
+                    mycart();
                 } else {
                     toastr.error(response.message);
                 }

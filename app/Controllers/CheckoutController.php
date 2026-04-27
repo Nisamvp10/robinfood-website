@@ -12,6 +12,7 @@ use App\Models\ProductModel;
 use App\Models\ProductManageModel;
 use App\Models\CouponcodeModel;
 use App\Services\ShipbuddyService;
+use App\Services\ShippingCharge;
 //thi controller in controllers frond folder 
 use Razorpay\Api\Api;
 use App\Controllers\front\RazorpayController; 
@@ -28,6 +29,7 @@ class CheckoutController extends Controller
     protected $productManageModel;
     protected $couponcodeModel;
     protected $shipbuddyService;
+    protected $shippingCharge;
     public function __construct()
     {
         $this->cart = new CartService();
@@ -40,6 +42,7 @@ class CheckoutController extends Controller
         $this->couponcodeModel = new CouponcodeModel();
         $this->paymentGateway = new PaymentGateway();
         $this->shipbuddyService = new ShipbuddyService();
+        $this->shippingCharge = new ShippingCharge();
     }
     public function index()
     {
@@ -144,6 +147,19 @@ class CheckoutController extends Controller
                     'url' => base_url('checkout')
                 ]);
             }
+            //block outof countory order allowed only india 
+            $allowedCountries = ['India','KL'];
+            if(!in_array($address->country, $allowedCountries)){
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => 'Out of country order not allowed',
+                    'url' => base_url('checkout')
+                ]);
+            }
+            //shipping charge 
+            $shippingCharge = $this->shippingCharge->calculate($totalAmount, $address->state);
+            $shippingCharge = ($shippingCharge > 0) ? $shippingCharge : 0;
+
 
             $shippingAddress = [
                 'name'  => $address->full_name,
@@ -161,12 +177,13 @@ class CheckoutController extends Controller
                 'user_id' => $isLoggedIn ? $userSession['userId'] : 0,
                // 'order_number' => $orderNumber,
                 'tax' => $taxAmount,
+                'shipping_charge' => $shippingCharge,
                 'coupen_code_id' => $cart['couponcode_id'],
                 'discount' => $cart['coupon_discount'],
                 'address_id' => $address->id,
                 'shipping_address' => json_encode($shippingAddress,true),
                 'sub_total' => $itemSum,
-                'total_amount' => $totalAmount,
+                'total_amount' => $totalAmount + $shippingCharge,
                 'payment_method' => $payment_method,
                 'coupon_id' => $cart['couponcode_id'],
                 'coupon_discount' => $coupenDiscount,
@@ -549,7 +566,7 @@ class CheckoutController extends Controller
          
         $emailService->setTo($mailTo);
         $emailService->setSubject('Order Placed');
-        $emailService->setMessage(view('frontend/email/order_placed', compact('order', 'order_items','user','shippingAddress'))); 
+        $emailService->setMessage(view('frontend/email/order_placed', compact('order', 'order_items','user','shippingAddress')));  
         $emailService->send();
     }
     public function applyCoupon(){

@@ -7,6 +7,9 @@ use App\Models\CategoryModel;
 use App\Models\CouponcodeModel;
 use App\Models\ProductManageModel;
 use App\Models\CustomerOrderModel;
+use App\Models\ShippingchargeModel;
+use App\Models\ShippingAddressModel;
+use App\Services\ShippingCharge;
 class CartService
 {
     protected $cartModel;
@@ -17,6 +20,9 @@ class CartService
     protected $couponcodeModel;
     protected $customerOrderModel;
     protected $cartSessionId = null;
+    protected $shippingchargeModel;
+    protected $shippingAddressModel;
+    protected $shippingCharge;
 
     public function __construct()
     {
@@ -27,6 +33,9 @@ class CartService
         $this->productManageModel = new ProductManageModel();
         $this->couponcodeModel = new CouponcodeModel();
         $this->customerOrderModel = new CustomerOrderModel();
+        $this->shippingchargeModel = new ShippingchargeModel();
+        $this->shippingAddressModel = new ShippingAddressModel();
+        $this->shippingCharge = new ShippingCharge();
     }
     private function getCartSessionId()
     {
@@ -474,6 +483,34 @@ class CartService
             'total' => $total
         ];
     }
-
+    //shipping charge
+    public function shippingCharge()
+    {
+       
+        $cart = $this->getCart();
+        if (!$cart) {
+            return ['status' => false, 'message' => 'Cart not found'];
+        }
+        $cartSession = $this->getCartSessionId();
+        $shippingAddress = $this->shippingAddressModel->where(['session_id' => $cartSession,'is_default'=>1])->first();
+        $cartItems = $this->getCartItems();
+        if(empty($cartItems)){
+            return ['status' => false, 'message' => 'Cart is empty'];
+        }
+        $total = 0;
+        foreach ($cartItems as $item) {
+            $total += $item['subtotal'];
+        }
+        $shippingCharge = $this->shippingCharge->calculate($total, $shippingAddress['state']);
+        if($shippingCharge){
+            $shippingCharge = $shippingCharge;
+        }else{
+            $shippingCharge = 0;
+        }
+        return [
+            'status' => true,
+            'shippingCharge' => $shippingCharge
+        ];
+    }
 
 }

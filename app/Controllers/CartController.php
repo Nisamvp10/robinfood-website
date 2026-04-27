@@ -15,7 +15,7 @@ class CartController extends Controller
 
     private function cartItemHtml(){
         $result = $this->cart->getCartItems();
-        return view('frontend/cart/cart-items',compact('result'));
+        return view('frontend/cart/cart-items',compact('result')); //
     }
 
     private function subtotalHtml() {
@@ -26,8 +26,10 @@ class CartController extends Controller
     private function checkoutItemsHtml() {
         $cartdata = $this->cart->getMyCart();
         $subtotal = $this->cart->getCartItems();
+        //shipping charge
+        $shippingCharge = $this->cart->shippingCharge();
         
-        return view('frontend/cart/checkoutItems',compact('subtotal','cartdata'));
+        return view('frontend/cart/checkoutItems',compact('subtotal','cartdata','shippingCharge')); 
     }
 
     public function index() {

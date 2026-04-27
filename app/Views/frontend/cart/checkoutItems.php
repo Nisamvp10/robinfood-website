@@ -1,6 +1,12 @@
 <?php
     $couponDiscount = 0;
 
+    if($shippingCharge['status']) {
+        $shippingCharge = $shippingCharge['shippingCharge'];
+    }else{
+        $shippingCharge = 0;
+    }
+
     if(isset($cartdata) && $cartdata != null) {
         $couponDiscount = ($cartdata['coupon_discount'] ==0)?0:$cartdata['coupon_discount'] ?? 0;
     }
@@ -12,8 +18,15 @@
         }
     }    
     $subtotalAmt = ($amountAmt - $couponDiscount);
+   if(round($subtotalAmt * ($taxAmt / 100)) > 0) {
     $taxCalculate = round($subtotalAmt * ($taxAmt / 100));
-    $totalAmt = $amountAmt + $taxCalculate - $couponDiscount;
+   }else{
+    $taxCalculate = 0;
+   }
+    $shippingChargeAmt = $shippingCharge;
+
+    $totalAmt = $amountAmt + $taxCalculate - $couponDiscount + $shippingChargeAmt;
+    $totalAmt = round($totalAmt);
     ?>
 
 <div class="cart-checkout-wrapper w-100 mb-0 border w-100 mt-0" style="w-100">
@@ -58,6 +71,11 @@
                         <div class="cart_subtotal d-flex align-items-center justify-content-between mt-3 mb-3">
                             <p>Tax</p>
                             <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
+                        </div>
+                        <!--  -->
+                        <div class="cart_subtotal d-flex align-items-center justify-content-between mt-3 mb-3">
+                            <p>Shipping Charge</p>
+                            <p class="cart_amount"><?= money_format_custom($shippingCharge) ?></p>
                         </div>
                         
 

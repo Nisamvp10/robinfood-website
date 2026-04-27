@@ -184,11 +184,7 @@
      
     </div>
 </div>
-
-
-
     <!--  -->
-
     <?= view('modal/shippingAddressModal')?>
     <?= view('modal/loginModal')?>
     <?= view('frontend/inc/footerLink') ?>

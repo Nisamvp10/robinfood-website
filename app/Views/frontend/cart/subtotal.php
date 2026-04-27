@@ -7,7 +7,8 @@
         }
     }    
     $taxCalculate = round($amountAmt * ($taxAmt / 100));
-    $totalAmt = $amountAmt + $taxCalculate;
+    $shippingCharge = $shippingCharge['shipping_charge'];
+    $totalAmt = $amountAmt + $taxCalculate + $shippingCharge;
     ?>
 
 <div class="cart-checkout-wrapper w-100 mb-0 border">
@@ -22,6 +23,7 @@
                         <p>Tax</p>
                         <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
                     </div>
+                    
                        <div class="coupon-left mt-2 d-none">
                             <div class="coupon-input d-flex align-items-center">
                                 <input class="couponcodeInput" placeholder="Coupon code" class="h-auto " type="text">

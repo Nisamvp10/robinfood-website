@@ -1,5 +1,6 @@
 <?php
 use App\Models\CategoryModel;
+use App\Services\ShippingCharge;
 if (!function_exists('updateImage')) {
     function updateImage($url)
     {
@@ -107,3 +108,10 @@ if(!function_exists('services')) {
         return $services;
     }
 }
+if(!function_exists('shippingCharge')) {
+    function shippingCharge($cartTotal, $state) {
+        $shippingCharge = new ShippingCharge();
+        return $shippingCharge->calculate($cartTotal, $state);
+    }
+}
+

@@ -581,6 +581,7 @@ public function save()
                     'email'         => $purchase['customerEmail'],
                     'totalAmount'  => $purchase['total_amount'],
                     'shippingAddress' => $purchase['shipping_address'],
+                    'shipping_charge' => $purchase['shipping_charge'],
                     // 'shippingAddress' => json_encode([
                     // 'name' => $purchase['shipping_full_name'], 
                     // 'phone' => $purchase['shipping_phone'],
@@ -620,7 +621,7 @@ public function save()
             'default_font' => 'dejavusans',
         ]);
 
-        $html = view('admin/sales/invoice', compact('result'));
+        $html = view('admin/sales/invoice', compact('result')); 
         
          $mpdf->WriteHTML($html);
 

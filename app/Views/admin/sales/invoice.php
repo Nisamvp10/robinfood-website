@@ -82,6 +82,7 @@ if(!empty($result)) {
         $shippingAddress = json_decode($res['shippingAddress'], true);
         $orderDate = date('Y-m-d H:i:s',strtotime($orderDate));
         $discount = $res['discount'];
+        $shippingCharge = $res['shipping_charge'];
     }
 }else{
     $orderId = '';
@@ -93,6 +94,7 @@ if(!empty($result)) {
     $shippingAddress = '';
     $orderDate = '';
     $discount = '';
+    $shippingCharge = '';
 }?>
     <div class="head row d-flex" style=" display:block; border:1px red solid; text-align: center; font-weight: bold;font-size:18px;width:100%;">
         <div class="logo col-sm-8" style="width:340px;text-align:left;padding:0px;margin:0px;" >
@@ -214,10 +216,17 @@ if(!empty($result)) {
                                 <th id="total" style="text-align:right;" colspan="2">Sub Total :</th>
                                 <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($totalAmount)?></td>
                                 </tr>
+                               
                                 <tr>
-                                <th id="total" style="text-align:right;" colspan="2">Tax :</th>
-                                <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($totalTax)?></td>
+                                    <th id="total" style="text-align:right;" colspan="2">Shipping Charge :</th>
+                                    <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($shippingCharge)?></td>
                                 </tr>
+                              
+                                <tr>
+                                    <th id="total" style="text-align:right;" colspan="2">Tax :</th>
+                                    <td colspan="2" style="text-align:right;">RS:  <?=money_format_custom($totalTax)?></td>
+                                </tr>
+
                                 <?php
                                 if($discount > 0){ ?>
                                 <tr>
