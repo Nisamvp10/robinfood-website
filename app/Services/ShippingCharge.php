@@ -10,7 +10,7 @@ class ShippingCharge{
         $state = ucfirst(strtolower(trim($state)));
 
         // ✅ Free shipping (optional)
-        if ($cartTotal >= 1000) {
+        if ($cartTotal >= 10000) {
             return 0;
         }
 
