@@ -277,7 +277,9 @@
                                  <div class="col-xl-4 col-md-6">
                                     <div class="best-seller-one">
                                        <div class="best-seller-one__thumb">
-                                          <img src="<?=validImg($premiumproduct->product_image)?>" alt="thumb" width="100%" />
+                                          <a href="<?=base_url('product-details/'.$premiumproduct->slug)?>">
+                                             <img src="<?=validImg($premiumproduct->product_image)?>" alt="thumb" width="100%" />
+                                          </a>
                                        </div>
                                        <div class="best-seller-one__content">
                                           <h4 class="best-seller-one__content-title">
@@ -425,10 +427,9 @@
                   <div class="col-xl-4 col-md-6 product-item" data-category="<?= $featuredProduct->category_id ?>">
                      <div class="featured-product-item-one">
                         <div class="featured-product-item-one__thumb">
-                           <img
-                              src="<?=validImg($featuredProduct->product_image)?>"
-                              alt="thumb"
-                           />
+                            <a href="<?=base_url('product-details/'.$featuredProduct->slug)?>">
+                              <img src="<?=validImg($featuredProduct->product_image)?>" alt="thumb" />
+                           </a>
                                  <?php
                                  if(!empty($featuredProduct->compare_price)) {
                                     if($featuredProduct->price_offer_type ==1 && $featuredProduct->compare_price > 0){
@@ -441,9 +442,7 @@
                                     <?php
                                  } ?>
                                     <div class="icon">
-                                       <a
-                                          href="<?=base_url('product-details/'.$featuredProduct->slug)?>"
-                                       >
+                                       <a href="<?=base_url('product-details/'.$featuredProduct->slug)?>">
                                           <i class="fa-regular fa-eye"></i>
                                     </a>
                                        <a href="#" class="d-none"

@@ -10,9 +10,9 @@
                      <i class="icon-footer-telephone"></i>
                   </div>
                   <div class="content">
-                     <p>Call Us 7/24</p>
+                     <p>Call Us</p>
                      <h3>
-                        <a href="tel:+9118008909945"> 1800 890 9945</a>
+                        <a href="tel:<?=getappdata('phone')?>"> <?=getappdata('phone')?></a>
                      </h3>
                   </div>
                </div>

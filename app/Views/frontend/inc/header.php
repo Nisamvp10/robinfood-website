@@ -252,7 +252,7 @@
                                     </li>
  
                                     <li class="active has-dropdown">
-                                       <a href="<?= base_url('productlist') ?>"> Products <i class="fa-regular fa-plus"></i></a>
+                                       <a href="<?= base_url('productlist') ?>"> Products </a>
                                        <ul class="submenu">
                                           <?php
                                            if(!empty(services())) {
