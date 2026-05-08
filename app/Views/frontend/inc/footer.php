@@ -14,6 +14,9 @@
                      <h3>
                         <a href="tel:<?=getappdata('phone')?>"> <?=getappdata('phone')?></a>
                      </h3>
+                      <h3>
+                        <a href="tel:7034741741">7034741741</a>
+                     </h3>
                   </div>
                </div>
                <div
@@ -43,7 +46,7 @@
                      </svg>
                   </div>
                   <div class="content">
-                     <p>Make a Quote</p>
+                     <p>Enquire Now</p>
                      <h3>
                         <a href="mailto:<?=getappdata('email') ?>"><?=getappdata('email') ?></a>
                      </h3>

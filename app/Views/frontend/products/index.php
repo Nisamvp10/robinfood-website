@@ -63,7 +63,9 @@
                 <div class="col-xl-3 col-md-6">
                   <div class="featured-product-item-one">
                      <div class="featured-product-item-one__thumb">
-                        <img src="<?=validImg($product['product_image'])?>" alt="thumb" />
+                        <a href="<?=base_url('product-details/'.$product['slug'])?>">
+                           <img src="<?=validImg($product['product_image'])?>" alt="thumb" />
+                        </a>
                         <?php
                             if(!empty($product['compare_price'])) {
                                if($product['price_offer_type'] ==1 && $product['compare_price'] > 0){

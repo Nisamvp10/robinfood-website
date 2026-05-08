@@ -79,6 +79,11 @@
                               <i class="fa-solid fa-phone"></i>
                               <a href="tel:<?=getappdata('phone') ?>"><?=getappdata('phone') ?></a>
                             </li>
+
+                            <li>
+                              <i class="fa-solid fa-phone"></i>
+                              <a href="tel:7034741741">7034741741</a>
+                            </li>
     
                             <li>
                               <i class="fa-regular fa-envelope"></i>
@@ -153,7 +158,7 @@
                                 <input type="text" name="phone" id="phone" placeholder="Phone number">
                                 </div>
                             </div>
-                            <div class="col-xl-12">
+                            <div class="col-xl-12 d-none">
                                 <div class="subjects">
                                     <h6>Select Subject?</h6>
                                     <div class="checkbox">

@@ -16,9 +16,9 @@
                     ?>
                             <tr>
                                 <td class="product_thumb d-flex align-items-center justify-content-between">
-                                    <a href="#!">
+                                    <a href="<?=base_url('product-details/'.$row['slug'])?>">
                                         <img src="<?= validImg($row['image']) ?>" alt="img"></a>
-                                    <a class="product-name" href="#!"><?= $row['product_title'] ?>
+                                    <a class="product-name" href="<?=base_url('product-details/'.$row['slug'])?>"><?= $row['product_title'] ?>
                                     <input type="hidden" value="<?= encryptor($row['id']) ?>"  name="item_id[]" />
                                 </a>
                                 </td>

@@ -140,7 +140,7 @@
                               <i class="far fa-phone"></i>
                            </div>
                            <div class="offcanvas__contact-text">
-                              <a href="#">+91 7034741741 
+                              <a href="tel:+917034741741">+91 7034741741 
                               </a>
                            </div>
                         </li>
@@ -148,17 +148,17 @@
                      <div class="header-button mt-4">
                         <a href="<?=base_url('contact');?>" class="theme-btn text-center">
                            <span
-                              >Get A Quote<i
+                              >Enquire Now<i
                                  class="fa-solid fa-arrow-right-long"
                               ></i
                            ></span>
                         </a>
                      </div>
                      <div class="social-icon d-flex align-items-center">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/Robinfoodindia"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/robinfood_india"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@robinfood1849"><i class="fab fa-youtube"></i></a>
+                        <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
                      </div>
                   </div>
                </div>
@@ -178,7 +178,7 @@
                <div class="offer">
                   <div class="subtitle style1 text-capitalize">
                      <i class="icon-tag"></i>
-                    TOLL-FREE NO <a class="text-white" href="tel:18008909945">1800 890 9945</a>
+                    TOLL-FREE NO <a class="text-white" href="tel:7034741741">7034741741</a>
                   </div>
                </div>
                <div class="lang">
