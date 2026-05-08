@@ -400,7 +400,8 @@ class CartService
                 'price'         => $item['price'],
                 'quantity'      => $item['quantity'],
                 'subtotal'      => $item['subtotal'],
-                'image'         => $product['product_image']
+                'image'         => $product['product_image'],
+                'slug'          => $product['slug']
             ];
         }
 
