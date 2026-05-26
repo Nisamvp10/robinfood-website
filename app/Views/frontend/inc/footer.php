@@ -12,10 +12,10 @@
                   <div class="content">
                      <p>Call Us</p>
                      <h3>
-                        <a href="tel:<?=getappdata('phone')?>"> <?=getappdata('phone')?></a>
+                        <a href="tel:<?=getappdata('phone')?>"> +91 <?=getappdata('phone')?></a>
                      </h3>
                       <h3>
-                        <a href="tel:7034741741">7034741741</a>
+                        <a href="tel:7034741741">+91 7034741741</a>
                      </h3>
                   </div>
                </div>
@@ -275,6 +275,7 @@
                   <p class="wow fadeInLeft" data-wow-delay=".3s">
                      © All Copyright 2026 by <a href="#">RobinFood</a>
                   </p>
+                  <p>Designed and Developed by Inboon Media</p>
                   <ul
                      class="credit-card-logo wow fadeInRight"
                      data-wow-delay=".5s"
