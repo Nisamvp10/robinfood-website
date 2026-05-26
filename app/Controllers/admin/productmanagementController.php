@@ -164,7 +164,7 @@ class ProductmanagementController extends Controller
         if ($file && $file->isValid() && !$file->hasMoved()) {
             // Upload new image
             $upload = json_decode($this->imgUploader->uploadimg($file, 'products'), true);
-            $imagePath = ($upload['status'] == true ? base_url($upload['file']) : '');
+            $imagePath = ($upload['status'] == true ? $upload['file'] : '');
         } else {
             // Keep old image if no new upload
             $imagePath = $selectedImage;
@@ -198,7 +198,7 @@ class ProductmanagementController extends Controller
                     mkdir(dirname($uploadPath), 0777, true);
                 }
                 file_put_contents($uploadPath, $data);
-                $uploadedPaths[] = base_url('./uploads/products/' . $fileName);
+                $uploadedPaths[] = './uploads/products/' . $fileName;
                 } else {
                     $uploadedPaths[] = $img;
                 }

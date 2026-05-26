@@ -1,5 +1,27 @@
 <?= view('frontend/inc/header') ?>
+<style>
+   .product-thumbs {
+    padding: 0;
+    margin: 15px 0 0;
+}
 
+.product-thumbs li {
+    margin-right: 10px;
+}
+
+.thumb-image {
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.thumb-image:hover {
+    transform: scale(1.05);
+}
+
+.active-thumb {
+    border: 2px solid #ff6600 !important;
+}
+</style>
       <!-- Search Area Start -->
       <div class="search-wrap">
          <div class="search-inner">
@@ -70,7 +92,18 @@
            <div class="container">
             <?php
             if(!empty($product)) {
+               $variantImages = [];
+              
                 foreach($product as $item) {
+                  $variantImages[] = ['image' => $item['product_image']];
+                  if(!empty($item['variantimages'])) {
+                     foreach($item['variantimages'] as $vimage){
+                        $variantImages[] =[
+                           'image' => $vimage['image']
+                        ];
+                     }
+                  }
+
                     $price = calculatePrice(
                         $item['price'],
                         $item['compare_price'],
@@ -80,13 +113,34 @@
 
               <div class="row gx-60">
                  <div class="col-lg-6">
-                    <div class="product-big-img bg-color2">
-                       <img
-                          src="<?= validImg($item['product_image']) ?>"
-                          alt="thumb"
-                       />
-                    </div>
-                 </div>
+                     <div class="product-big-img bg-color2">
+
+                        <!-- Main Image -->
+                        <img
+                              id="mainProductImage"
+                              src="<?= validImg($item['product_image']) ?>"
+                              alt="Product Image"
+                              class="img-fluid w-100"
+                        />
+
+                        <?php if(!empty($variantImages)): ?>
+                              <ul class="product-thumbs list-inline mt-3">
+                                 <?php foreach($variantImages as $vimages): ?>
+                                    <li class="list-inline-item">
+                                          <img
+                                             src="<?= validImg($vimages['image']) ?>"
+                                             class="thumb-image"
+                                             style="width:80px;height:80px;cursor:pointer;border:1px solid #ddd;padding:3px;"
+                                             alt=""
+                                          />
+                                    </li>
+                                 <?php endforeach; ?>
+                              </ul>
+                        <?php endif; ?>
+
+                     </div>
+                  </div>
+
                  <div class="col-lg-6">
                     <div class="product-about">
                        <div class="rating">
@@ -199,3 +253,20 @@
      </div>
 
 <?= view('frontend/inc/footerLink') ?>
+<script>
+$(document).ready(function(){
+
+    $('.thumb-image').on('click', function(){
+
+        let imageSrc = $(this).attr('src');
+
+        $('#mainProductImage').attr('src', imageSrc);
+
+        // Active border
+        $('.thumb-image').removeClass('active-thumb');
+        $(this).addClass('active-thumb');
+
+    });
+
+});
+</script>
