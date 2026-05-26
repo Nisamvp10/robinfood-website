@@ -11664,7 +11664,7 @@ textarea.is-invalid {
 
 .featured-product-item-one__thumb {
   position: relative;
-  padding: 70px;
+  padding: 10px;
   border-radius: 20px;
   background: #F6F6F6;
   text-align: center;
@@ -11675,8 +11675,8 @@ textarea.is-invalid {
 
 .featured-product-item-one__thumb img {
   max-width: 100%;
-  width: 150px;
-  height: 185px;
+  width: 100%;
+  height: auto;
 }
 
 .featured-product-item-one__thumb .badge {
