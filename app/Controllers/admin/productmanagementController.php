@@ -198,7 +198,7 @@ class ProductmanagementController extends Controller
                     mkdir(dirname($uploadPath), 0777, true);
                 }
                 file_put_contents($uploadPath, $data);
-                $uploadedPaths[] = './uploads/products/' . $fileName;
+                $uploadedPaths[] = base_url('./uploads/products/' . $fileName);
                 } else {
                     $uploadedPaths[] = $img;
                 }
