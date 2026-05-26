@@ -539,7 +539,7 @@
                            <div class="promo-info">
                               <p class="offer-text">The Best for Your Table</p>
                               <h3 class="promo-title">
-                                 Unpolished, Unprocessed, Unbeatable.
+                                 Unpolished Unprocessed Unbeatable
                               </h3>
                            </div>
                            <div class="promo-btn-wrapper">

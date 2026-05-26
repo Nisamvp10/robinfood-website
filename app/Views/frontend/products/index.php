@@ -3,7 +3,7 @@
 <div class="breadcumb-section">
    <div
       class="breadcumb-container-wrapper"
-      data-bg-src="assets/images/breadcumb/breadcumb-bg.png">
+      data-bg-src="<?= base_url('public/assets/template/') ?>assets/images/sub_ban.jpg">
       <div class="shape1">
          <img
             src="<?=base_url('public/assets/template/');?>assets/img/breadcumb-shape1_1.png"
@@ -31,8 +31,8 @@
             </li>
             <li><i class="fa-solid fa-chevron-right"></i></li>
             <li>Products</li>
-            <li><i class="fa-solid fa-chevron-right"></i></li>
-            <li>Products Listing</li>
+            <!-- <li><i class="fa-solid fa-chevron-right"></i></li> -->
+            <!-- <li>Products Listing</li> -->
          </ul>
       </div>
    </div>

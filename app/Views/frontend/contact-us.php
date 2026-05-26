@@ -77,12 +77,12 @@
                           <ul class="contact-info-items">
                             <li>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:<?=getappdata('phone') ?>"><?=getappdata('phone') ?></a>
+                              <a href="tel:+91<?=getappdata('phone') ?>">+91<?=getappdata('phone') ?></a>
                             </li>
 
                             <li>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:7034741741">7034741741</a>
+                              <a href="tel:7034741741">+91 7034741741</a>
                             </li>
     
                             <li>
@@ -137,25 +137,25 @@
                             <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="form-clt-1 mb-3">
                                     <label for="name">First Name</label>
-                                <input type="text" name="name" id="name2" placeholder="I">
+                                <input type="text" name="name" id="name2" placeholder="Enter Your Name">
                                 </div>
                             </div>
                             <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="form-clt-1 mb-3">  
                                     <label for="name">Last Name</label>
-                                <input type="text" name="name" id="name" placeholder="Doe">
+                                <input type="text" name="name" id="name" placeholder="Enter your Last name">
                                 </div>
                             </div>
                             <div class="col-xl-6 wow fadeInUp mb-5" data-wow-delay=".5s">
                                 <div class="form-clt-1">
                                     <label for="name">Email</label>
-                                <input type="text" name="email" id="email212" placeholder="Email">
+                                <input type="text" name="email" id="email212" placeholder="Enter Your Email">
                                 </div>
                             </div>
                             <div class=" col-xl-6 wow fadeInUp mb-5" data-wow-delay=".7s">
                                 <div class="form-clt-1">
                                     <label for="name">Phone Number</label>
-                                <input type="text" name="phone" id="phone" placeholder="Phone number">
+                                <input type="text" name="phone" id="phone" placeholder="Enter Phone number">
                                 </div>
                             </div>
                             <div class="col-xl-12 d-none">
