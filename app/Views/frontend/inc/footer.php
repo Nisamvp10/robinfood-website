@@ -1,10 +1,10 @@
       <!-- Footer Section start  -->
       <footer class="footer-section bg-title">
          <div class="container">
-            <div class="contact-info-area">
+            <div class="contact-info-area gap-5">
                <div
                   class="contact-info-items wow fadeInUp"
-                  data-wow-delay=".2s"
+                  data-wow-delay=".2s" style="min-width:20%"
                >
                   <div class="icon">
                      <i class="icon-footer-telephone"></i>
