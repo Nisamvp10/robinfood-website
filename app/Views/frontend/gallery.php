@@ -23,7 +23,7 @@
       <div class="breadcumb-section">
         <div
            class="breadcumb-container-wrapper"
-           data-bg-src="<?=base_url('public/assets/template/');?>assets/images/breadcumb/breadcumb-bg.png"
+           data-bg-src="<?=base_url('public/assets/template/');?>assets/images/breadcumb/gallery-brea.png"
         >
            <div class="shape1">
               <img

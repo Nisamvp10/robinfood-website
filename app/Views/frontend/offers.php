@@ -20,7 +20,7 @@
       <div class="breadcumb-section">
         <div
            class="breadcumb-container-wrapper"
-           data-bg-src="assets/images/breadcumb/breadcumb-bg.png"
+           data-bg-src="<?= base_url('public/assets/template/') ?>assets/images/sub_ban.jpg"
         >
            <div class="shape1">
               <img
