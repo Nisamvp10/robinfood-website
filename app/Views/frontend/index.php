@@ -325,7 +325,7 @@
                </div>
                
                <div
-               class="video-container bg-img" style="background-image: url(<?=base_url('public/assets/template/');?>assets/images/video-bg.jpg)">
+               class="video-container bg-img" style="background-image: url(<?=base_url('public/assets/template/');?>assets/images/breadcumb/breadcumb-bg.png)">
                <div class="row align-items-center">
                   <div class="col-lg-6">
                      <div class="video-content">
@@ -342,7 +342,7 @@
                            View All Products</a>
                      </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 d-none">
                      <div class="video-thumb">
                         <img src="<?=base_url('public/assets/template/');?>assets/images/mm.png" alt="Thumb" />
                      </div>

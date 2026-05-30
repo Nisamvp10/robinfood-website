@@ -20,7 +20,7 @@
       <div class="breadcumb-section">
         <div
            class="breadcumb-container-wrapper"
-           data-bg-src="<?= base_url('public/assets/template/') ?>assets/images/sub_ban.jpg"
+           data-bg-src="<?= base_url('public/assets/template/') ?>assets/images/breadcumb/offer.webp"
         >
            <div class="shape1">
               <img
@@ -70,14 +70,14 @@
          if(!empty($offers)) {
             foreach($offers as $offer) {
                ?>
-                  <div class="coupon-card d-flex align-items-center mb-4">
+                  <div class="coupon-card d-flex align-items-center mb-4 justify-content-between p-2">
                   <!-- Left Discount Box -->
-                  <div class="discount-box col-md-2">
-                     <h2><?=$offer['discount'] ;?><?=($offer['discount_type'] == 1 ? 'RS':'%')?><br>OFF</h2>
+                  <div class="discount-box col-md-4">
+                     <h2><?=$offer['discount'] ;?><?=($offer['discount_type'] == 1 ? 'RS':'%')?> OFF</h2>
                   </div>
 
                   <!-- Middle Content -->
-                  <div class="coupon-content col-md-7">
+                  <div class="coupon-content col-md-5">
                      <p class="mb-1 text-muted">
                            <?=$offer['description'] ;?>
                      </p>

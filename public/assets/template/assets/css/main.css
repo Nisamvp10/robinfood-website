@@ -7806,6 +7806,7 @@ input.main-search-input::placeholder {
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input {
   position: relative;
   margin-top: 40px;
+  overflow: hidden;
 }
 
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input input {
@@ -7824,19 +7825,18 @@ input.main-search-input::placeholder {
 }
 
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input .newsletter-btn {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: var(--theme3);
-  color: rgba(255, 255, 255, 0.8);
-  bottom: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 44px;
+    line-height: 50px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--theme3);
+    color: rgba(255, 255, 255, 0.8);
+    bottom: 5px;
 }
-
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input .newsletter-btn.style3 {
   background-color: #FFB22C;
 }
@@ -16408,7 +16408,12 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 1;
   color: var(--white);
 }
-
+.breadcumb-wrapper li, .breadcumb-wrapper li a{
+  color: #fff;
+}
+.breadcumb-wrapper li:nth-last-child(1){
+  color: #fff!important;
+}
 @media (max-width: 767px) {
   .breadcumb-wrapper {
     gap: 8px;
