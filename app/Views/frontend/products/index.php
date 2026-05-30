@@ -4,6 +4,7 @@
    <div
       class="breadcumb-container-wrapper"
        data-bg-src="<?= base_url('public/assets/template/') ?>assets/images/sub_ban.jpg">
+       
       <div class="shape1">
          <img src="<?=base_url('public/assets/template/');?>assets/img/breadcumb-shape1_1.png" alt="shape" />
       </div>
