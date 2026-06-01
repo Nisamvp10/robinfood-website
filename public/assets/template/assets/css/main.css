@@ -38,6 +38,9 @@
   --green-gray: #002603;
   --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
+.z-10{
+  z-index: 10;
+}
 
 /* 03.Typography */
 /* --------------------------------------------
@@ -7987,22 +7990,24 @@ input.main-search-input::placeholder {
   display: flex;
   align-items: center;
   gap: 20px;
+  min-width: 25%;
+  max-width: 30%;
+  justify-content: flex-end;
 }
 
 .footer-bottom .footer-wrapper .credit-card-logo li {
   /* border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 5px 7px;
    */
-  background-color: #f1f1f1;
   border-radius: 3px;
 }
 .footer-bottom .footer-wrapper .credit-card-logo li svg{
-  width:40px;
+  width:fit-content;
   height: auto;
   padding: 0;
 }
 .footer-bottom .footer-wrapper .credit-card-logo li img{
-  width:50px;
+  width:100%;
   height: auto;
   padding: 0;
 }
@@ -8026,6 +8031,15 @@ input.main-search-input::placeholder {
 @media (max-width: 575px) {
   .contact-info-area {
     gap: 30px;
+  }
+  .footer-bottom .footer-wrapper .credit-card-logo {
+    width: 100%;
+      visibility: visible;
+      animation-delay: 0.5s;
+      animation-name: fadeInRight;
+      max-width: 100%;
+      margin-bottom: 31px;
+      
   }
 }
 
@@ -8732,8 +8746,20 @@ textarea.is-invalid {
 }
 
 .video-container {
-  padding: 44px 52px;
-  margin-top: 50px;
+    padding: 44px 52px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.video-container:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 56%);
+    z-index: 1;
+    border-radius: 20px;
 }
 
 @media (max-width: 575px) {
@@ -8844,6 +8870,8 @@ textarea.is-invalid {
   font-style: normal;
   font-weight: 300;
   padding-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 @media (max-width: 575px) {

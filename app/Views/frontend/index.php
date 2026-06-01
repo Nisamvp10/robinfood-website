@@ -325,8 +325,8 @@
                </div>
                
                <div
-               class="video-container bg-img" style="background-image: url(<?=base_url('public/assets/template/');?>assets/images/breadcumb/breadcumb-bg.png)">
-               <div class="row align-items-center">
+               class="video-container bg-img position-relative" style="background-image: url(<?=base_url('public/assets/template/');?>assets/images/breadcumb/breadcumb-bg.png)">
+               <div class="row align-items-center position-relative z-10">
                   <div class="col-lg-6">
                      <div class="video-content">
                         <div class="video-box">
