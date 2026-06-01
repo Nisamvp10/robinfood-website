@@ -16408,11 +16408,14 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 1;
   color: var(--white);
 }
+ul.breadcumb-wrapper li{
+  display: none;
+}
 .breadcumb-wrapper li, .breadcumb-wrapper li a{
   color: #fff;
 }
 .breadcumb-wrapper li:nth-last-child(1){
-  color: #fff!important;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .breadcumb-wrapper {
