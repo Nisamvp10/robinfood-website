@@ -336,7 +336,7 @@
                         </div>
                         
                         <div class="section-title p-5">
-                           <h3 class="title d-none">Healthier Diet</h3>
+                           <h3 class="title d-none ">Healthier Diet</h3>
                         </div>
                         <a class="theme-btn style3" href="<?=base_url('productlist');?>">
                            View All Products</a>
