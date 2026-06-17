@@ -334,3 +334,24 @@ $('#user_email,#shipping_phone').on('blur', function () {
         })
     }
 })
+
+function removeAddress(e) {
+    if (confirm("are you sure . You want to delete the address")) {
+        let id = e
+        if (id) {
+            $.ajax({
+                url: App.getSiteurl() + 'user/delete-address',
+                method: 'POST',
+                data: { id: id },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        shippingAddress()
+                    } else {
+                        toastr.error(response.message);
+                    }
+                }
+            })
+        }
+    }
+}
