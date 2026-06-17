@@ -19,7 +19,7 @@
 
 <div class="breadcumb-section">
     <div
-        class="breadcumb-container-wrapper"
+        class="breadcumb-container-wrapper d-none"
        data-bg-src="<?=base_url('public/assets/template/');?>assets/images/breadcumb/cart.webp">
         <div class="shape1">
             <img

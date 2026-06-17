@@ -8053,7 +8053,7 @@ input.main-search-input::placeholder {
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
@@ -8066,13 +8066,18 @@ input.main-search-input::placeholder {
 .contact-info-area .contact-info-items .icon {
   width: 65px;
   height: 65px;
-  line-height: 60px;
-  text-align: center;
-  position: relative;
+  min-width: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border: 2px dotted var(--white);
   border-radius: 50%;
   font-size: 30px;
   color: var(--white);
+
+  flex-shrink: 0;
 }
 
 .contact-info-area .contact-info-items .content p {

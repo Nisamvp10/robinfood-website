@@ -1,7 +1,7 @@
       <!-- Footer Section start  -->
       <footer class="footer-section bg-title">
          <div class="container">
-            <div class="contact-info-area gap-5">
+            <div class="contact-info-area gap-2">
                <div
                   class="contact-info-items wow fadeInUp"
                   data-wow-delay=".2s" style="min-width:20%"
@@ -15,7 +15,7 @@
                         <a href="tel:<?=getappdata('phone')?>"> +91 <?=getappdata('phone')?></a>
                      </h3>
                       <h3>
-                        <a href="tel:7034741741">+91 7034741741</a>
+                        <a href="tel:7034741741">+91 703 474 1741</a>
                      </h3>
                   </div>
                </div>
