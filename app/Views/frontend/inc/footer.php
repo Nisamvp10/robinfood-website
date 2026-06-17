@@ -81,7 +81,7 @@
                   </div>
                   <div class="content">
                      <p>Opening Hour</p>
-                     <h3>Monday to saturday- 9AM - 5.30PM</h3>
+                     <h3>Monday to Saturday- 9AM - 5.30PM</h3>
                   </div>
                </div>
                <div

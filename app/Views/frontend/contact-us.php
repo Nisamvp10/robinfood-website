@@ -103,7 +103,7 @@
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b>Marketed & Exported by</b><br>ARRIK AR FOODS PVT.LTD 19/636, Perumbavoor, Koovapady. Emakulam, Kerala - 683544 <br>Essai Lic. No. 11323999000136 </a>
+                              <a href=""><b>Marketed & Exported by</b><br>ARRIKAR FOODS PVT.LTD 19/636, Perumbavoor, Koovapady. Emakulam, Kerala - 683544 <br>Essai Lic. No. 11323999000136 </a>
                             </li>
     
                           </ul>

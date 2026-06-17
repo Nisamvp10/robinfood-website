@@ -252,6 +252,7 @@ $routes->get('isLogin','CheckoutController::isLogin');
 $routes->post('user/add-shipping-address','ShippingAddressController::save');
 $routes->post('shipping-address','ShippingAddressController::getShippingAddress');
 $routes->post('set-default-address','ShippingAddressController::setDefaultAddress');
+$routes->post('user/delete-address','ShippingAddressController::addressDelete');
 //place order
 $routes->post('place-order','CheckoutController::placeOrder');
 $routes->post('apply-coupon','CheckoutController::applyCoupon');

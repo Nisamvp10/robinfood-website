@@ -143,13 +143,13 @@ class ShippingAddressController extends BaseController
         ]);
     }
 
-    // ⭐ SET DEFAULT
+    // SET DEFAULT
     public function setDefaultAddress()
     {
         helper('cookie');
         $sessionId = get_cookie('cart_session');
 
-        $id = decryptor($this->request->getPost('address_id'));
+        $id = decryptor($this->request->getPost('id'));
         $model = new ShippingAddressModel();
 
         $user = session('user');
@@ -166,5 +166,34 @@ class ShippingAddressController extends BaseController
             'success' => true,
             'message' => 'Default address updated'
         ]);
+    }
+
+    public function addressDelete() {
+         if (!$this->request->isAJAX()) {
+            return $this->response->setJSON(['status' => false]);
+        }
+
+        $model = new ShippingAddressModel();
+
+        $id =decryptor($this->request->getPost('id'));
+        if(!empty($id)){
+            if($model->delete($id)){
+                return $this->response->setJSON([
+                    'success' => true,
+                    'message' => 'Address deleted'
+                ]);
+            }
+            else{
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => 'Opps! Address not deleted try again'
+                ]);
+            }
+        } else{
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Opps! Address not deleted try again'
+            ]);
+        }
     }
 }

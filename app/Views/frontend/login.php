@@ -94,7 +94,7 @@
                     
                    <div class="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
                     <div class="login-thumb">
-                        <img src="<?=base_url('public/assets/template/');?>assets/img/register/loginThumb.jpg" alt="register-thumb">
+                        <img src="<?=base_url('public/assets/template/');?>assets/img/register/loginThumb.webp" alt="register-thumb">
                     </div>
                  </div>
                </div>

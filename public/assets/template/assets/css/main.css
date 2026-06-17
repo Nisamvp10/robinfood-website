@@ -38,7 +38,8 @@
   --green-gray: #002603;
   --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
-.z-10{
+
+.z-10 {
   z-index: 10;
 }
 
@@ -7828,18 +7829,19 @@ input.main-search-input::placeholder {
 }
 
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input .newsletter-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 44px;
-    line-height: 50px;
-    border-radius: 8px;
-    text-align: center;
-    background-color: var(--theme3);
-    color: rgba(255, 255, 255, 0.8);
-    bottom: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 44px;
+  line-height: 50px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--theme3);
+  color: rgba(255, 255, 255, 0.8);
+  bottom: 5px;
 }
+
 .footer-widgets-wrapper .single-footer-widget .footer-content .footer-input .newsletter-btn.style3 {
   background-color: #FFB22C;
 }
@@ -8001,16 +8003,19 @@ input.main-search-input::placeholder {
    */
   border-radius: 3px;
 }
-.footer-bottom .footer-wrapper .credit-card-logo li svg{
-  width:fit-content;
+
+.footer-bottom .footer-wrapper .credit-card-logo li svg {
+  width: fit-content;
   height: auto;
   padding: 0;
 }
-.footer-bottom .footer-wrapper .credit-card-logo li img{
-  width:100%;
+
+.footer-bottom .footer-wrapper .credit-card-logo li img {
+  width: 100%;
   height: auto;
   padding: 0;
 }
+
 .contact-info-area {
   padding-top: 120px;
   display: flex;
@@ -8032,14 +8037,15 @@ input.main-search-input::placeholder {
   .contact-info-area {
     gap: 30px;
   }
+
   .footer-bottom .footer-wrapper .credit-card-logo {
     width: 100%;
-      visibility: visible;
-      animation-delay: 0.5s;
-      animation-name: fadeInRight;
-      max-width: 100%;
-      margin-bottom: 31px;
-      
+    visibility: visible;
+    animation-delay: 0.5s;
+    animation-name: fadeInRight;
+    max-width: 100%;
+    margin-bottom: 31px;
+
   }
 }
 
@@ -8077,7 +8083,7 @@ input.main-search-input::placeholder {
 .contact-info-area .contact-info-items .content h3 {
   font-size: 18px;
   color: var(--white);
-  text-transform: capitalize;
+  text-transform: initial;
 }
 
 .contact-info-area .contact-info-items .content h3 a {
@@ -8746,20 +8752,21 @@ textarea.is-invalid {
 }
 
 .video-container {
-    padding: 44px 52px;
-    margin-top: 50px;
-    border-radius: 20px;
+  padding: 44px 52px;
+  margin-top: 50px;
+  border-radius: 20px;
 }
+
 .video-container:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(0 0 0 / 56%);
-    z-index: 1;
-    border-radius: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 56%);
+  z-index: 1;
+  border-radius: 20px;
 }
 
 @media (max-width: 575px) {
@@ -16393,7 +16400,8 @@ span.select2-selection.select2-selection--single:focus {
   position: relative;
   padding: 8em 0px;
 }
-.breadcumb-container-wrapper:before{
+
+.breadcumb-container-wrapper:before {
   content: "";
   position: absolute;
   top: 0;
@@ -16402,6 +16410,7 @@ span.select2-selection.select2-selection--single:focus {
   height: 100%;
   background: linear-gradient(180deg, rgb(100 100 100 / 8%) 0%, rgb(20 23 34) 100%);
 }
+
 .breadcumb-container-wrapper .shape1 {
   position: absolute;
   bottom: 0;
@@ -16436,15 +16445,20 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 1;
   color: var(--white);
 }
-ul.breadcumb-wrapper li{
+
+ul.breadcumb-wrapper li {
   display: none;
 }
-.breadcumb-wrapper li, .breadcumb-wrapper li a{
+
+.breadcumb-wrapper li,
+.breadcumb-wrapper li a {
   color: #fff;
 }
-.breadcumb-wrapper li:nth-last-child(1){
+
+.breadcumb-wrapper li:nth-last-child(1) {
   color: #fff;
 }
+
 @media (max-width: 767px) {
   .breadcumb-wrapper {
     gap: 8px;
@@ -19880,7 +19894,7 @@ button {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 26px;
 }
 
 .contact-section-wrapper .contact-info__contact--contact-items .contact-info-items li a:hover {
@@ -20782,6 +20796,16 @@ a.logbtn {
   width: fit-content;
   float: right;
   align-items: center;
+}
+
+.dltbtn {
+  cursor: pointer;
+}
+
+.dltbtn:hover {
+  opacity: 0.5;
+  color: #d1d1d1;
+  transition: 1s;
 }
 
 /*# sourceMappingURL=main.css.map */
