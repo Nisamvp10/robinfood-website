@@ -52,6 +52,9 @@ $('#addShippingAddressForm').on('submit', function (e) {
                         $('#' + field + 'Error').text(msg.replaceAll('_', ' '));
                     })
                 }
+                else {
+                    toastr.error(response.message);
+                }
 
             }
         }
@@ -91,6 +94,9 @@ $('#addShippingAddressForm2').on('submit', function (e) {
                         $('#' + field).addClass('is-invalid');
                         $('#' + field + 'Error').text(msg.replaceAll('_', ' '));
                     })
+                }
+                else {
+                    toastr.error(response.message);
                 }
 
             }

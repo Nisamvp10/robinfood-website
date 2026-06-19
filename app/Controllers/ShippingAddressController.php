@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ShippingAddressModel;
+use App\Models\ShippingchargeModel;
 use App\Models\UsersregistrationsModel;
 use App\Services\CartService;
 
@@ -28,6 +29,8 @@ class ShippingAddressController extends BaseController
 
         helper('cookie');
         $sessionId = get_cookie('cart_session');
+        $model = new ShippingAddressModel();
+        $shippingCharge = new ShippingchargeModel();
 
         $rules = [
             'shipping_name' => 'required',
@@ -49,6 +52,16 @@ class ShippingAddressController extends BaseController
 
         $phone = $this->request->getPost('shipping_phone');
         $email = $this->request->getPost('shipping_email_id');
+        $shippingState =  $this->request->getPost('shipping_state');
+        //chack valid state 
+        $stateAndCharge = $shippingCharge->where('state', $shippingState)->first();
+        
+        if(empty(( $stateAndCharge['state']))) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Please Enter valid state'.$this->request->getPost('shipping_state')
+            ]);
+        }   
 
         // 🔍 Check user
         $user = $this->userModel->where('phone', $phone)->where('email', $email)->first();
@@ -75,7 +88,6 @@ class ShippingAddressController extends BaseController
         $this->cartService->mergeCartAfterLogin();
 
         // 📦 Save address
-        $model = new ShippingAddressModel();
 
         $data = [
             'user_id' => $userId ?? 0,

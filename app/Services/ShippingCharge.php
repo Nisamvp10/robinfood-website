@@ -15,18 +15,14 @@ class ShippingCharge{
         }
         if($state) {
              //  1. Match exact state (Kerala)
-            $rule = $model->where('state', $state)
-                        ->where('is_active', 1)
-                        ->first();
+            $rule = $model->where('state', $state)->where('is_active', 1)->first();
 
             if ($rule) {
                 return $rule['charge'];
             }
 
             //  2. Outside state rule
-            $rule = $model->where('is_outside', 1)
-                        ->where('is_active', 1)
-                        ->first();
+            $rule = $model->where(['is_outside'=> 1,'state' => $state])->where('is_active', 1)->first();
 
             if ($rule) {
                 return $rule['charge'];

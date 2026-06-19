@@ -13,6 +13,7 @@ use App\Models\ProductManageModel;
 use App\Models\CouponcodeModel;
 use App\Services\ShipbuddyService;
 use App\Services\ShippingCharge;
+use App\Models\ShippingchargeModel;
 //thi controller in controllers frond folder 
 use Razorpay\Api\Api;
 use App\Controllers\front\RazorpayController; 
@@ -85,6 +86,8 @@ class CheckoutController extends Controller
     public function placeOrder() {
         $address_id = $this->request->getPost('address_id');
         $payment_method = $this->request->getPost('payment_method') ?? 'gateway'; //cod
+        $shippingchargeModel = new ShippingchargeModel();
+        
         helper('cookie');
         $sessionId = get_cookie('cart_session');
 
@@ -122,6 +125,19 @@ class CheckoutController extends Controller
             $taxAmount = round($subTotal * ($tax / 100));
          
             $totalAmount = $subTotal + $taxAmount; 
+            //add on shipping charge 
+            $state = $this->shippingAddressModel->where('id',decryptor($address_id))->get()->getRow();
+            //stateSHippingCharge = $shippingchargeModel->where('state',$state->state)->first();
+            if(empty($state->state ) ) {
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => 'Please Enter valid state',
+                    'url' => base_url('checkout')
+                ]);
+            }
+            $shippingcharge = $this->shippingCharge->calculate($totalAmount,$state->state);
+            $totalAmount+=$shippingcharge;
+          //  exit();
             if($totalAmount < $minimumOrderAmount){
                 return $this->response->setJSON([
                     'success' => false,
@@ -139,7 +155,7 @@ class CheckoutController extends Controller
             } else {
                 $address = $this->shippingAddressModel->where('session_id', $sessionId)->where('is_default', 1)->get()->getRow();
             }
-
+           
             if (!$address) {
                 return $this->response->setJSON([
                     'success' => false,
@@ -148,7 +164,7 @@ class CheckoutController extends Controller
                 ]);
             }
             //block outof countory order allowed only india 
-            $allowedCountries = ['India','KL'];
+            $allowedCountries = ['India','KL','IN'];
             if(!in_array($address->country, $allowedCountries)){
                 return $this->response->setJSON([
                     'success' => false,
@@ -183,7 +199,7 @@ class CheckoutController extends Controller
                 'address_id' => $address->id,
                 'shipping_address' => json_encode($shippingAddress,true),
                 'sub_total' => $itemSum,
-                'total_amount' => $totalAmount + $shippingCharge,
+                'total_amount' => $totalAmount,
                 'payment_method' => $payment_method,
                 'coupon_id' => $cart['couponcode_id'],
                 'coupon_discount' => $coupenDiscount,
