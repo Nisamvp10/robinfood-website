@@ -232,7 +232,7 @@ public function save()
         $endDate = $this->request->getPost('endDate');
         $orderId = decryptor($this->request->getPost('id'));
         $purchaseInvoice = $this->customerOrderModel->salesHistory($searchInput,$filter,$startDate,$endDate,$orderId);
-
+        //echo $this->customerOrderModel->getLastQuery();
         $purchaseHistory = [];
         
         foreach ($purchaseInvoice as &$purchase) {
