@@ -302,10 +302,11 @@ document.addEventListener('click', async (e) => {
 
 function isDefault(e) {
     if (e.checked) {
+        id = e.value
         $.ajax({
             url: App.getSiteurl() + 'set-default-address',
             method: 'POST',
-            data: { address_id: e.value },
+            data: { address_id: id },
             dataType: 'json',
             success: function (response) {
                 if (response.success) {

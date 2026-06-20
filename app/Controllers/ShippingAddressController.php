@@ -161,7 +161,7 @@ class ShippingAddressController extends BaseController
         helper('cookie');
         $sessionId = get_cookie('cart_session');
 
-        $id = decryptor($this->request->getPost('id'));
+        $id = decryptor($this->request->getPost('address_id'));
         $model = new ShippingAddressModel();
 
         $user = session('user');
