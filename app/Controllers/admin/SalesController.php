@@ -253,7 +253,7 @@ public function save()
                     'note'          => '',
                     'customer'      => !empty($purchase['customerName']) ? $purchase['customerName'] : $purchase['shipping_full_name'],
                     'phone'         => !empty($purchase['customerPhone']) ? $purchase['customerPhone'] : $purchase['shipping_phone'],
-                    'email'         => !empty($purchase['customerEmail']) ? $purchase['customerEmail'] : $purchase['customerEmail'],
+                    'email'         => !empty($purchase['customerEmail']) ? $purchase['customerEmail'] : $email,
                     'totalAmount'  => $purchase['total_amount'],
                     'items'         => []
                 ];
