@@ -361,3 +361,19 @@ function removeAddress(e) {
         }
     }
 }
+function removeCoupon() {
+    $.ajax({
+        url: App.getSiteurl() + 'remove-coupon',
+        method: 'POST',
+        data: {},
+        dataType: 'json',
+        success: function (response) {
+            if (response.success) {
+                toastr.success(response.message);
+                mycart();
+            } else {
+                toastr.error(response.message);
+            }
+        }
+    })
+}
