@@ -491,6 +491,10 @@ class CartService
         if($couponUsed){
             return ['status' => false, 'message' => 'Coupon code is already used'];
         }
+        //check coupon code amount graterthan total 
+        if($coupon['discount'] > $total){
+            $discount = $total;
+        }
         $total = $total - $discount;
         //insert coupon_discount and coupon id in cart
         $this->cartModel->update($cart['id'], [

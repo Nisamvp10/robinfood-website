@@ -8,6 +8,7 @@
     }
 
     if(isset($cartdata) && $cartdata != null) {
+        
         $couponDiscount = ($cartdata['coupon_discount'] ==0)?0:$cartdata['coupon_discount'] ?? 0;
     }
     $amountAmt = 0;
@@ -66,11 +67,15 @@
 
                         
                         <?php if($couponDiscount > 0) { ?>
-                        <div class="cart_subtotal d-flex align-items-center justify-content-between">
+                        <div class="cart_subtotal d-flex align-items-center justify-content-between mt-2">
                             <p>Coupon Discount</p>
-                            <p class="cart_amount"><?= money_format_custom($couponDiscount) ?></p>
+                            <p class="cart_amount"><?= money_format_custom($couponDiscount) ?> <?=($cartdata['discount'] > $cartdata['coupon_discount'])?'<span style="font-size:10px;color: red;text-decoration: line-through;">('.$cartdata['discount'].')</span>':''?></p>
                         </div>
                         <?php } ?>
+                        <div class="cart_subtotal d-flex align-items-center justify-content-between mt-3 mb-3">
+                            <p>Sub Total</p>
+                            <p class="cart_amount"><?= money_format_custom($amountAmt - $couponDiscount) ?></p>
+                        </div>
                         <div class="cart_subtotal d-flex align-items-center justify-content-between mt-3 mb-3">
                             <p>Tax</p>
                             <p class="cart_amount"><?= money_format_custom($taxCalculate) ?></p>
