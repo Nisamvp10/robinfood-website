@@ -250,6 +250,7 @@ public function save()
                     'tax'           => $purchase['tax'],
                     'discount'      => $purchase['discount'],
                     'paymentMethod' => $purchase['payment_method'],
+                    'shippingCharge' => $purchase['shipping_charge'],
                     'note'          => '',
                     'customer'      => !empty($purchase['customerName']) ? $purchase['customerName'] : $purchase['shipping_full_name'],
                     'phone'         => !empty($purchase['customerPhone']) ? $purchase['customerPhone'] : $purchase['shipping_phone'],
