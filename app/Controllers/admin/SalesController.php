@@ -238,6 +238,9 @@ public function save()
         foreach ($purchaseInvoice as &$purchase) {
             $purchaseOrderId = $purchase['orderId'];
             if(!isset($purchaseHistory[$purchaseOrderId])) {
+                $address = json_decode($purchase['shipping_address'],true);
+                $email = $address['email'] ?? '';
+
                 $purchaseHistory[$purchaseOrderId] = [
                     'orderId'   => encryptor($purchaseOrderId),
                     'inoicenumber'  => $purchase['order_number'],
@@ -248,9 +251,9 @@ public function save()
                     'discount'      => $purchase['discount'],
                     'paymentMethod' => $purchase['payment_method'],
                     'note'          => '',
-                    'customer'      => $purchase['customerName'],
-                    'phone'         => $purchase['customerPhone'],
-                    'email'         => $purchase['customerEmail'],
+                    'customer'      => !empty($purchase['customerName']) ? $purchase['customerName'] : $purchase['shipping_full_name'],
+                    'phone'         => !empty($purchase['customerPhone']) ? $purchase['customerPhone'] : $purchase['shipping_phone'],
+                    'email'         => !empty($purchase['customerEmail']) ? $purchase['customerEmail'] : $purchase['customerEmail'],
                     'totalAmount'  => $purchase['total_amount'],
                     'items'         => []
                 ];
