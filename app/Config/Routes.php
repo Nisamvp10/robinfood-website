@@ -256,6 +256,7 @@ $routes->post('user/delete-address','ShippingAddressController::addressDelete');
 //place order
 $routes->post('place-order','CheckoutController::placeOrder');
 $routes->post('apply-coupon','CheckoutController::applyCoupon');
+$routes->post('remove-coupon','CheckoutController::removeCoupon');
 $routes->post('verify-payment','CheckoutController::verifyPayment');
 // razarpay
 $routes->get('razorpay/create-order/(:any)','frond\RazorpayController::createOrder/$1');

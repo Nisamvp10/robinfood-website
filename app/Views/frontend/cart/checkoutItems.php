@@ -18,6 +18,7 @@
         }
     }    
     $subtotalAmt = ($amountAmt - $couponDiscount);
+    //discount not included to tax
    if(round($subtotalAmt * ($taxAmt / 100)) > 0) {
     $taxCalculate = round($subtotalAmt * ($taxAmt / 100));
    }else{
@@ -39,10 +40,12 @@
                     </div>
                   
                        <div class="coupon-left mt-2">
-                            <div class="coupon-input d-flex align-items-center mt-3 mb-3">
-                                <input class="couponcodeInput" placeholder="Coupon code" class="h-auto " type="text">
+                            <div class="coupon-input d-flex align-items-center mt-3 mb-1">
+                                <input class="couponcodeInput" placeholder="Coupon code" class="h-auto" value="<?=isset($cartdata)?$cartdata['coupencode']:''?>" type="text">
                                 <button type="button" class="theme-btn style6 applyCoupon rounded-0 h-auto px-3 py-2">Apply</button>
                             </div>
+                            <?=(!empty($cartdata) && $cartdata['coupencode'] != '')?'<span onclick="removeCoupon()" class="remove-coupon">Remove</span>':''?>
+
                         </div>
 
                           <div class="w-100">

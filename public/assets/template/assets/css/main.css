@@ -20813,4 +20813,13 @@ a.logbtn {
   transition: 1s;
 }
 
+.remove-coupon {
+  text-align: right;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
 /*# sourceMappingURL=main.css.map */

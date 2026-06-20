@@ -619,6 +619,30 @@ class CheckoutController extends Controller
         }
         
     }
+    function removeCoupon() {
+
+          if(!$this->request->isAJAX()){
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Invalid request',
+                'url' => base_url('checkout')
+            ]);
+        }
+        $coupon = $this->cart->removeCoupon();
+        if($coupon['status'] == 'success'){
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => $coupon['message'],
+                'url' => base_url('checkout')
+            ]);
+        }else{
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => $coupon['message'],
+                'url' => base_url('checkout')
+            ]);
+        }
+    }
 
     public function cancelOrder() {
         $orderId = $this->request->getPost('order_id');

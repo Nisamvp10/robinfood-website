@@ -10,6 +10,7 @@ use App\Models\CustomerOrderModel;
 use App\Models\ShippingchargeModel;
 use App\Models\ShippingAddressModel;
 use App\Services\ShippingCharge;
+
 class CartService
 {
     protected $cartModel;
@@ -89,9 +90,27 @@ class CartService
                 return $cart;
             }
         }
+        //select coupon code and check validity based on coupon code
+        
+        //$cart = $this->cartModel->where('session_id', $sessionId)->first();
+        $builder = $this->cartModel
+            ->select('carts.*, coupons.coupencode, coupons.discount');
 
-        $cart = $this->cartModel->where('session_id', $sessionId)->first();
+        $builder->join(
+            'coupons',
+            "coupons.id = carts.couponcode_id
+            AND coupons.is_active = 1
+            AND coupons.validity_from <= '".date('Y-m-d')."'
+            AND coupons.validity_to >= '".date('Y-m-d')."'",
+            'left'
+        );
+
+        $builder->where('carts.session_id', $sessionId);
+
+        $cart = $builder->first();
+
         $this->checkCouponCode($cart);
+
         return $cart;
     }
 
@@ -513,6 +532,62 @@ class CartService
             'status' => true,
             'shippingCharge' => $shippingCharge
         ];
+    }
+
+    public function removeCoupon($cart=null){
+        if($cart!=null){
+            $cart = $cart;
+        }else{
+        $cart = $this->getCart();
+        }
+        if (!$cart) {
+            return ['status' => false, 'message' => 'Cart not found'];
+        }
+        $this->cartModel->update($cart['id'], [
+            'couponcode_id' => null,
+            'coupon_discount' => null
+        ]);
+        return [
+            'status' => true,
+            'message' => 'Coupon code removed successfully'
+        ];
+    }
+
+    public function itemsamountWIthdiscount(){
+
+        $cart = $this->getCart();
+        if (!$cart) {
+            return ['status' => false, 'message' => 'Cart not found'];
+        }
+        $cartItems = $this->getCartItems();
+        if(empty($cartItems)){
+            return ['status' => false, 'message' => 'Cart is empty'];
+        }
+        $total = 0;
+        foreach ($cartItems as $item) {
+            $total += $item['subtotal'];
+        }
+        //coupon code with amount discount 
+        $couponCodeDiscount = 0;
+        if(!empty($cart['couponcode_id'])){
+            $coupon = $this->couponcodeModel->where('id',$cart['couponcode_id'])->first();
+            if($coupon){
+                $couponCodeDiscount = $coupon['discount'];
+            }
+        }
+        //check couponcode amount graterthan total amount or not
+        $couponCodeAmount = $couponCodeDiscount > $total ? $total : $couponCodeDiscount;
+        //tasx 
+        $taxAmt = getappdata('tax') ?? 0;
+        $totalamount = $total - $couponCodeAmount;
+        $tax = round($totalamount * $taxAmt / 100);
+        $totalamount = $totalamount + $tax;
+       //shippingcharge
+        $cartSession = $this->getCartSessionId();
+        $shippingAddress = $this->shippingAddressModel->where(['session_id' => $cartSession,'is_default'=>1])->first();
+        $shippingChargeAmount = $this->shippingCharge->calculate($total, $shippingAddress['state'] ?? '');
+        $total = $totalamount+$shippingChargeAmount;
+        return $total ?? 0;
     }
 
 }
