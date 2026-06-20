@@ -28,7 +28,7 @@
                 <select name="coupenType" id="coupenType" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" >
                     <option value="">Select Coupon Type</option>
                     <option value="1">For Order</option>
-                    <option value="2">For Product</option>
+                    <!-- <option value="2">For Product</option> -->
                 </select>
                  <div class="invalid-feedback" id="coupenType_error"></div>
             </div>
@@ -52,7 +52,7 @@
                         <select name="discount_type" id="discount_type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" >
                             <option value="">Select Coupon Type</option>
                             <option value="1">Flat</option>
-                            <option value="2">Percentage</option>
+                            <!-- <option value="2">Percentage</option> -->
                         </select>
                         <div class="invalid-feedback" id="discount_type_error"></div>
                     </div>
