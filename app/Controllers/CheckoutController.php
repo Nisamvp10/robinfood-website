@@ -164,7 +164,7 @@ class CheckoutController extends Controller
                 ]);
             }
             //block outof countory order allowed only india 
-            $allowedCountries = ['India','KL','IN'];
+            $allowedCountries = ['India','KL','IN','india'];
             if(!in_array($address->country, $allowedCountries)){
                 return $this->response->setJSON([
                     'success' => false,
