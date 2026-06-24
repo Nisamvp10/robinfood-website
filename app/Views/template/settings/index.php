@@ -265,6 +265,14 @@
                             </div>
                         </div>
 
+                         <div class="grid grid-cols-2 mt-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Footer Content</label>
+                                <textarea class="border rounded px-3 py-2 w-full" name="footer_content" id="footer_content" placeholder="Footer Content"><?= getappdata('footer_content') ?></textarea>
+                            </div>
+                           
+                        </div>
+
                         <!--  -->
                         <div class="flex items-center justify-between">
                         <div class="form-check form-switch">

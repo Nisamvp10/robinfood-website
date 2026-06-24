@@ -135,7 +135,8 @@
                         </div>
                         <div class="footer-content">
                            <p>
-                              Backed by Arrikar Foods and Pavizham Rice, Robin Hood stands for uncompromising quality and nutrition. Expert supervision and strict quality checks ensure the food you can trust every day.
+                              <?= getappdata('footer_content') ?>
+                              
                            </p>
                            <div class="social-icon d-flex align-items-center">
                               <a href="https://www.facebook.com/Robinfoodindia"
