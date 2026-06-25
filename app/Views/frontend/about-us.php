@@ -52,9 +52,9 @@
             <div class="row gx-80 mt-20 d-flex align-items-center">
                 <div class="col-xl-8">
                     <div class="about-page-content">
-                        <h1>About Robinfood </h1>
+                        <h1>About RobinFood  </h1>
                         <p class="mb-15">
-                            At Robin Food, we believe that good health begins with the food we eat every day. Our products are thoughtfully made to suit modern lifestyles while staying true to natural nutrition. By combining wholesome ingredients with advanced food processing methods, we create food that is both nourishing and enjoyable, making healthy eating simple and practical for every home.
+                            At RobinFood , we believe that good health begins with the food we eat every day. Our products are thoughtfully made to suit modern lifestyles while staying true to natural nutrition. By combining wholesome ingredients with advanced food processing methods, we create food that is both nourishing and enjoyable, making healthy eating simple and practical for every home.
 
                         </p>
 
