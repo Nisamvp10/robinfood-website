@@ -30,7 +30,7 @@ if (!empty($userData)){
   --color-secondary: blue;/*--esc($clientColorSecondary) */;
 }
 .wrapModal{
-    z-index:9999!important;
+    z-index:2!important;
 }
 </style>
 

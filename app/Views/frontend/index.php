@@ -40,7 +40,7 @@
                            </div>
                            <h1>  health-oriented brand from Arrikar Foods</h1>
                            <p>
-                              At RobinFood, we focus on red bran rice because we believe real wellness begins with
+                              At RobinFood  we focus on red bran rice because we believe real wellness begins with
                               simple choices:
                            </p>
                         
@@ -146,8 +146,8 @@
              <div class="row gx-80 mt-20 d-flex align-items-center">
                  <div class="col-xl-8">
                      <div class="about-page-content">
-                         <h1>About Robinfood </h1>
-                         <p class="mb-15">Robinfood is a premium, health-focused brand from Arrikar Foods, the trusted makers of Pavizham Rice. Born from decades of expertise in rice milling, Robinfood was created with one clear purpose: to nourish people with food that is as honest as it is healthy.</p>
+                         <h1>About RobinFood </h1>
+                         <p class="mb-15">RobinFood is a premium, health-focused brand from Arrikar Foods, the trusted makers of Pavizham Rice. Born from decades of expertise in rice milling, RobinFood was created with one clear purpose: to nourish people with food that is as honest as it is healthy.</p>
 
                            <p>Robin Foods began its journey as a small rice mill in Koovapady and, through a decade of hard work, has built a reputation for producing high-quality products that do not compromise on taste or nutrition.  Over the years, that commitment has helped us grow into one of South India’s leading rice mills, supporting thousands of families and earning the trust of generations. 
                            </p>
@@ -155,7 +155,7 @@
                               We aim to restore the forgotten goodness of rice bran, once a vital part of everyday diets. Through advanced technology, expert supervision, and strict quality assurance, we carefully preserve essential nutrients while creating products suited for today’s lifestyle.
                            </p>
                            <p>
-                              Every Robinfood product is crafted with care, focusing on balanced nutrition, natural goodness, and great taste, because we believe healthy food should be easy to trust and enjoyable to eat. Inspired by the spirit of Robin Hood, Robinfood stands for goodness shared, food that supports better living, stronger families, and healthier communities.
+                              Every RobinFood product is crafted with care, focusing on balanced nutrition, natural goodness, and great taste, because we believe healthy food should be easy to trust and enjoyable to eat. Inspired by the spirit of Robin Hood, RobinFood stands for goodness shared, food that supports better living, stronger families, and healthier communities.
 
                            </p>
                      </div>
@@ -180,7 +180,7 @@
                          </div>
                          <div class="feature-box-item-two__content">
                              <h6>Pan-India Reach</h6>
-                             <p class="feature-box-item-two__content--text">A robust Distribution Network ensuring seamless presence across major Indin markets</p>
+                             <p class="feature-box-item-two__content--text">A robust distribution network ensuring seamless presence across major Indian markets.</p>
                          </div>
                      </div>
                  </div>
@@ -191,9 +191,7 @@
                          </div>
                          <div class="feature-box-item-two__content">
                              <h6>Global Presence</h6>
-                             <p class="feature-box-item-two__content--text">Expanding footprint with exports taking Kerala'sauthentic goodness to international shelves
-
-                             </p>
+                             <p class="feature-box-item-two__content--text">Expanding our footprint through exports, taking Kerala's authentic goodness to international shelves.</p>
                          </div>
                      </div>
                  </div>
@@ -204,7 +202,8 @@
                          </div>
                          <div class="feature-box-item-two__content">
                              <h6>Reliable Supply Chain</h6>
-                             <p class="feature-box-item-two__content--text">Advances warehousing, efficient logistics, and consistent production supported by our co-grn power plan
+                             <p class="feature-box-item-two__content--text">
+                              Reliable Supply Chain Advanced warehousing, efficient logistics, and consistent production supported by our co-generation power plant.
 
                              </p>
                          </div>
@@ -218,7 +217,8 @@
                          <div class="feature-box-item-two__content">
                              <h6>Trusted Pertnerships
                            </h6>
-                             <p class="feature-box-item-two__content--text">Long-standing distributor relationships that ensures steady availability and market confidence
+                             <p class="feature-box-item-two__content--text">
+                              Long-standing distributor relationships that ensure steady availability and market confidence.
 
                              </p>
                          </div>
@@ -513,8 +513,8 @@
                         </div>
                         <div class="promo-content">
                            <div class="promo-info">
-                              <p class="offer-text">Red Bran Rice:</p>
-                              <h3 class="promo-title">  The Power of Every Grain.</h3>
+                              <p class="offer-text">Red Bran Rice</p>
+                              <h3 class="promo-title">Power in Every Grain</h3>
                            </div>
                            <div class="promo-btn-wrapper">
                               <a
@@ -538,9 +538,7 @@
                         <div class="promo-content">
                            <div class="promo-info">
                               <p class="offer-text">The Best for Your Table</p>
-                              <h3 class="promo-title">
-                                 Unpolished Unprocessed Unbeatable
-                              </h3>
+                              <h3 class="promo-title">Unpolished. Unprocessed. Unbeatable.</h3>
                            </div>
                            <div class="promo-btn-wrapper">
                               <a
