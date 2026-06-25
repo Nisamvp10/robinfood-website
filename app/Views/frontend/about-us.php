@@ -59,7 +59,7 @@
                         </p>
 
                         <p class="mb-15">
-                            With cutting-edge technology, expert supervision, and strict quality checks at every stage, we ensure that only the best reaches your table. Each Robin Food product is carefully crafted to deliver great taste while keeping your health in balance. For us, food is not just about filling a plate; it’s about caring for the well-being of the people who trust us.
+                            With cutting-edge technology, expert supervision, and strict quality checks at every stage, we ensure that only the best reaches your table. Each RobinFood  product is carefully crafted to deliver great taste while keeping your health in balance. For us, food is not just about filling a plate; it’s about caring for the well-being of the people who trust us.
 
                         </p>
 
@@ -97,7 +97,7 @@
                             </h1>
                             <h6>Mr. Robin George
                             </h6>
-                            <p class="mb-15">Our journey began as a small rice mill in Koovapady, built on hard work, honesty, and a deep respect for food and people. Over the years, with the trust of our farmers, partners, and customers, we have grown into one of South India’s leading rice mills, supporting thousands of families along the way. Robin Food was born from my belief that food should nourish, not just fill. Inspired by the spirit of sharing and care, we are committed to offering honest, healthy food that people can trust every day.
+                            <p class="mb-15">Our journey began as a small rice mill in Koovapady, built on hard work, honesty, and a deep respect for food and people. Over the years, with the trust of our farmers, partners, and customers, we have grown into one of South India’s leading rice mills, supporting thousands of families along the way. RobinFood  was born from my belief that food should nourish, not just fill. Inspired by the spirit of sharing and care, we are committed to offering honest, healthy food that people can trust every day.
                             </p>
                         </div>
         
