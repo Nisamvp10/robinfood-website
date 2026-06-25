@@ -177,8 +177,8 @@
                </div>
                <div class="offer">
                   <div class="subtitle style1 text-capitalize">
-                     <i class="icon-tag"></i>
-                    TOLL-FREE NO <a class="text-white" href="tel:7034741741">7034741741</a>
+                     <i class="fa fa-phone"></i>
+                     <a class="text-white pl-2" href="tel:7034741741">+91 7034741741</a>
                   </div>
                </div>
                <div class="lang">
