@@ -77,12 +77,12 @@
                           <ul class="contact-info-items">
                             <li>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:+91<?=getappdata('phone') ?>">+91<?=getappdata('phone') ?></a>
+                              <a href="tel:+91<?=getappdata('phone') ?>">+91 <?=getappdata('phone') ?></a>
                             </li>
 
                             <li>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:7034741741">+91 7034741741</a>
+                              <a href="tel:7034741741">+91 703 474 1741</a>
                             </li>
     
                             <li>
@@ -97,13 +97,13 @@
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b>Manufactured by</b><br> Nambiyattukudy Food Spices Near Aimuri Ganapathi Temple Koovappady P.O., Perumbavoor Ernakulam, Kerala-683544 <br>Essai Lic. No. 11316007000247 </a>
+                              <a href=""><b class="d-block">Manufactured by</b><br> Nambiyattukudy Food Spices Near Aimuri Ganapathi Temple Koovappady P.O., Perumbavoor Ernakulam, Kerala-683544 <br><span  class="d-block">Essai Lic. No. 11316007000247 </span></a>
                             </li>
 
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b>Marketed & Exported by</b><br>ARRIKAR FOODS PVT.LTD 19/636, Perumbavoor, Koovapady. Emakulam, Kerala - 683544 <br>Essai Lic. No. 11323999000136 </a>
+                              <a href=""><b class="d-block">Marketed & Exported by</b><br>ARRIKAR FOODS PVT.LTD 19/636, Perumbavoor, Koovapady. Emakulam, Kerala - 683544 <br><span class="d-block"> Essai Lic. No. 11323999000136 </span></a>
                             </li>
     
                           </ul>
