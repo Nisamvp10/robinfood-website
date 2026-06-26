@@ -20835,4 +20835,32 @@ a.logbtn {
   .header-logo img {
     width: 139px;
   }
+
+  .contact-info-area .contact-info-items .icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted var(--white);
+    border-radius: 50%;
+    font-size: 15px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .contact-info-items .icon svg {
+    width: 20px !important;
+    height: 20px !important;
+
+  }
+
+  footer .contact-info-area .contact-info-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
 }
