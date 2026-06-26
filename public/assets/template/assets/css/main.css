@@ -5865,7 +5865,7 @@ input.main-search-input::placeholder {
   box-shadow: 0 0 7px 0.5px rgba(0, 0, 0, 0.15);
   padding: 5px 20px 0px;
   position: absolute;
-  left: -250px;
+  left: -170px;
   top: 200%;
   transform: rotateX(90deg);
   transform-origin: center top 0;

@@ -1,0 +1,48 @@
+ERROR - 2026-06-03 17:43:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'robinfood', 3306, '', 0)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `value`\n...', Array, false)
+#4 D:\xamp\htdocs\robinfood\app\Helpers\settings_helper.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\robinfood\app\Config\Routes.php(23): getappdata('expertise')
+#6 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Router\RouteCollection.php(779): CodeIgniter\Router\RouteCollection->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+#7 D:\xamp\htdocs\robinfood\app\Config\Routes.php(153): CodeIgniter\Router\RouteCollection->group('admin', Array, Object(Closure))
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Router\RouteCollection.php(345): require('D:\\xamp\\htdocs\\...')
+#9 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(811): CodeIgniter\Router\RouteCollection->loadRoutes()
+#10 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#11 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `value`\n...', Array, false)
+#3 D:\xamp\htdocs\robinfood\app\Helpers\settings_helper.php(24): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xamp\htdocs\robinfood\app\Config\Routes.php(23): getappdata('expertise')
+#5 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Router\RouteCollection.php(779): CodeIgniter\Router\RouteCollection->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+#6 D:\xamp\htdocs\robinfood\app\Config\Routes.php(153): CodeIgniter\Router\RouteCollection->group('admin', Array, Object(Closure))
+#7 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\Router\RouteCollection.php(345): require('D:\\xamp\\htdocs\\...')
+#8 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(811): CodeIgniter\Router\RouteCollection->loadRoutes()
+#9 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#10 D:\xamp\htdocs\robinfood\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\robinfood\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2026-06-03 17:43:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `value`
+FROM `app_settings`
+WHERE `name` = :name:', [...], false)
+ 3 APPPATH\Helpers\settings_helper.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Config\Routes.php(23): getappdata('expertise')
+ 5 SYSTEMPATH\Router\RouteCollection.php(779): CodeIgniter\Router\RouteCollection->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 6 APPPATH\Config\Routes.php(153): CodeIgniter\Router\RouteCollection->group('admin', [...], Object(Closure))
+ 7 SYSTEMPATH\Router\RouteCollection.php(345): require('D:\\xamp\\htdocs\\robinfood\\app\\Config\\Routes.php')
+ 8 SYSTEMPATH\CodeIgniter.php(811): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 9 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

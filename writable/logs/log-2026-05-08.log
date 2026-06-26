@@ -1,0 +1,99 @@
+INFO - 2026-05-08 21:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-08 21:15:21 --> ErrorException: Undefined array key "slug"
+in APPPATH\Views\frontend\cart\cart-items.php on line 19.
+ 1 APPPATH\Views\frontend\cart\cart-items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "slug"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('frontend/cart/cart-items', [], true)
+ 5 APPPATH\Controllers\CartController.php(18): view('frontend/cart/cart-items', [...])
+ 6 APPPATH\Controllers\CartController.php(41): App\Controllers\CartController->cartItemHtml()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCartItems()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-08 21:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-08 21:15:23 --> ErrorException: Undefined array key "slug"
+in APPPATH\Views\frontend\cart\cart-items.php on line 19.
+ 1 APPPATH\Views\frontend\cart\cart-items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "slug"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('frontend/cart/cart-items', [], true)
+ 5 APPPATH\Controllers\CartController.php(18): view('frontend/cart/cart-items', [...])
+ 6 APPPATH\Controllers\CartController.php(41): App\Controllers\CartController->cartItemHtml()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCartItems()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-08 21:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-08 21:15:59 --> ErrorException: Undefined array key "slug"
+in APPPATH\Views\frontend\cart\cart-items.php on line 19.
+ 1 APPPATH\Views\frontend\cart\cart-items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "slug"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('frontend/cart/cart-items', [], true)
+ 5 APPPATH\Controllers\CartController.php(18): view('frontend/cart/cart-items', [...])
+ 6 APPPATH\Controllers\CartController.php(41): App\Controllers\CartController->cartItemHtml()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCartItems()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-08 21:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-08 21:16:29 --> ErrorException: Undefined array key "slug"
+in APPPATH\Views\frontend\cart\cart-items.php on line 20.
+ 1 APPPATH\Views\frontend\cart\cart-items.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "slug"', 'D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xamp\\htdocs\\robinfood\\app\\Views\\frontend\\cart\\cart-items.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('frontend/cart/cart-items', [], true)
+ 5 APPPATH\Controllers\CartController.php(18): view('frontend/cart/cart-items', [...])
+ 6 APPPATH\Controllers\CartController.php(41): App\Controllers\CartController->cartItemHtml()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCartItems()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-08 21:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-08 21:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
