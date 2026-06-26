@@ -5856,7 +5856,7 @@ input.main-search-input::placeholder {
 
 @media (max-width: 1199px) {
   .header-1 .menu-cart {
-    display: none;
+    display: block;
   }
 }
 

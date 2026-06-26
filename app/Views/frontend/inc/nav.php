@@ -250,7 +250,7 @@
                                 <li><a href="<?=base_url('career');?>">Careers</a></li>
                               </ul>
                             </li>
-                            <li><a href="<?=base_url('contact-us');?>">Contact Us</a></li>
+                            <li><a href="<?=base_url('contact-us');?>">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

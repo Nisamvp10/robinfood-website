@@ -81,7 +81,7 @@
                               href="<?=base_url('product-details/'.$product['slug'])?>">
                               <i class="fa-regular fa-eye"></i>
                            </a>
-                           <a href="#"><i class="fa-regular fa-heart"></i></a>
+                           <!-- <a href="#"><i class="fa-regular fa-heart"></i></a> -->
                            <a href="javascript:void(0);" class="add-to-cart" data-id="<?= $product['id'] ?>">
                               <i class="fa-light fa-bag-shopping"></i>
                            </a>
