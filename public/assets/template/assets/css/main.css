@@ -20833,6 +20833,9 @@ a.logbtn {
   cursor: pointer;
 }
 
+.cart-delete {
+  padding: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */
 @media (max-width: 576px) {
