@@ -5916,7 +5916,9 @@ input.main-search-input::placeholder {
   font-size: 18px;
   font-weight: 500;
   color: var(--title);
-  z-index: 9;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
 }
 
 .header-1 .menu-cart .cart-box ul li img {
