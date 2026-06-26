@@ -11,9 +11,14 @@
                     <img
                         src="<?=validImg($row['image'])?>" alt="image"/>
                 </a>
-            <div class="cart-product w-100">
-                <a href="<?=base_url('product-details/'.$row['slug'])?>" class="d-flex justify-content-between" ><?=$row['product_title']?> <span class="remove-from-cart" data-id="<?=$row['product_id']?>"><i class="fa fa-trash"></i></span></a>
-                <span><?= money_format_custom($row['price'])?>  X <?=$row['quantity']?></span> 
+            <div class="cart-product w-100 d-flex align-items-center justify-content-between">
+                <div class=" w-100 ">
+                    <a href="<?=base_url('product-details/'.$row['slug'])?>" class="d-flex justify-content-between" ><?=$row['product_title']?> </a>
+                    <span><?= money_format_custom($row['price'])?>  X <?=$row['quantity']?></span> 
+                </div>
+                <div class="cart-delete">
+                    <span class="remove-from-cart" data-id="<?=$row['product_id']?>"><i class="fa fa-trash"></i></span>
+                </div>
             </div>
         </li>
     <?php
