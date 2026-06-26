@@ -131,7 +131,7 @@
                            </div>
                            <div class="offcanvas__contact-text">
                               <a target="_blank" href="#"
-                                 >Mod-friday, 09am -05pm</a
+                                 >Monday-Friday, 09am -05pm</a
                               >
                            </div>
                         </li>
@@ -190,6 +190,7 @@
                         My account
                      </a>
                   </div>
+
                </div>
             </div>
 
@@ -282,13 +283,13 @@
                               </nav>
                            </div>
                         </div>
-                        <a href="#" class="search-trigger search-icon"
+                        <!-- <a href="#" class="search-trigger search-icon"
                            ><i class="fal fa-search"></i
-                        ></a>
+                        ></a> -->
                         <div class="menu-cart" id="menuCart"></div>
-                        
-                        <a class="wishlist" href="<?=base_url('cart')?>"
-                           ><i class="fa-regular fa-heart"></i
+                      
+                        <a class="wishlist" href="<?=( session()->get('user') && session()->get('user')['isLoggedIn']==true)? base_url('my-account') : base_url('login') ?>"
+                           ><i class="fa-regular fa-user"></i
                         ></a>
                         <div
                            class="header__hamburger d-block d-xl-none my-auto"

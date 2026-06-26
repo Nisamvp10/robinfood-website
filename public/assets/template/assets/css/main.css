@@ -5942,14 +5942,22 @@ input.main-search-input::placeholder {
   font-size: 14px;
 }
 
-.header-1 .menu-cart .cart-icon {
+.header-1 .menu-cart .cart-icon,
+.header-1 .wishlist {
   position: relative;
+  border: 1px #ddd solid;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
 }
 
 .header-1 .menu-cart #cartCount {
   position: absolute;
-  top: -7px;
-  right: -8px;
+  top: 2px;
+  right: 2px;
   content: "2";
   width: 16px;
   line-height: 16px;
@@ -7247,7 +7255,7 @@ input.main-search-input::placeholder {
 
 @media (max-width: 767px) {
   .header-main .header-right .wishlist {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -20823,3 +20831,8 @@ a.logbtn {
 
 
 /*# sourceMappingURL=main.css.map */
+@media (max-width: 576px) {
+  .header-logo img {
+    width: 139px;
+  }
+}
