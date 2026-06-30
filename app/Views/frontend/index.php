@@ -236,7 +236,7 @@
                   <div class="row gy-3">
                      <div class="col-lg-3">
                         <div class="section-title">
-                           <div class="subtitle style1">Premium Products</div>
+                           <div class="subtitle style1">Our Products</div>
                            <h2 class="title">Premium Products</h2>
                         </div>
                      </div>
