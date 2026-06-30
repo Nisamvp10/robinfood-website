@@ -20857,6 +20857,12 @@ a.logbtn {
     padding: 10px;
   }
 
+  .cart-checkout-wrapper {
+    max-width: 100%;
+    margin-left: auto;
+    margin-top: 60px;
+  }
+
   .coupon-btn {
 
     padding: 10px 15px;
