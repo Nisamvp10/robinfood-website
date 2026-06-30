@@ -13227,7 +13227,7 @@ textarea.is-invalid {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.16px;
-  text-transform: lowercase;
+  text-transform: inherit;
   max-width: 430px;
 }
 
@@ -20757,7 +20757,7 @@ button {
 }
 
 .coupon-content {
-  padding: 20px;
+  padding: 0 1;
 }
 
 .coupon-btn {
@@ -20842,6 +20842,29 @@ a.logbtn {
   .header-logo img {
     width: 139px;
   }
+
+  .discount-box {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .discount-box h2 {
+    font-size: 18px;
+  }
+
+  .coupon-content {
+    padding: 10px;
+  }
+
+  .coupon-btn {
+
+    padding: 10px 15px;
+    font-size: 12px;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    width: 100%;
+  }
+
 
   .contact-info-area .contact-info-items .icon {
     width: 35px;

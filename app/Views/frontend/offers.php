@@ -70,7 +70,7 @@
          if(!empty($offers)) {
             foreach($offers as $offer) {
                ?>
-                  <div class="coupon-card d-flex align-items-center mb-4 justify-content-between p-2">
+                  <div class="coupon-card d-md-flex align-items-center mb-4 justify-content-between p-2">
                   <!-- Left Discount Box -->
                   <div class="discount-box col-md-4">
                      <h2><?=$offer['discount'] ;?><?=($offer['discount_type'] == 1 ? 'RS':'%')?> OFF</h2>
@@ -81,6 +81,9 @@
                      <p class="mb-1 text-muted">
                            <?=$offer['description'] ;?>
                      </p>
+                     <div class="expire-text mt-2">
+                           Expires <?= date('m-d-Y',strtotime($offer['validity_to'])) ;?>
+                     </div>
                   </div>
 
                   <!-- Right Button -->
@@ -88,9 +91,7 @@
                      <button class="coupon-btn" onclick="copyCode('<?=$offer['coupencode'] ;?>')">
                            GET CODE
                      </button>
-                     <div class="expire-text mt-2">
-                           Expires <?= date('m-d-Y',strtotime($offer['validity_to'])) ;?>
-                     </div>
+
                   </div>
 
             </div>
