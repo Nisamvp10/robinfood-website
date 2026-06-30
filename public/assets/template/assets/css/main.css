@@ -20899,4 +20899,16 @@ a.logbtn {
     flex-wrap: nowrap;
   }
 
+  .best-seller-one {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .best-seller-one__thumb {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
 }
