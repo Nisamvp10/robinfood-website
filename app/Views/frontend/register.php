@@ -1,6 +1,6 @@
 <?= view('frontend/inc/header') ?>
    <!-- Breadcumb Section Start -->
-      <div class="breadcumb-section">
+      <div class="breadcumb-section d-none d-md-block">
          <div
             class="breadcumb-container-wrapper"
              data-bg-src="<?=base_url('public/assets/template/');?>assets/images/breadcumb/cart.webp"
@@ -114,7 +114,7 @@
                              </div>
                        </div>
                     </div>
-                   <div class="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
+                   <div class="col-xl-6 offset-xl-0 col-md-8 offset-md-2 d-none d-md-block">
                     <div class="register-thumb">
                         <img src="<?=base_url('public/assets/template/');?>assets/img/register/loginThumb.webp" alt="register-thumb">
                     </div>
