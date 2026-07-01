@@ -597,8 +597,8 @@ input[type=radio]:checked~label::before {
 .theme-btn.style6:before {
   transition-duration: 800ms;
   position: absolute;
-  width: 210%;
-  height: 290%;
+  width: 100%;
+  height: 41%;
   content: "";
   top: 162%;
   left: 50%;
