@@ -4,7 +4,7 @@
       <div class="breadcumb-section">
          <div
             class="breadcumb-container-wrapper"
-            data-bg-src="<?=base_url('public/assets/template/');?>assets/img/breadcumb-bg.png"
+            data-bg-src="<?=base_url('public/assets/template/');?>assets/images/breadcumb/cart.webp"
          >
             <div class="shape1">
                <img
@@ -67,10 +67,10 @@
                            <button class="nav-link d-none" id="v-pills-order-details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order-details" type="button" role="tab" aria-controls="v-pills-order-details" aria-selected="false">
                               <i class="fa-solid fa-list"></i>Order Details
                            </button>
-
+<!-- 
                            <button class="nav-link" id="v-pills-wishlist-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wishlist" type="button" role="tab" aria-controls="v-pills-wishlist" aria-selected="false">
                               <i class="fa-light fa-heart"></i>Wishlist
-                           </button>
+                           </button> -->
 
                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                               <i class="fa-regular fa-gear"></i>Settings
@@ -156,7 +156,7 @@
                                           <span class="status <?= ($order['status'] == 'delivered' ? 'completed' : ($order['status'] == 'confirmed' ? 'on-the-way' : ($order['status'] == 'pending' ? 'processing' : 'processing'))) ?>"
                                              ><?= strtoupper($order['status']) ?></span
                                           >
-                                          <a href="#">View Details</a>
+                                          <!-- <a href="#">View Details</a> -->
                                        </td>
                                     </tr>
                                     <?php

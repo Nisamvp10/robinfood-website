@@ -611,7 +611,7 @@ input[type=radio]:checked~label::before {
 }
 
 .theme-btn.style6:hover {
-  color: var(--title) !important;
+  color: var(--white) !important;
 }
 
 .theme-btn.style6:hover svg path {
