@@ -110,7 +110,7 @@ h3 {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px;
+  line-height: initial;
 }
 
 @media (max-width: 767px) {
@@ -15786,9 +15786,11 @@ table {
 }
 
 .cart-checkout-wrapper {
-  max-width: 350px;
+  max-width: 100%;
   margin-left: auto;
   margin-top: 60px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .cart-checkout-wrapper h3 {
