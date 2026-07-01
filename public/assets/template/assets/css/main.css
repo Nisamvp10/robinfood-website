@@ -20741,10 +20741,12 @@ button {
 }
 
 .discount-box {
+  display: flex;
   background: #eaf4ff;
   text-align: center;
   padding: 25px 10px;
   border-right: 1px dashed #ccc;
+  justify-content: center;
 }
 
 .discount-box h2 {

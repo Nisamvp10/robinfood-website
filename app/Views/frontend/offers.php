@@ -70,31 +70,70 @@
          if(!empty($offers)) {
             foreach($offers as $offer) {
                ?>
-                  <div class="coupon-card d-md-flex align-items-center mb-4 justify-content-between p-2">
-                  <!-- Left Discount Box -->
-                  <div class="discount-box col-md-4">
-                     <h2><?=$offer['discount'] ;?><?=($offer['discount_type'] == 1 ? 'RS':'%')?> OFF</h2>
-                  </div>
+                 <div class="coupon-card mb-2">
 
-                  <!-- Middle Content -->
-                  <div class="coupon-content col-md-5">
-                     <p class="mb-1 text-muted">
-                           <?=$offer['description'] ;?>
-                     </p>
-                     <div class="expire-text mt-2">
-                           Expires <?= date('m-d-Y',strtotime($offer['validity_to'])) ;?>
+                     <div class="row align-items-center g-0 p-2">
+
+                        <!-- Left -->
+                        <div class="col-lg-3">
+                              <div class="discount-box border rounded-2">
+                                 <h2>
+                                    <?= ($offer['discount_type'] == 1 ? 'Rs. '.number_format($offer['discount'],0) : number_format($offer['discount'],0).'%') ?>
+                                 </h2>
+                                 <span>OFF</span>
+                              </div>
+                        </div>
+
+                        <!-- Middle -->
+                        <div class="col-lg-6">
+                              <div class="coupon-content mx-md-3">
+
+                                 <h5 class="coupon-title">
+                                    <?= $offer['title'] ?? 'Special Discount Offer'; ?>
+                                 </h5>
+
+                                 <p class="coupon-description">
+                                    <?= $offer['description']; ?>
+                                 </p>
+
+                                 <div class="coupon-meta">
+
+                                    <span class="coupon-code">
+                                          <i class="fa fa-ticket"></i>
+                                          <?= $offer['coupencode']; ?>
+                                    </span>
+
+                                    <span class="expire">
+                                          <i class="fa fa-clock-o"></i>
+                                          Valid Till :
+                                          <?= date('d M Y', strtotime($offer['validity_to'])) ?>
+                                    </span>
+
+                                 </div>
+
+                              </div>
+                        </div>
+
+                        <!-- Right -->
+                        <div class="col-lg-3">
+
+                              <div class="coupon-action">
+
+                                 <button
+                                    class="coupon-btn"
+                                    onclick="copyCode('<?= $offer['coupencode']; ?>')">
+
+                                    GET CODE
+
+                                 </button>
+
+                              </div>
+
+                        </div>
+
                      </div>
-                  </div>
-
-                  <!-- Right Button -->
-                  <div class="text-center col-md-3">
-                     <button class="coupon-btn" onclick="copyCode('<?=$offer['coupencode'] ;?>')">
-                           GET CODE
-                     </button>
 
                   </div>
-
-            </div>
 
                <?php
             }

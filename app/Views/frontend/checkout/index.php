@@ -138,11 +138,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="text-right">
+                                        <div class="text-right d-flex flex-wrap gap-2 mb-3">
                                             <button type="reset" class="btn btn-secondary" data-dismiss="modal">
                                                 Reset
                                             </button>
-                                            <button type="submit" class="btn btn-primary" id="saveAddress">
+                                            <button type="submit" class="btn btn-success" id="saveAddress">
                                                 Save Address
                                             </button>
                                         </div>

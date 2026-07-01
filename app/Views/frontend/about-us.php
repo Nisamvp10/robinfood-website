@@ -127,7 +127,7 @@
                   
                     <div class="row gy-4 gx-64 d-flex align-items-center">
                         <div class="col-xl-6">
-                            <div class="about-page-content">
+                            <div class="about-page-content border p-3 rounded-4" style="background:#f5fff7;">
                                 <h1>Our Vision
                                 </h1>
                                 <p class="mb-15">
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                         <div class="col-xl-6">
-                            <div class="about-page-content">
+                            <div class="about-page-content border p-3 rounded-4" style="background:#f5fff7;">
                                 <h1>Our Mission
                                 </h1>
                                 <p class="mb-15">  <?=getappdata('mission') ?></p>
