@@ -42,10 +42,10 @@
                   
                        <div class="coupon-left mt-2">
                             <div class="coupon-input d-flex align-items-center mt-3 mb-1">
-                                <input class="couponcodeInput" placeholder="Coupon code" class="h-auto" value="<?=isset($cartdata)?$cartdata['coupencode']:''?>" type="text">
+                                <input class="couponcodeInput" placeholder="Coupon code" class="h-auto" value="<?=isset($cartdata)?$cartdata['coupencode'] ?? '':''?>" type="text">
                                 <button type="button" class="theme-btn style6 applyCoupon rounded-0 h-auto px-3 py-2">Apply</button>
                             </div>
-                            <?=(!empty($cartdata) && $cartdata['coupencode'] != '')?'<span onclick="removeCoupon()" class="remove-coupon">Remove</span>':''?>
+                            <?=(!empty($cartdata['coupencode']) ?'<span onclick="removeCoupon()" class="remove-coupon">Remove</span>':'')?>
 
                         </div>
 
