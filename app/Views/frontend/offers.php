@@ -117,7 +117,7 @@
                         <!-- Right -->
                         <div class="col-lg-3">
 
-                              <div class="coupon-action">
+                              <div class="coupon-action text-center">
 
                                  <button
                                     class="coupon-btn"
