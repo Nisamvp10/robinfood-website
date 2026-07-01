@@ -110,7 +110,7 @@
                                 </div>
 
                                
-                                <h5 class="contact-content__logtitle center">Have an account? <a href="<?=base_url('login')?>">Sign Up</a></h5>
+                                <h5 class="contact-content__logtitle center">Have an account? <a href="<?=base_url('login')?>">Sign In</a></h5>
                              </div>
                        </div>
                     </div>

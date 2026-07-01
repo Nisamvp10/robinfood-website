@@ -572,7 +572,7 @@ input[type=radio]:checked~label::before {
   color: var(--white);
   font-weight: 600;
   border-radius: 22px;
-  background: var(--theme3);
+  background: #0c1536;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
