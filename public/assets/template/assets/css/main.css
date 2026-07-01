@@ -20218,6 +20218,11 @@ button {
   .promo-wrapper.style1 .promo-card.promo-card_1 .thumb {
     padding-bottom: 20px;
   }
+
+  .about-page-content p {
+    font-size: 13px;
+    line-height: initial;
+  }
 }
 
 @media (max-width: 991px) {
