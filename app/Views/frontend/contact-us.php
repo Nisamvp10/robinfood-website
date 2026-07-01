@@ -103,7 +103,7 @@
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b class="d-block">Marketed & Exported by</b><br>Arrikar Foods Pvt Ltd, 19/636, Perumbavoor, Koovapady, Ernakulam, Kerala. 683544   <br><span class="d-block"> Essai Lic. No. 11323999000136 </span></a>
+                              <a href=""><b class="d-block">Marketed & Exported by</b>Arrikar Foods Pvt Ltd, 19/636, Perumbavoor, Koovapady, Ernakulam, Kerala. 683544   <br><span class="d-block"> Essai Lic. No. 11323999000136 </span></a>
                             </li>
     
                           </ul>
