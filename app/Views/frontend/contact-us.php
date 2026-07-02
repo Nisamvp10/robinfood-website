@@ -97,13 +97,13 @@
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b class="d-block">Manufactured by</b> Nambiyattukudy Food Spices Near Aimuri Ganapathi Temple Koovappady PO, Perumbavoor Ernakulam, Kerala-683544 <br><span  class="d-block">Essai Lic. No. 11316007000247 </span></a>
+                              <span><b class="d-block">Manufactured by</b> Nambiyattukudy Food Spices Near Aimuri Ganapathi Temple Koovappady PO, Perumbavoor Ernakulam, Kerala-683544 <br><span  class="d-block">Essai Lic. No. 11316007000247 </span></span>
                             </li>
 
                             <li>
                               <i class="fas fa-map-marker-alt"></i>
                              
-                              <a href=""><b class="d-block">Marketed & Exported by</b>Arrikar Foods Pvt Ltd, 19/636, Perumbavoor, Koovapady, Ernakulam, Kerala. 683544   <br><span class="d-block"> Essai Lic. No. 11323999000136 </span></a>
+                              <span><b class="d-block">Marketed & Exported by</b>Arrikar Foods Pvt Ltd, 19/636, Perumbavoor, Koovapady, Ernakulam, Kerala. 683544   <br><span class="d-block"> Essai Lic. No. 11323999000136 </span></span>
                             </li>
     
                           </ul>
