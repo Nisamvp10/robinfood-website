@@ -7,7 +7,9 @@ if(!$isLogin){
         foreach($data as $address){
            $html.= ' 
             <div class="card mt-2"><div class="card-body d-flex align-items-center gap-2"><div><span class="dltbtn"onclick="removeAddress(\''.encryptor($address['id']).'\')"><i class="fa fa-trash"></i></span></div><input type="radio" name="address_id" onclick="isDefault(this)" style="width: 20px; margin-right: 10px;" class="mr-2  addressRadio" value="'.encryptor($address['id']).'" '.($address['is_default'] == 1 ? 'checked' : '').' >
-            <p>'.$address['full_name'].','.$address['phone'].','.$address['address_line1'].','.$address['city'].','.$address['state'].','.$address['postal_code'].','.$address['country'].'</p></div></div>';
+            <p>'.$address['full_name'].','.$address['address_line1'].','.$address['city'].','.$address['state'].','.$address['postal_code'].','.$address['country'].'</p>
+            <p>'.(!empty($address['country_code']) ? '+'. $address['country_code'] : '').$address['phone'].'</p>
+            </div></div>';
         }
     }else{
        // $html.= '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNewAddressModal"> Add to Address </button><br><p>No address found</p>';
@@ -18,7 +20,8 @@ if(!$isLogin){
         foreach($data as $address){
            $html.= ' 
             <div class="card mt-2"><div class="card-body d-flex align-items-center"><input type="radio" name="address_id" onclick="isDefault(this)" style="width: 20px; margin-right: 10px;" class="mr-2  addressRadio" value="'.encryptor($address['id']).'" '.($address['is_default'] == 1 ? 'checked' : '').' >
-            <p>'.$address['full_name'].','.$address['phone'].','.$address['address_line1'].','.$address['city'].','.$address['state'].','.$address['postal_code'].','.$address['country'].'</p></div></div>';
+            <p>'.$address['full_name'].','.$address['address_line1'].','.$address['city'].','.$address['state'].','.$address['postal_code'].','.$address['country'].'</p>
+            <p>'.(!empty($address['country_code']) ? '+'. $address['country_code'] : '').$address['phone'].'</p></div></div>';
         }
         $html.= '<button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#addNewAddressModal"> Add to Address </button>';
     }else{
