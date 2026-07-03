@@ -20924,9 +20924,10 @@ a.logbtn {
     font-size: 13px;
   }
 
-  .featured-product-item-one:hover .featured-product-item-one__thumb .icon {
+  .featured-product-item-one__thumb .icon {
     opacity: 1;
     visibility: visible;
+    position: absolute;
     bottom: 30px;
   }
 
