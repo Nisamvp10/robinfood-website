@@ -105,7 +105,7 @@
                               <i class="fal fa-map-marker-alt"></i>
                            </div>
                            <div class="offcanvas__contact-text">
-                              <a target="_blank" href="#"
+                              <a target="_blank" href="javascript:void(0)"
                                  >Nambiyattukudy Food Spices
                                  Near Aimuri Ganapathi Temple.
                                  Koovappady P.O Perumbavoor
