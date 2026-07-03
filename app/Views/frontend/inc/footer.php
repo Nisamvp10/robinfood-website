@@ -212,7 +212,7 @@
                               </a>
                            </li>
                            <li>
-                              <a class="style1" href="about.html">
+                              <a class="style1" href="<?=base_url('about-us');?>">
                                  <i class="fa-solid fa-chevrons-right"></i>
                                  About Us
                               </a>
