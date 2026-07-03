@@ -65,10 +65,20 @@ class ShippingAddressController extends BaseController
         }   
 
         // 🔍 Check user
-        $user = $this->userModel->where('phone', $phone)->where('email', $email)->first();
+        //$user = $this->userModel->where('phone', $phone)->where('email', $email)->first();
+
+         $session = session();
+        
+        $user = $session->get('user');
+        $userId = 0;
+
+        if ($user && isset($user['isLoggedIn']) && $user['isLoggedIn'] === true) {
+            $userId = $user['userId']; // use 'id' not userId
+        }
+
 
         if ($user) {
-            $userId = $user['id'];
+            $userId =$userId;// $user['id'];
         } else {
             // 🆕 Create new user
             $this->userModel->insert([
@@ -79,7 +89,7 @@ class ShippingAddressController extends BaseController
                 'is_active' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
             ]);
-            $userId = '';// $this->userModel->insertID();
+           // $userId = '';// $this->userModel->insertID();
         }
 
         //  Auto login
