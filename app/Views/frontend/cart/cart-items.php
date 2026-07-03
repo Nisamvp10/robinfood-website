@@ -130,9 +130,10 @@
 }
 
 .cart-row{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 .cart-footer{
@@ -253,7 +254,7 @@ foreach ($result as $row) {
 
 <?php $qty++; } ?>
 
-<div class="text-end mt-4">
+<div class="text-end mt-4 d-none">
     <button class="theme-btn style6" type="submit">
         Update Cart
     </button>

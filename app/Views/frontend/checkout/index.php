@@ -317,4 +317,86 @@ $(document).ready(function () {
     input.addEventListener('change', reset);
     input.addEventListener('keyup', reset);
 });
+
+
+
+
+
+
+    function updateCart() {
+
+      $.ajax({
+         url: App.getSiteurl() + "cart/update",
+         type: "POST",
+         data: $("#cartForm").serialize(),
+
+         beforeSend: function () {
+               $(".plus-minus-input button").prop("disabled", true);
+         },
+
+         success: function (data) {
+
+               if (data.status) {
+                  cartNotification();
+                  mycart();      // Reload cart
+                  toastr.success(data.message); 
+               } else {
+                  toastr.error(data.message);
+               }
+
+         },
+
+         complete: function () {
+               $(".plus-minus-input button").prop("disabled", false);
+         }
+
+      });
+
+   }
+
+
+   function plusCartQty(btn){
+
+    let input = $("#" + $(btn).data("field"));
+
+    let qty = parseInt(input.val()) || 1;
+
+    input.val(qty + 1);
+
+    updateCart();
+
+}
+
+
+function minusCartQty(btn){
+
+    let input = $("#" + $(btn).data("field"));
+
+    let qty = parseInt(input.val()) || 1;
+
+    if(qty > 1){
+
+        input.val(qty - 1);
+
+        updateCart();
+
+    }
+
+}
+
+
+
+$(document).on("change", "input[name='quantity[]']", function(){
+
+    let qty = parseInt($(this).val());
+
+    if(qty < 1 || isNaN(qty)){
+        $(this).val(1);
+    }
+
+    updateCart();
+
+});
+
+
 </script>
