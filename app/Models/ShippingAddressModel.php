@@ -12,6 +12,7 @@ class ShippingAddressModel extends Model
         'user_id',
         'session_id',
         'full_name',
+        'country_code',
         'phone',
         'email',
         'address_line1',

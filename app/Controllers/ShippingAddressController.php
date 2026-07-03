@@ -34,13 +34,14 @@ class ShippingAddressController extends BaseController
 
         $rules = [
             'shipping_name' => 'required',
-            'shipping_phone' => 'required|min_length[10]|max_length[10]',
+            'shipping_phone' => 'required',
             'shipping_email_id' => 'required|valid_email',
             'shipping_address' => 'required',
             'shipping_city' => 'required',
             'shipping_state' => 'required',
             'shipping_pincode' => 'required|min_length[6]|max_length[6]',
             'shipping_country' => 'required',
+            'phone_country_code' => 'required',
         ];
 
         if (!$this->validate($rules)) {
@@ -100,6 +101,7 @@ class ShippingAddressController extends BaseController
             'state' => $this->request->getPost('shipping_state'),
             'postal_code' => $this->request->getPost('shipping_pincode'),
             'country' => $this->request->getPost('shipping_country'),
+            'country_code' => $this->request->getPost('phone_country_code'),
             'is_default' => 1,
             'created_at' => date('Y-m-d H:i:s'),
         ];
