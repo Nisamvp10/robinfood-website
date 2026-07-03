@@ -13,7 +13,7 @@
 
 <div class="cart-checkout-wrapper w-100 mb-0 border">
             <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="p-10 bg-off-white py-3 px-2">Order Summary  (<?= count($subtotal) ?>)</h3>
+                <h3 class="p-10 bg-off-white py-3 px-2">Order Details  (<?= count($subtotal) ?>)</h3>
                 <div class="coupon_inner p-2">
                     <div class="cart-subtotal">
                         <p>Subtotal</p>
