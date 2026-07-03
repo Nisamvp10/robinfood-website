@@ -105,7 +105,7 @@
                               <i class="fal fa-map-marker-alt"></i>
                            </div>
                            <div class="offcanvas__contact-text">
-                              <a target="_blank" href="javascript:void(0)"
+                              <a  href="javascript:void(0)"
                                  >Nambiyattukudy Food Spices
                                  Near Aimuri Ganapathi Temple.
                                  Koovappady P.O Perumbavoor
@@ -130,7 +130,7 @@
                               <i class="fal fa-clock"></i>
                            </div>
                            <div class="offcanvas__contact-text">
-                              <a target="_blank" href="#"
+                              <a href="javascript:void(0)"
                                  >Monday-Friday, 09am -05pm</a
                               >
                            </div>
