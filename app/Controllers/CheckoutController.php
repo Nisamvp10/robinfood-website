@@ -117,6 +117,18 @@ class CheckoutController extends Controller
                     'url' => base_url('checkout')
                 ]);
             }
+            //check item stock
+            foreach($cartItems as $item){
+                $totalStock = $this->productModel->where('id', $item['product_id'])->first();
+
+                if($totalStock['current_stock'] == 0){
+                        return $this->response->setJSON([
+                            'success' => false,
+                            'message' => $totalStock['product_name'].' is out of stock remove item and try again',
+                            'url' => base_url('checkout')
+                    ]);
+                }
+            }
             foreach($cartItems as $item){
                 $itemSum += $item['subtotal'];
             }
