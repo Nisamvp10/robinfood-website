@@ -8,6 +8,7 @@ use App\Models\PurchaseOrderModel;
 use App\Models\PurchaseOrderItemModel;
 use App\Models\Salesmodel;
 use App\Models\SaleItemModel;
+use App\Models\CustomerOrderItemsModel;
 
 class InventoryController extends Controller {
     protected $productModel;
@@ -16,6 +17,7 @@ class InventoryController extends Controller {
     protected $purchasedItemModel;
     protected $salesModel;
     protected $salesItemModel;
+    protected $customerOrderItemsModel;
     function __construct() {
         $this->productModel = new ProductModel();
         $this->supplierModel = new SupplierModel();
@@ -23,6 +25,8 @@ class InventoryController extends Controller {
         $this->purchasedItemModel = new PurchaseOrderItemModel();
         $this->salesModel = new Salesmodel();
         $this->salesItemModel = new SaleItemModel();
+        $this->customerOrderItemsModel = new CustomerOrderItemsModel();
+
     }
     public function index() {
         $page = (!hasPermission('','purchase') ? lang('Custom.permissionDenied') : 'Purchase History');
@@ -32,7 +36,7 @@ class InventoryController extends Controller {
         return view($pageRote,compact('page','products','suppliers'));
     }
 
-    function edit($id) {
+    function edit($id=false) {
         $page = (!hasPermission('','edit_purchase') ? lang('Custom.permissionDenied') : 'Edit ');
         $pageRote = (!hasPermission('','purchase') ? 'pages-error-404': 'admin/inventory/create');
         $products = $this->productModel->where('status',1)->findAll();
@@ -221,10 +225,27 @@ class InventoryController extends Controller {
         // Validation: ensure proposed purchased totals are not less than sold quantity
         $affectedIds = array_keys($affectedProductIds);
         if (!empty($affectedIds)) {
-            $soldRows = $salesItemModel->select('product_id, SUM(quantity) as sold_qty')
-                                    ->whereIn('product_id', $affectedIds)
-                                    ->groupBy('product_id')
-                                    ->get()->getResultArray();
+           // print_r($affectedIds);exit;
+
+                $builder = $this->customerOrderItemsModel->builder();
+
+                $builder->select('product_id, SUM(qty) as sold_qty');
+                //check customer_orders payment status paid & status deviverd
+                $builder->join('customer_orders','customer_orders_items.customer_order_id = customer_orders.id','left');
+                $builder->where('customer_orders.payment_status','paid');
+                $builder->whereIn('product_id', $affectedIds);
+                $builder->groupBy('product_id');
+
+                $query = $builder->get();
+
+                if ($query === false) {
+                    print_r($db->error());
+                    exit;
+                }
+
+
+                $soldRows = $query->getResultArray();
+
 
             $soldMap = [];
             foreach ($soldRows as $r) {
@@ -307,9 +328,21 @@ class InventoryController extends Controller {
             $totalPurchased = (float) ($pRow->quantity ?? 0);
 
             // total sold
-            $sRow = $salesItemModel->selectSum('quantity')
-                                ->where('product_id', $pid)
-                                ->get()->getRow();
+            // $sRow = $salesItemModel->selectSum('quantity')
+            //                     ->where('product_id', $pid)
+            //                     ->get()->getRow();
+            //select sum from customer_order_items where product_id = $pid and customer_order_id in (select id from customer_orders where payment_status = 'paid')
+            $builder = $this->customerOrderItemsModel->builder();
+            $builder->select('product_id, SUM(qty) as sold_qty');
+            $builder->where('product_id', $pid);
+            $builder->whereIn('customer_order_id', function ($subQuery) {
+                $subQuery->select('id')
+                         ->from('customer_orders')
+                         ->where('payment_status', 'paid');
+            });
+            $sRow = $builder->get()->getRow();
+
+
             $totalSold = (float) ($sRow->quantity ?? 0);
 
             $stock = $totalPurchased - $totalSold;
