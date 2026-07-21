@@ -6,6 +6,7 @@ use App\Models\ProductModel;
 use App\Models\ProductManageModel;
 use App\Controllers\UploadImages;
 use App\Models\ProductvariantImagesModel;
+use App\Models\ShippingconfigrationModel;
 class ProductmanagementController extends Controller
 {
     protected $categoryModel;
@@ -13,12 +14,14 @@ class ProductmanagementController extends Controller
     protected $productManageModel;
     protected $imgUploader;
     protected $productvariantImagesModel;
+    protected $shippingconfigrationModel;
     function __construct() {
         $this->imgUploader = new UploadImages();
         $this->categoryModel = new CategoryModel();
         $this->productModel = new ProductModel();
         $this->productManageModel = new ProductManageModel();
         $this->productvariantImagesModel = new ProductvariantImagesModel();
+        $this->shippingconfigrationModel = new ShippingconfigrationModel();
     }
     public function index()
     {
@@ -150,6 +153,8 @@ class ProductmanagementController extends Controller
             'note'          => 'required',
             'products'      => 'required',
             'price'         => 'required',
+            'shipping_status' => 'required',
+
            // 'current_stock' => 'required',
             //'status'        => 'required',
         ];
@@ -157,9 +162,35 @@ class ProductmanagementController extends Controller
             return $this->response->setJSON(['success' => false,'errors' => $this->validator->getErrors()]);
         }
 
+        
+        $shippingStatus = $this->request->getPost('shipping_status');
+        $isMultiple = $this->request->getPost('is_multiple');
+        $shippingCost = $this->request->getPost('shipping_cost');
+        $length = $this->request->getPost('length');
+        $breadth = $this->request->getPost('breadth');
+        $height = $this->request->getPost('height');
+        $weight = $this->request->getPost('weight');
+        
+        if($shippingStatus == 2){
+            $rules['shipping_cost'] = 'required';
+        }
+        if($shippingStatus != 1){
+            
+            $rules['length'] = 'required';
+            $rules['breadth'] = 'required';
+            $rules['height'] = 'required';
+            $rules['weight'] = 'required';
+        }
+
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON(['success' => false,'errors' => $this->validator->getErrors()]);
+        }
+
+
         $file = $this->request->getFile('file');
         $selectedImage = $this->request->getPost('selected_image');
         $id = decryptor($this->request->getPost('itmId'));
+
 
         if ($file && $file->isValid() && !$file->hasMoved()) {
             // Upload new image
@@ -169,6 +200,8 @@ class ProductmanagementController extends Controller
             // Keep old image if no new upload
             $imagePath = $selectedImage;
         }
+
+        
 
         // multiple Images
         $selectedImages = $this->request->getPost('selected_images')[0] ?? '[]';
@@ -224,6 +257,16 @@ class ProductmanagementController extends Controller
             'premium_product'=> $this->request->getPost('premium') ? 1 : 0,
             'featured_product'=> $this->request->getPost('featured') ? 1 : 0,
         ];
+
+        $shippingCOnfig = [
+            'shipping_status' => $this->request->getPost('shipping_status'),
+            'is_multiple' => $this->request->getPost('is_multiple') ? 1 : 0,
+            'shipping_cost' => $this->request->getPost('shipping_cost'),
+            'length' => $this->request->getPost('length'),
+            'breadth' => $this->request->getPost('breadth'),
+            'height' => $this->request->getPost('height'),
+            'weight' => $this->request->getPost('weight'),
+        ];
       
         if(!empty($imagePath)) {
             $data['product_image'] = $imagePath;
@@ -235,6 +278,13 @@ class ProductmanagementController extends Controller
                 foreach ($uploadedPaths as $url) {
                         $this->productvariantImagesModel->insert(['product_id'   => $id,'image' => $url]);
                 }
+            }
+            $shippingconfigrationId = $this->shippingconfigrationModel->where('product_id',$id)->first();
+            if($shippingconfigrationId) {
+                $this->shippingconfigrationModel->update($shippingconfigrationId->id,$shippingCOnfig);
+            }else{
+                $shippingCOnfig['product_id'] = $id;
+                $this->shippingconfigrationModel->insert($shippingCOnfig);
             }
 
             $message = 'Data successfully updated';

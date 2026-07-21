@@ -594,4 +594,10 @@ class CartService
         return $total ?? 0;
     }
 
+    public function shippingAddress(){
+        $cartSession = $this->getCartSessionId();
+        $shippingAddress = $this->shippingAddressModel->where(['session_id' => $cartSession,'is_default'=>1])->first();
+        return $shippingAddress;
+    }
+
 }
