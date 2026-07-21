@@ -13,11 +13,11 @@
       <div class="flex items-center">
         <div id="step1circle" class="w-8 h-8 rounded-full bg-blue-600 text-white flex justify-center items-center">1</div>
         <div class="w-10 h-[2px] bg-blue-600"></div>
-        <div id="step2circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center hidden">2</div>
+        <div id="step2circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center ">2</div>
         <div class="w-10 h-[2px] bg-gray-300"></div>
-        <div id="step3circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center ">2</div>
+        <div id="step3circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center ">3</div>
          <div class="w-10 h-[2px] bg-gray-300"></div>
-        <div id="step4circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center">3</div>
+        <div id="step4circle" class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex justify-center items-center">4</div>
       </div>
     </div>
 
@@ -167,40 +167,95 @@
                     </div>
                     <!--  -->
                     <div class="flex justify-end mt-2">
-                        <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="nextStep(3)">Next</button>
+                        <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="nextStep(2)">Next</button>
                     </div>
                 </div> <!-- close set 1 -->
              <!-- Step 2 -->
                 <div id="step2" class="step hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 hidden">
-                          <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Title *</label>
-                            <div class="relative">
-                                <div class="absolute inset-y-0 left-0 pl-3 mt-2 items-center pointer-events-none"><i class="bi bi-briefcase text-xl text-gray-400"></i></div>
-                                <input type="text" name="pointtitle"  id="pointtitle" class="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Title">
-                                <div class="invalid-feedback" id="pointtitle_error"></div>
-                            </div>
-                        </div>
-                        <div id="productWrapper">
-                       
-                        
-                              <div class="border border-gray-200 rounded-lg p-4  mt-2 ">
-                                <div>
-                                    <label class="block mb-2 text-sm font-semibold">Highlight Points</label>
-                                    <div id="points">
-                                        <div>
-                                            <input type="text" name="points[]" class="w-full border p-2 rounded mb-2" placeholder="Highlight point 1">
-                                            <div class="invalid-feedback" id="points_error"></div>
-                                        </div>
-                                        <div>
-                                            <textarea name="remark[]" class="w-full border p-2 rounded mb-2" placeholder="Description"></textarea>
-                                        <div class="invalid-feedback" id="remark_error"></div>
-                                        </div>
-                                    </div>
-                                    <button type="button" onclick="addPoint()" class="text-blue-600 text-sm mb-4">+ Add Point</button>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                        <h4 class="font-semibold">Shipping Configuration</h4>
+                        <!-- SHIPPING CONFIGRATION -->
+                            <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Free Shipping</h4>
+                                    <p class="text-sm text-muted-foreground">Active products can be shipped for free</p>
+                                    <!-- set dropdown free shipping -> no free shipping, free shipping, shiprocket -->
+                                    <select name="shipping_status" id="shipping_status" class="form-control">
+                                        <option value="">Select Shipping</option>
+                                        <option value="1">Free Shipping</option>
+                                        <option value="2">Non-free Shipping</option>
+                                        <option value="3">Shiprocket</option>
+                                    </select>
+                                    <span class="text-danger" id="shipping_status_error"></span>
                                 </div>
                             </div>
-                        </div>
+                            <!-- shipping Cost -->
+                             <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Shipping Cost *</h4>
+                                    <p class="text-sm text-muted-foreground">Enter the shipping cost for this product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-control" id="shipping_cost" type="number" name="shipping_cost" min="0" step="0.01" value="" >
+                                        <span class="text-danger" id="shipping_cost_error"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- is product quantity multiple -->
+                            <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Is Product Quantity Multiple</h4>
+                                    <p class="text-sm text-muted-foreground">Allow customers to order multiple quantities of this product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-check-input" id="is_multiple" type="checkbox" name="is_multiple" >
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- length breadth  height wheight  -->
+                            <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Length (cm)*</h4>
+                                    <p class="text-sm text-muted-foreground">Enter the length of the product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-control" id="length" type="number" name="length" min="0" step="0.01" value="" >
+                                    </label>
+                                    <span class="text-danger" id="length_error"></span>
+                                </div>
+                            </div>
+                             <!-- width -->
+                              <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Breadth (cm)*</h4>
+                                    <p class="text-sm text-muted-foreground">Enter the Breadth of the product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-control" id="breadth" type="number" name="breadth" min="0" step="0.01" value="" >
+                                    </label>
+                                    <span class="text-danger" id="breadth_error"></span>
+                                </div>
+                            </div>
+                            <!-- height -->
+                             <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Height (cm)*</h4>
+                                    <p class="text-sm text-muted-foreground">Enter the height of the product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-control" id="height" type="number" name="height" min="0" step="0.01" value="" >
+                                    </label>
+                                    <span class="text-danger" id="height_error"></span>
+                                </div>
+                            </div>
+                            <!-- weight -->
+                             <div class="space-y-2">
+                                <div class=" border border-border p-2 rounded-xl">
+                                    <h4 class="text-lg font-medium">Weight (kg)*</h4>
+                                    <p class="text-sm text-muted-foreground">Enter the weight of the product</p>
+                                    <label class="form-check form-switch mt-2">
+                                        <input class="form-control" id="weight" type="number" name="weight" min="0" step="0.01" value="" >
+                                    </label>
+                                    <span class="text-danger" id="weight_error"></span>
+                                </div>
+                            </div>
+
+
                     </div>
                     <div class="flex justify-between mt-3">
                         <button type="button" class="border px-4 py-2 rounded" onclick="prevStep(1)">Previous</button>
@@ -223,7 +278,7 @@
                         </div>
                         </div> 
                          <div class="flex justify-between mt-3">
-                            <button type="button" class="border px-4 py-2 rounded" onclick="prevStep(1)">Previous</button>
+                            <button type="button" class="border px-4 py-2 rounded" onclick="prevStep(2)">Previous</button>
                             <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="nextStep(4)">Next</button>
                         </div>                
 
@@ -262,3 +317,9 @@
     </div>
   </div>
 </div>
+
+
+<!-- CREATE TABLE `robinfood`.`shipping_configration` (`id` INT NOT NULL AUTO_INCREMENT , `product_id` INT(11) NOT NULL , `shipping_status` TINYINT NOT NULL DEFAULT '2' COMMENT '1-free-shipping 2-Non-free shipping 3-shiprocket' , `shipping_cost` DECIMAL(10,2) NOT NULL , `is_multiple` DECIMAL(10,2) NOT NULL DEFAULT '1' COMMENT '1-multple 2-fixed' , `length` DECIMAL(10,2) NOT NULL DEFAULT '0' , `breadth` DECIMAL(10,2) NOT NULL , `height` DECIMAL(10,2) NOT NULL , `weight` DECIMAL(10,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+ALTER TABLE `shipping_configration` CHANGE `is_multiple` `is_multiple` INT(11) NOT NULL DEFAULT '1' COMMENT '1-multple 2-fixed';
+ 
+-->
