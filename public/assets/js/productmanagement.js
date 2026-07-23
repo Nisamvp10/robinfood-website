@@ -38,6 +38,14 @@ function openModal(id = false) {
     $('#featured').prop('checked', false)
     $('#status').prop('checked', false)
     $('#premium').prop('checked', false)
+    $('#is_multiple').prop('checked', false)
+
+    webForm.querySelector('#shipping_status').value = '';
+    webForm.querySelector('#shipping_cost').value = '';
+    webForm.querySelector('#length').value = '';
+    webForm.querySelector('#breadth').value = '';
+    webForm.querySelector('#height').value = '';
+    webForm.querySelector('#weight').value = '';
 
     const preview = $('#selectedMultiPreview');
     $('.is-invalid').removeClass('is-invalid');
@@ -69,6 +77,13 @@ function openModal(id = false) {
                     (result.featured_product == 1 ? $('#featured').prop('checked', true) : $('#featured').prop('checked', false));
                     (result.product_status == 1 ? $('#status').prop('checked', true) : $('#status').prop('checked', false));
                     (result.premium_product == 1 ? $('#premium').prop('checked', true) : $('#premium').prop('checked', false));
+                    (result.is_multiple == 1 ? $('#is_multiple').prop('checked', true) : $('#is_multiple').prop('checked', false));
+                    webForm.querySelector('#shipping_status').value = result.shipping_status;
+                    webForm.querySelector('#shipping_cost').value = result.shipping_cost;
+                    webForm.querySelector('#length').value = result.length;
+                    webForm.querySelector('#breadth').value = result.breadth;
+                    webForm.querySelector('#height').value = result.height;
+                    webForm.querySelector('#weight').value = result.weight;
                     let subCategoryId = result.product_id ?? '';
                     // set category & trigger change
                     $('#category').val(result.category_id ?? '').trigger('change', [subCategoryId]);

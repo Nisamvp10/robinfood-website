@@ -134,7 +134,7 @@ class ShippingCharge{
             $pickup_pincode = '';
             if(!empty($pickup_locations)){
                 foreach ($shipping_address as $pickup_location) {
-                    if($pickup_location['pickup_location'] == 'Home'){
+                    if($pickup_location['pickup_location'] == 'warehouse'){
                         $pickup_location_id = $pickup_location['id'];
                         $pickup_location_name = $pickup_location['pickup_location'];
                         $pickup_pincode = $pickup_location['pin_code'];
@@ -142,9 +142,6 @@ class ShippingCharge{
                     }
                 }
             }
-
-
-
             // get cart items with shipping configration
 
         

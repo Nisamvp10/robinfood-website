@@ -140,7 +140,7 @@
             
          }else{
             ?>
-               <div class="text-center p-t5 pb-5">
+               <div class="text-center pt-5 pb-5">
                   <h3 class="text-center">Stay tuned! We'll post new deals soon. Check back later for special discounts!</h3>
                </div>
             <?php

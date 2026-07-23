@@ -20,8 +20,9 @@ class ProductManageModel extends Model{
     public function getInfo($id){
         $builder = $this->db->table('product_management as pm')
             ->select('pm.id,pm.product_id,pm.product_title,pm.category_id,pm.price,pm.compare_price,pm.product_image,pm.product_status,pm.seo_title,pm.seo_description,pm.short_description,pm.description,pm.price_offer_type,pm.premium_product,pm.featured_product,pm.created_at,pm.updated_at,
-           pvi.image as variantimages,pvi.id as variantimageid' )
-          ->join('product_variant_images as pvi','pvi.product_id = pm.id','left');
+           pvi.image as variantimages,pvi.id as variantimageid,sc.id shippingConfigId,sc.shipping_status,sc.shipping_cost,sc.is_multiple,sc.length,sc.breadth,sc.height,sc.weight' )
+          ->join('product_variant_images as pvi','pvi.product_id = pm.id','left')
+          ->join('shipping_configration as sc','pm.id = sc.product_id','left');
         $builder->where('pm.id', $id);
         
         return $builder->get()->getResult();

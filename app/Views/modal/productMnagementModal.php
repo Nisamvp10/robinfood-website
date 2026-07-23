@@ -281,8 +281,6 @@
                             <button type="button" class="border px-4 py-2 rounded" onclick="prevStep(2)">Previous</button>
                             <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="nextStep(4)">Next</button>
                         </div>                
-
-                        
                     </div>
                      <div id="step4" class="step hidden">
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
@@ -304,7 +302,6 @@
                            </div>
                         </div>
                         
-
                     </div>
                     <div class="flex justify-end space-x-4 pt-6 gap-3 border-t border-gray-200">
                             <button type="button" class="border px-4 py-2 rounded" onclick="prevStep(3)">Previous</button>
@@ -317,9 +314,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- CREATE TABLE `robinfood`.`shipping_configration` (`id` INT NOT NULL AUTO_INCREMENT , `product_id` INT(11) NOT NULL , `shipping_status` TINYINT NOT NULL DEFAULT '2' COMMENT '1-free-shipping 2-Non-free shipping 3-shiprocket' , `shipping_cost` DECIMAL(10,2) NOT NULL , `is_multiple` DECIMAL(10,2) NOT NULL DEFAULT '1' COMMENT '1-multple 2-fixed' , `length` DECIMAL(10,2) NOT NULL DEFAULT '0' , `breadth` DECIMAL(10,2) NOT NULL , `height` DECIMAL(10,2) NOT NULL , `weight` DECIMAL(10,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-ALTER TABLE `shipping_configration` CHANGE `is_multiple` `is_multiple` INT(11) NOT NULL DEFAULT '1' COMMENT '1-multple 2-fixed';
- 
--->

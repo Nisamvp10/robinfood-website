@@ -73,7 +73,6 @@ class ProductmanagementController extends Controller
         $search = $this->request->getPost('search');
         $filter = $this->request->getPost('filter');
         $data   = $this->productManageModel->getData($search,$filter);
-        //echo  $this->productManageModel->getLastQUery();
         if($data) {
 
             foreach($data as &$key) {
@@ -162,7 +161,6 @@ class ProductmanagementController extends Controller
             return $this->response->setJSON(['success' => false,'errors' => $this->validator->getErrors()]);
         }
 
-        
         $shippingStatus = $this->request->getPost('shipping_status');
         $isMultiple = $this->request->getPost('is_multiple');
         $shippingCost = $this->request->getPost('shipping_cost');
@@ -185,7 +183,6 @@ class ProductmanagementController extends Controller
         if (!$this->validate($rules)) {
             return $this->response->setJSON(['success' => false,'errors' => $this->validator->getErrors()]);
         }
-
 
         $file = $this->request->getFile('file');
         $selectedImage = $this->request->getPost('selected_image');
@@ -281,7 +278,7 @@ class ProductmanagementController extends Controller
             }
             $shippingconfigrationId = $this->shippingconfigrationModel->where('product_id',$id)->first();
             if($shippingconfigrationId) {
-                $this->shippingconfigrationModel->update($shippingconfigrationId->id,$shippingCOnfig);
+                $this->shippingconfigrationModel->update($shippingconfigrationId['id'],$shippingCOnfig);
             }else{
                 $shippingCOnfig['product_id'] = $id;
                 $this->shippingconfigrationModel->insert($shippingCOnfig);
@@ -328,6 +325,14 @@ class ProductmanagementController extends Controller
                         'featured_product' => $row->featured_product,
                         'created_at' => $row->created_at,
                         'updated_at' => $row->updated_at,
+                        'shippingConfigId' => $row->shippingConfigId,
+                        'shipping_status' => $row->shipping_status,
+                        'shipping_cost' => $row->shipping_cost,
+                        'is_multiple' => $row->is_multiple,
+                        'length' => $row->length,
+                        'breadth' => $row->breadth,
+                        'height' => $row->height,
+                        'weight' => $row->weight,
                         'variantimages' => [],
                         'highlights'    => [],
                     ];
