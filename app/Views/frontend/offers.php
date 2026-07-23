@@ -138,7 +138,16 @@
                <?php
             }
             
-         } ?>
+         }else{
+            ?>
+               <div class="text-center">
+                  <img src="<?=base_url('public/assets/template/');?>assets/images/no-offer.png" alt="no-offer">
+               </div>
+            <?php
+         }
+         
+         
+         ?>
 
        
 
