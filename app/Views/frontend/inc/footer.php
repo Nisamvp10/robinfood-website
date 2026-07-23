@@ -258,7 +258,7 @@
                   <p class="wow fadeInLeft" data-wow-delay=".3s">
                      © All Copyright 2026 by <a href="#">RobinFood</a>
                   </p>
-                  <p>Designed and Developed by Inboon Media</p>
+                  <p>Designed and Developed by <a target="_blank" href="https://inboonmedia.com/">Inboon Media </a></p>
                   <ul
                      class="credit-card-logo wow fadeInRight"
                      data-wow-delay=".5s"

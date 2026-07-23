@@ -46,51 +46,34 @@
      </div>
 
     
-     <section class="about-page-section pt-40 pb-40 fix">
-        <div class="container">
-          
-            <div class="row gx-80 mt-20 d-flex align-items-center">
-                <div class="col-xl-8">
-                    <div class="about-page-content">
-                        <!-- <h1>The RobinFood Promise </h1>
-                        <p class="mb-15">
-                            At RobinFood , we believe that good health begins with the food we eat every day. Our products are thoughtfully made to suit modern lifestyles while staying true to natural nutrition. By combining wholesome ingredients with advanced food processing methods, we create food that is both nourishing and enjoyable, making healthy eating simple and practical for every home.
+           <section class="about-page-section pt-40 pb-40 fix">
+         <div class="container">
+             <div class="row gx-80 mt-20 d-flex align-items-center">
+                 <div class="col-xl-8">
+                     <div class="about-page-content" style="text-align:justify">
+                         <h1>The RobinFood Promise</h1>
+                         <p><b>Good food starts with trust.</b></p>
+                         <p class="mb-15">
+                           RobinFood is the health-focused brand from Arrikar Foods, the makers of Pavizham Rice. Our journey began in a small rice mill in Koovapady and has grown over the years with one simple belief: food should be wholesome, honest, and full of natural goodness.
+                         </p>
 
-                        </p>
-
-                        <p class="mb-15">
-                            With cutting-edge technology, expert supervision, and strict quality checks at every stage, we ensure that only the best reaches your table. Each RobinFood  product is carefully crafted to deliver great taste while keeping your health in balance. For us, food is not just about filling a plate; it’s about caring for the well-being of the people who trust us.
-
-                        </p> -->
-
-                        <h1>The RobinFood Promise</h1>
-                         <p class="mb-15">RobinFood is a premium, health-focused brand from Arrikar Foods, the trusted makers of Pavizham Rice. Born from decades of expertise in rice milling, RobinFood was created with one clear purpose: to nourish people with food that is as honest as it is healthy.</p>
-
-                             <p class="mb-15">Robin Foods began its journey as a small rice mill in Koovapady and, through a decade of hard work, has built a reputation for producing high-quality products that do not compromise on taste or nutrition.  Over the years, that commitment has helped us grow into one of South India’s leading rice mills, supporting thousands of families and earning the trust of generations. 
+                           <p class="mb-15">
+                              We believe nutrition should never be lost along the way. That's why we work to preserve the goodness of rice bran and carefully craft every product to bring together nourishment, great taste, and uncompromising quality.
                            </p>
                            <p class="mb-15">
-                              We aim to restore the forgotten goodness of rice bran, once a vital part of everyday diets. Through advanced technology, expert supervision, and strict quality assurance, we carefully preserve essential nutrients while creating products suited for today’s lifestyle.
+                              At RobinFood, every pack reflects the care, experience, and trust we've built over generations. Because healthy food isn't just about what you eat. It's about what you can trust to bring home.
                            </p>
-                           <p>
-                              Every RobinFood product is crafted with care, focusing on balanced nutrition, natural goodness, and great taste, because we believe healthy food should be easy to trust and enjoyable to eat. Inspired by the spirit of Robin Hood, RobinFood stands for goodness shared, food that supports better living, stronger families, and healthier communities.
-
-                           </p>
-
-                    
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="about-page-thumb2">
-                        <img src="<?=base_url('public/assets/template/');?>assets/images/abt.jpg" alt="thumb">
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-    </section>
+                           
+                     </div>
+                 </div>
+                 <div class="col-xl-4">
+                     <div class="about-page-thumb2">
+                         <img src="<?=base_url('public/assets/template/');?>assets/images/abt.jpg" alt="thumb">
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
 
 
     <section class="testimonial-section fix bg-color3 section-padding">

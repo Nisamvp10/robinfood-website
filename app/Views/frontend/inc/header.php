@@ -178,7 +178,7 @@
                <div class="offer">
                   <div class="subtitle style1 text-capitalize">
                      <i class="fa fa-phone"></i>
-                     <a class="text-white pl-2" href="tel:7034741741">+91 7034741741</a>
+                     <a class="text-white pl-2" href="tel:+9118008909945">1800 890 9945</a>
                   </div>
                </div>
                <div class="lang">
