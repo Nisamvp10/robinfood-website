@@ -1,0 +1,376 @@
+INFO - 2026-07-19 10:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 10:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 10:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:10:58 --> ErrorException: Undefined array key "pickup_location"
+in APPPATH\Controllers\ShiprocketController.php on line 25.
+ 1 APPPATH\Controllers\ShiprocketController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pickup_location"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:11:08 --> ErrorException: Undefined array key "pickup_location"
+in APPPATH\Controllers\ShiprocketController.php on line 25.
+ 1 APPPATH\Controllers\ShiprocketController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pickup_location"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:12:58 --> ParseError: syntax error, unexpected variable "$pickup_location_name"
+in APPPATH\Controllers\ShiprocketController.php on line 21.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ShiprocketController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ShiprocketController')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\ShiprocketController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:13:05 --> ErrorException: Undefined array key "pickup_location"
+in APPPATH\Controllers\ShiprocketController.php on line 26.
+ 1 APPPATH\Controllers\ShiprocketController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pickup_location"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:13:07 --> ErrorException: Undefined array key "pickup_location"
+in APPPATH\Controllers\ShiprocketController.php on line 26.
+ 1 APPPATH\Controllers\ShiprocketController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pickup_location"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:13:32 --> ErrorException: Undefined array key "pickup_pincode"
+in APPPATH\Controllers\ShiprocketController.php on line 31.
+ 1 APPPATH\Controllers\ShiprocketController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pickup_pincode"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:28:46 --> ParseError: syntax error, unexpected variable "$order", expecting "function" or "const"
+in APPPATH\Controllers\ShiprocketController.php on line 100.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ShiprocketController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ShiprocketController')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\ShiprocketController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:29:44 --> ErrorException: Undefined array key "courier_id"
+in APPPATH\Controllers\ShiprocketController.php on line 57.
+ 1 APPPATH\Controllers\ShiprocketController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "courier_id"', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 11:40:47 --> ErrorException: Undefined variable $cod
+in APPPATH\Controllers\ShiprocketController.php on line 36.
+ 1 APPPATH\Controllers\ShiprocketController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Controllers\\ShiprocketController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ShiprocketController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiprocketController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 11:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 11:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:30:38 --> Error: Class "App\Services\CartModel" not found
+in APPPATH\Services\ShippingCharge.php on line 12.
+ 1 APPPATH\Services\CartService.php(39): App\Services\ShippingCharge->__construct()
+ 2 APPPATH\Controllers\CartController.php(13): App\Services\CartService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\CartController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-19 12:30:45 --> Error: Class "App\Services\CartModel" not found
+in APPPATH\Services\ShippingCharge.php on line 12.
+ 1 APPPATH\Services\CartService.php(39): App\Services\ShippingCharge->__construct()
+ 2 APPPATH\Controllers\CheckoutController.php(36): App\Services\CartService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\CheckoutController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 12:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:37:20 --> ErrorException: Undefined property: App\Services\ShippingCharge::$shippingAddressModel
+in APPPATH\Services\ShippingCharge.php on line 59.
+ 1 APPPATH\Services\ShippingCharge.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\ShippingCharge::$shippingAddressModel', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 59)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 12:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:37:21 --> ErrorException: Undefined property: App\Services\ShippingCharge::$shippingAddressModel
+in APPPATH\Services\ShippingCharge.php on line 59.
+ 1 APPPATH\Services\ShippingCharge.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\ShippingCharge::$shippingAddressModel', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 59)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 12:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:47:53 --> Error: Class "App\Service\CartService" not found
+in APPPATH\Services\ShippingCharge.php on line 14.
+ 1 APPPATH\Services\CartService.php(39): App\Services\ShippingCharge->__construct()
+ 2 APPPATH\Controllers\CartController.php(13): App\Services\CartService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\CartController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-19 12:48:38 --> Error: Class "App\Service\CartService" not found
+in APPPATH\Services\ShippingCharge.php on line 14.
+ 1 APPPATH\Services\CartService.php(39): App\Services\ShippingCharge->__construct()
+ 2 APPPATH\Controllers\CartController.php(13): App\Services\CartService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\CartController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 12:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:51:39 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:51:50 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:52:30 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:52:37 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:53:05 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:53:17 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:53:41 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:53:49 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:58:04 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2026-07-19 12:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:58:40 --> ErrorException: Undefined array key "address"
+in APPPATH\Services\ShippingCharge.php on line 58.
+ 1 APPPATH\Services\ShippingCharge.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address"', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 58)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 12:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 12:58:41 --> ErrorException: Undefined array key "address"
+in APPPATH\Services\ShippingCharge.php on line 58.
+ 1 APPPATH\Services\ShippingCharge.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address"', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 58)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-19 12:58:49 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2026-07-19 12:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 12:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:00:59 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 85.
+ 1 APPPATH\Services\ShippingCharge.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 85)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:01:00 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 85.
+ 1 APPPATH\Services\ShippingCharge.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 85)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:01:26 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 86.
+ 1 APPPATH\Services\ShippingCharge.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 86)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:01:27 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 86.
+ 1 APPPATH\Services\ShippingCharge.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 86)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:01:49 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 90.
+ 1 APPPATH\Services\ShippingCharge.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 90)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:01:50 --> ErrorException: Undefined variable $cod
+in APPPATH\Services\ShippingCharge.php on line 90.
+ 1 APPPATH\Services\ShippingCharge.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cod', 'D:\\xamp\\htdocs\\robinfood\\app\\Services\\ShippingCharge.php', 90)
+ 2 APPPATH\Services\CartService.php(529): App\Services\ShippingCharge->calculate(100.0, 'Kerala')
+ 3 APPPATH\Controllers\CartController.php(30): App\Services\CartService->shippingCharge()
+ 4 APPPATH\Controllers\CartController.php(48): App\Controllers\CartController->checkoutItemsHtml()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CartController->getMyCheckoutItems()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-07-19 13:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-19 13:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 13:03:19 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:04:18 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:04:25 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:04:28 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:04:53 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:04:58 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:05:30 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:05:37 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:05:54 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:06:10 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:06:27 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:08:52 --> ErrorException: Maximum execution time of 1200 seconds exceeded
+in APPPATH\Services\ShiprocketService.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
