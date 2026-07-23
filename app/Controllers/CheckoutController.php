@@ -14,6 +14,7 @@ use App\Models\CouponcodeModel;
 use App\Services\ShipbuddyService;
 use App\Services\ShippingCharge;
 use App\Models\ShippingchargeModel;
+use App\Services\ShiprocketService;
 //thi controller in controllers frond folder 
 use Razorpay\Api\Api;
 use App\Controllers\front\RazorpayController; 
@@ -31,6 +32,7 @@ class CheckoutController extends Controller
     protected $couponcodeModel;
     protected $shipbuddyService;
     protected $shippingCharge;
+    protected $shiprocketService;
     public function __construct()
     {
         $this->cart = new CartService();
@@ -44,6 +46,7 @@ class CheckoutController extends Controller
         $this->paymentGateway = new PaymentGateway();
         $this->shipbuddyService = new ShipbuddyService();
         $this->shippingCharge = new ShippingCharge();
+        $this->shiprocketService = new ShiprocketService();
     }
     public function index()
     {
@@ -117,14 +120,43 @@ class CheckoutController extends Controller
                     'url' => base_url('checkout')
                 ]);
             }
+           
             //check item stock
             foreach($cartItems as $item){
-                $totalStock = $this->productModel->where('id', $item['product_id'])->first();
+                $productmange = $this->productManageModel->where('id', $item['product_id'])->first();
+                // Product Manage not found
+                if (!$productmange) {
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'message' => 'Product not found.',
+                        'url' => base_url('checkout')
+                    ]);
+                }
+                $totalStock = $this->productModel->where('id', $productmange['product_id'])->first();
+                if (!$totalStock) {
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'message' => 'Product not found.',
+                        'url' => base_url('checkout')
+                    ]);
+                }
+                //availabale stock
+                $availableStock = (int) $totalStock['current_stock'];
+                // Cart quantity
+                $cartQty = (int) $item['quantity'];
 
-                if($totalStock['current_stock'] == 0){
-                        return $this->response->setJSON([
+                 if ($availableStock <= 0) {
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'message' => $totalStock['product_name'] . ' is out of stock. Please remove it from your cart.',
+                        'url' => base_url('checkout')
+                    ]);
+                }
+                // Insufficient stock
+                if ($cartQty > $availableStock) {
+                    return $this->response->setJSON([
                             'success' => false,
-                            'message' => $totalStock['product_name'].' is out of stock remove item and try again',
+                            'message' => $totalStock['product_name'] .' has only ' . $availableStock .' item(s) available, but you requested ' . $cartQty . '.',
                             'url' => base_url('checkout')
                     ]);
                 }
@@ -176,7 +208,7 @@ class CheckoutController extends Controller
                 ]);
             }
             //block outof countory order allowed only india 
-            $allowedCountries = ['India','KL','IN','india'];
+            $allowedCountries = ['India','IN','india'];
             if(!in_array($address->country, $allowedCountries)){
                 return $this->response->setJSON([
                     'success' => false,
@@ -184,6 +216,7 @@ class CheckoutController extends Controller
                     'url' => base_url('checkout')
                 ]);
             }
+            
             //shipping charge 
             $shippingCharge = $this->shippingCharge->calculate($totalAmount, $address->state);
             $shippingCharge = ($shippingCharge > 0) ? $shippingCharge : 0;

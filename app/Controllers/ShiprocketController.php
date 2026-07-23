@@ -64,7 +64,7 @@ class ShiprocketController extends BaseController
                 'created_at'              => date('Y-m-d H:i:s'),
             ];
 
-            // Save to database
+            // Save to database 
            // $this->db->insert('shipping_details', $shippingData);
            print_r($shippingData);
           
