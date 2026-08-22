@@ -273,6 +273,14 @@
                            
                         </div>
 
+                         <div class="grid grid-cols-2 mt-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Pickup Address </label>
+                                <input type="number" value="<?= getappdata('pickup_address') ?>" class="border rounded px-3 py-2 w-full" name="c4" id="c4" placeholder="Enter pickup address">
+                            </div>
+                           
+                        </div>
+
                         <!--  -->
                         <div class="flex items-center justify-between">
                         <div class="form-check form-switch">

@@ -149,7 +149,7 @@ $routes->get('dashboard','admin\AuthController::login');
         $routes->post('coupen-code/save','CoupenCodeController::save');
         $routes->get('coupen-code/edit/(:any)','CoupenCodeController::getinfo/$1');
         $routes->get('coupen-code/delete/(:any)','CoupenCodeController::delete/$1');
-          
+        $routes->get('ready-to-ship','ShiprocketController::readyToShip');
 });
 $routes->group('', ['filter' => 'auth'], function($routes)
 { 
@@ -291,3 +291,5 @@ $routes->post('track-order','frond\ProductTrackingController::createOrder');
 
 //ship roket
 $routes->get('shiprocket','ShiprocketController::index');
+$routes->get('sendOrderMail','CheckoutController::sendOrderMail');
+$routes->get('readyToShip','CheckoutController::readyToShip');

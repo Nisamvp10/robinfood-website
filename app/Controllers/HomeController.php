@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-
 use CodeIgniter\Controllers;
 use App\Models\SliderModel;
 use App\Models\ExpertiseModel;
