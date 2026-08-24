@@ -23,12 +23,7 @@
                 <div class="mb-4">
                     <label for="categoryName" class="block text-sm font-medium text-gray-700 mb-1">Sub Category </label>
                   <select name="parent_id" id="parent_id" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                          <option value="">Sub Category</option>
-                          <?php foreach ($roles as $role): ?>
-                              <option value="<?= $role['id'] ?>">
-                                  <?= str_repeat('— ', $role['level'] - 1) . $role['category'] ?>
-                              </option>
-                          <?php endforeach ?>
+                        
                       </select>
               </div>
 

@@ -17,8 +17,15 @@ class CategoryController extends Controller{
         $roles = $this->categoryModel->orderBy('level','ASC')->findAll();
         return view($route,compact('page','roles'));
     }
-    
 
+    function categoryAjaxFun(){
+       if(!$this->request->isAJAX()){
+          return $this->response->setJSON(['success' => false,'message' => ' Invalid Request']);
+       } 
+        $roles = $this->categoryModel->orderBy('level','ASC')->findAll();
+        return $this->response->setJSON(['success' => true,'message' => 'Get category successfully!', 'roles' => $roles]);
+    }
+    
     function save(){
         if(!$this->request->isAJAX())
         {

@@ -18,6 +18,7 @@ function openModal(e = false) {
                     $('#categoryModal').find('.head').text('Edit ' + title)
                     modal.querySelector('#edit_id').value = `${id}`;
                     modal.querySelector('#category').value = banner.category;
+                    modal.querySelector('#parent_id').value = banner.parent_id;
                 }
             });
     } else {
@@ -139,6 +140,81 @@ function nextPage(totalPages) {
     }
 }
 
+getCategory();
+function getCategory() {
+    fetch(App.cust() + 'categoryAjaxFun', {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(res => res.json())
+        .then(data => {
+
+            if (!data.success) {
+                toastr.error(data.message);
+                return;
+            }
+
+            const select = $('#parent_id');
+
+            select.empty().append(
+                '<option value="">Sub Category</option>'
+            );
+
+            const roles = data.roles;
+
+            // Group categories by parent_id
+            const children = {};
+
+            roles.forEach(function (role) {
+                const parentId = role.parent_id ?? 'root';
+
+                if (!children[parentId]) {
+                    children[parentId] = [];
+                }
+
+                children[parentId].push(role);
+            });
+
+            // Recursively add categories
+            function addCategories(parentId, level = 1) {
+
+                const key = parentId === null ? 'root' : parentId;
+
+                if (!children[key]) {
+                    return;
+                }
+
+                children[key].forEach(function (role) {
+
+                    let prefix = '';
+
+                    if (level > 1) {
+                        prefix = '└── '.repeat(level - 1);
+                    }
+
+                    select.append(`
+                    <option value="${role.id}">
+                        ${prefix}${role.category}
+                    </option>
+                `);
+
+                    // Add children of this category
+                    addCategories(role.id, level + 1);
+                });
+            }
+
+            // Start with top-level categories
+            addCategories(null);
+        })
+        .catch(error => {
+            console.error(error);
+            toastr.error('Unable to load categories');
+        });
+}
+
 
 $('#categoryForm').on('submit', function (e) {
     let webForm = $('#categoryForm');
@@ -160,6 +236,7 @@ $('#categoryForm').on('submit', function (e) {
                 webForm[0].reset();
                 modal.addClass('hidden');
                 loadCategories();
+                getCategory();
             } else {
                 if (response.errors) {
                     $.each(response.errors, function (field, message) {

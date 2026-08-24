@@ -23,6 +23,7 @@ class ProductManageModel extends Model{
            pvi.image as variantimages,pvi.id as variantimageid,sc.id shippingConfigId,sc.shipping_status,sc.shipping_cost,sc.is_multiple,sc.length,sc.breadth,sc.height,sc.weight' )
           ->join('product_variant_images as pvi','pvi.product_id = pm.id','left')
           ->join('shipping_configration as sc','pm.id = sc.product_id','left');
+        $builder->where('pm.product_status !=', 3);
         $builder->where('pm.id', $id);
         
         return $builder->get()->getResult();

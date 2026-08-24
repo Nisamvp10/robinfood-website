@@ -518,6 +518,9 @@ $('#productManageForm').on('submit', function (e) {
                 $('#edit_id').val('');
                 loadServices();
                 $('#subcategory').empty()
+                if (typeof window.resetSelectedImages === 'function') {
+                    window.resetSelectedImages();
+                }
             } else {
                 if (response.errors) {
                     $.each(response.errors, function (field, message) {

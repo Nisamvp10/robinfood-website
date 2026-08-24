@@ -288,6 +288,12 @@ class ProductmanagementController extends Controller
             $validStatus = true;
         }else{
             $this->productManageModel->insert($data);
+             $lastIncId = $this->productManageModel->getLastID();
+            if(!empty($uploadedPaths)) {
+                foreach ($uploadedPaths as $url) {
+                        $this->productvariantImagesModel->insert(['product_id'   => $lastIncId,'image' => $url]);
+                }
+            }
             $message = 'Data successfully added';
             $validStatus = true;
         }
