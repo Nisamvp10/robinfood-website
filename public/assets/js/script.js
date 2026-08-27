@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //muti images
 //$(function() {
-const modal = $('#multiImageModal');
+const mModal = $('#multiImageModal');
 const gallery = $('#multiImageGallery');
 const fileInput = $('#mediaImageInput');
 const preview = $('#selectedMultiPreview');
@@ -138,7 +138,7 @@ let selectedImages = [];
 // Open popup
 $('#openultiUploader').click(function () {
   let folder = $(this).data('folder');
-  modal.removeClass('hidden').addClass('flex');
+  mModal.removeClass('hidden').addClass('flex');
   gallery.html('<p class="text-gray-500 col-span-full text-center">Loading images...</p>');
 
   $.getJSON(App.getSiteurl() + "admin/slider/getMultiUploadedImages", { folder: folder }, function (images) {
@@ -176,7 +176,7 @@ $('#openultiUploader').click(function () {
 });
 
 // Close modal
-$('#closeMultModal').click(() => modal.addClass('hidden'));
+$('#closeMultModal').click(() => mModal.addClass('hidden'));
 
 // Add New → open file input
 $('#addNewImagefromPc').click(() => fileInput.trigger('click'));
@@ -191,7 +191,7 @@ fileInput.change(function () {
     };
     reader.readAsDataURL(file);
   });
-  modal.addClass('hidden');
+  mModal.addClass('hidden');
 });
 
 // Update preview section
