@@ -206,7 +206,7 @@ class CheckoutController extends Controller
                     'url' => base_url('checkout')
                 ]);
             }
-            $shippingcharge = 0;//$this->shippingCharge->calculate($totalAmount,$state->state);
+            $shippingcharge = $this->shippingCharge->calculate($totalAmount,$state->state);
             $totalAmount+=$shippingcharge;
           
             if($totalAmount < $minimumOrderAmount){
